@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
+        width: 1280,
+        height: 1280,
         alt: "BAL Logo",
       },
       {
         url: "/icon.png",
-        width: 1280,
-        height: 1280,
+        width: 1200,
+        height: 630,
         alt: "BAL Logo",
       },
     ],
