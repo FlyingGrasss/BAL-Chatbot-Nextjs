@@ -4,6 +4,22 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "BAL Asistan — Bornova Anadolu Lisesi",
   description: "Bornova Anadolu Lisesi için RAG destekli sohbet asistanı",
+  openGraph: {
+    title: "BAL Asistan — Bornova Anadolu Lisesi",
+    description: "Bornova Anadolu Lisesi için RAG destekli sohbet asistanı",
+    url: "https://bal-asistan.vercel.app",
+    siteName: "BAL Asistan",
+    locale: "tr_TR",
+    type: "website",
+    images: [
+      {
+        url: "/icon.png",
+        width: 640,
+        height: 640,
+        alt: "BAL Logo",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
