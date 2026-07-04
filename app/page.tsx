@@ -9,6 +9,7 @@ import {
   useRef,
   useState,
 } from "react";
+import Link from "next/link";
 import { estimateTokens } from "../src/lib/tokenCounter";
 
 type Role = "user" | "assistant";
@@ -524,7 +525,9 @@ export default function Home() {
               </form>
 
               <div className="composer-meta">
-                <span>Enter'e basarak gönder</span>
+                <span>
+                  Enter'e basarak gönder · <Link href="/oneriler" style={{ color: "var(--brand)", textDecoration: "none", fontWeight: "600" }}>Bilgi/Öneri Ekle</Link>
+                </span>
                 <span className="project-note">
                   BAL Asistan öğrenci projesidir; resmi işlemler için okul
                   duyuruları ve idare esas alınır.

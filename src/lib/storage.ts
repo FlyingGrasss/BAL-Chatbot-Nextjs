@@ -32,12 +32,26 @@ export type FeedbackRecord = {
   feedback_text: string | null;
 };
 
+export type SuggestionRecord = {
+  id: number | null;
+  user_id: number;
+  content: string;
+  created_at: string;
+};
+
+type MemorySuggestion = {
+  userId: number;
+  content: string;
+  createdAt: string;
+};
+
 const globalState = globalThis as typeof globalThis & {
   balPool?: Pool;
   balSchemaReady?: Promise<void>;
   balUsers?: Map<string, MemoryUser>;
   balUsage?: Map<string, number>;
   balLogs?: MemoryLog[];
+  balSuggestions?: MemorySuggestion[];
   balNextUserId?: number;
 };
 
@@ -78,6 +92,11 @@ function memoryLogs() {
   return globalState.balLogs;
 }
 
+function memorySuggestions() {
+  if (!globalState.balSuggestions) globalState.balSuggestions = [];
+  return globalState.balSuggestions;
+}
+
 export async function ensureSchema() {
   const pool = getPool();
   if (!pool) return;
@@ -112,6 +131,13 @@ export async function ensureSchema() {
         created_at VARCHAR(64) NOT NULL,
         feedback VARCHAR(16),
         feedback_text TEXT
+      );
+
+      CREATE TABLE IF NOT EXISTS suggestions (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER NOT NULL,
+        content TEXT NOT NULL,
+        created_at VARCHAR(64) NOT NULL
       );
 
       CREATE INDEX IF NOT EXISTS ix_chat_logs_user_question ON chat_logs (user_id, question_index);
@@ -296,6 +322,63 @@ export async function listFeedback(limit = 100): Promise<FeedbackRecord[]> {
     }));
 }
 
+export async function saveSuggestion(identity: Identity, content: string) {
+  const userId = Number(identity.subjectId);
+  const pool = getPool();
+  if (pool) {
+    await ensureSchema();
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS suggestions (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER NOT NULL,
+        content TEXT NOT NULL,
+        created_at VARCHAR(64) NOT NULL
+      );
+    `);
+    await pool.query(
+      `INSERT INTO suggestions (user_id, content, created_at)
+       VALUES ($1, $2, $3)`,
+      [userId, content, new Date().toISOString()],
+    );
+    return true;
+  }
+  const suggestions = memorySuggestions();
+  suggestions.push({ userId, content, createdAt: new Date().toISOString() });
+  return true;
+}
+
+export async function listSuggestions(limit = 100): Promise<SuggestionRecord[]> {
+  const pool = getPool();
+  if (pool) {
+    await ensureSchema();
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS suggestions (
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER NOT NULL,
+        content TEXT NOT NULL,
+        created_at VARCHAR(64) NOT NULL
+      );
+    `);
+    const result = await pool.query(
+      `SELECT id, user_id, content, created_at
+       FROM suggestions
+       ORDER BY created_at DESC, id DESC
+       LIMIT $1`,
+      [limit],
+    );
+    return result.rows as SuggestionRecord[];
+  }
+  return memorySuggestions()
+    .slice(-limit)
+    .reverse()
+    .map((item) => ({
+      id: null,
+      user_id: item.userId,
+      content: item.content,
+      created_at: item.createdAt,
+    }));
+}
+
 export async function databaseReady() {
   const pool = getPool();
   if (!pool) return true;
@@ -308,17 +391,59 @@ export async function databaseReady() {
   }
 }
 
-async function getUsage(identity: Identity, periodType: "day" | "minute", periodKey: string) {
+export async function checkSuggestionQuota(identity: Identity) {
+  const dailyUsed = await getUsageForType(identity, "suggestion", "day", todayKey());
+  const minuteUsed = await getUsageForType(identity, "suggestion", "minute", minuteKey());
+
+  if (dailyUsed >= 5) {
+    return { ok: false, error: "Günlük öneri limitine ulaştın (Maksimum 5)." };
+  }
+  if (minuteUsed >= 1) {
+    return { ok: false, error: "Çok hızlı öneri gönderiyorsun. Lütfen biraz bekleyip tekrar dene." };
+  }
+  return { ok: true };
+}
+
+export async function incrementSuggestionUsage(identity: Identity) {
+  const now = new Date().toISOString();
+  for (const [periodType, periodKey] of [
+    ["day", todayKey()],
+    ["minute", minuteKey()],
+  ] as const) {
+    const pool = getPool();
+    if (pool) {
+      await ensureSchema();
+      await pool.query(
+        `INSERT INTO usage_counters (subject_type, subject_id, period_type, period_key, count, updated_at)
+         VALUES ($1, $2, $3, $4, 1, $5)
+         ON CONFLICT (subject_type, subject_id, period_type, period_key)
+         DO UPDATE SET count = usage_counters.count + 1, updated_at = EXCLUDED.updated_at`,
+        ["suggestion", identity.subjectId, periodType, periodKey, now],
+      );
+    } else {
+      const usage = memoryUsage();
+      const key = `suggestion:${identity.subjectId}:${periodType}:${periodKey}`;
+      usage.set(key, (usage.get(key) || 0) + 1);
+    }
+  }
+}
+
+async function getUsageForType(identity: Identity, subjectType: string, periodType: "day" | "minute", periodKey: string) {
   const pool = getPool();
   if (pool) {
     await ensureSchema();
     const result = await pool.query(
       "SELECT count FROM usage_counters WHERE subject_type = $1 AND subject_id = $2 AND period_type = $3 AND period_key = $4",
-      [identity.subjectType, identity.subjectId, periodType, periodKey],
+      [subjectType, identity.subjectId, periodType, periodKey],
     );
     return Number(result.rows[0]?.count || 0);
   }
-  return memoryUsage().get(usageKey(identity, periodType, periodKey)) || 0;
+  const key = `${subjectType}:${identity.subjectId}:${periodType}:${periodKey}`;
+  return memoryUsage().get(key) || 0;
+}
+
+async function getUsage(identity: Identity, periodType: "day" | "minute", periodKey: string) {
+  return getUsageForType(identity, identity.subjectType, periodType, periodKey);
 }
 
 function identityFromUser(id: number, role: Role): Identity {
