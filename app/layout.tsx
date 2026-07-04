@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bal-asistan.vercel.app"),
   title: "BAL Asistan — Bornova Anadolu Lisesi",
   description: "Bornova Anadolu Lisesi için RAG destekli sohbet asistanı",
   openGraph: {
@@ -14,8 +15,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/icon.png",
-        width: 640,
-        height: 640,
+        width: 480,
+        height: 480,
         alt: "BAL Logo",
       },
     ],
