@@ -20,13 +20,13 @@ export async function POST(request: Request) {
   const sessionId = typeof body?.session_id === "string" ? body.session_id : "default";
 
   if (!userMessage) {
-    return Response.json({ error: "message alani gerekli", error_type: "technical" }, { status: 400 });
+    return Response.json({ error: "message alanı gerekli", error_type: "technical" }, { status: 400 });
   }
 
   const identity = await getIdentity(request.headers);
   if (!identity) {
     return Response.json(
-      { error: "Ziyaretci kimligi alinamadi; lutfen sayfayi yenileyin.", error_type: "technical" },
+      { error: "Ziyaretçi kimliği alınamadı; lütfen sayfayı yenileyin.", error_type: "technical" },
       { status: 401 },
     );
   }
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
     retrieved = await retrieve(userMessage, CONFIG.retrievalTopK);
   } catch {
     return Response.json(
-      { error: "Su anda cok yogunuz. Lutfen biraz sonra tekrar dene.", error_type: "retry" },
+      { error: "Şu anda çok yoğumuz. Lütfen biraz sonra tekrar dene.", error_type: "retry" },
       { status: 503 },
     );
   }
@@ -75,7 +75,7 @@ export async function POST(request: Request) {
         }
       } catch {
         hadError = true;
-        controller.enqueue(encoder.encode(sse({ error: "Teknik bir sorun olustu.", error_type: "technical" })));
+        controller.enqueue(encoder.encode(sse({ error: "Teknik bir sorun oluştu.", error_type: "technical" })));
       } finally {
         decrementActiveRequests();
       }

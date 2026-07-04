@@ -16,8 +16,20 @@ type MemoryLog = {
   questionIndex: number;
   question: string;
   answer: string;
+  createdAt: string;
   feedback?: string | null;
   feedbackText?: string | null;
+};
+
+export type FeedbackRecord = {
+  id: number | null;
+  user_id: number;
+  question_index: number;
+  question: string;
+  answer: string;
+  created_at: string;
+  feedback: string | null;
+  feedback_text: string | null;
 };
 
 const globalState = globalThis as typeof globalThis & {
@@ -175,9 +187,9 @@ export async function quotaSnapshot(identity: Identity) {
 
 export async function checkQuota(identity: Identity) {
   const usage = await quotaSnapshot(identity);
-  if (usage.daily_remaining <= 0) return { ok: false, usage, error: "Gunluk soru limitin doldu." };
+  if (usage.daily_remaining <= 0) return { ok: false, usage, error: "Günlük soru limitin doldu." };
   if (usage.minute_remaining <= 0) {
-    return { ok: false, usage, error: "Dakikalik soru limitine ulastin. Biraz bekleyip tekrar dene." };
+    return { ok: false, usage, error: "Dakikalık soru limitine ulaştın. Biraz bekleyip tekrar dene." };
   }
   return { ok: true, usage, error: "" };
 }
@@ -224,7 +236,7 @@ export async function saveChatLog(identity: Identity, question: string, answer: 
 
   const logs = memoryLogs();
   const questionIndex = logs.filter((log) => log.userId === userId).length + 1;
-  logs.push({ userId, questionIndex, question, answer });
+  logs.push({ userId, questionIndex, question, answer, createdAt: new Date().toISOString() });
   return questionIndex;
 }
 
@@ -251,6 +263,37 @@ export async function saveFeedback(identity: Identity, questionIndex: number, fe
     log.feedbackText = feedbackText;
   }
   return true;
+}
+
+export async function listFeedback(limit = 100): Promise<FeedbackRecord[]> {
+  const pool = getPool();
+  if (pool) {
+    await ensureSchema();
+    const result = await pool.query(
+      `SELECT id, user_id, question_index, question, answer, created_at, feedback, feedback_text
+       FROM chat_logs
+       WHERE feedback IS NOT NULL OR feedback_text IS NOT NULL
+       ORDER BY created_at DESC, id DESC
+       LIMIT $1`,
+      [limit],
+    );
+    return result.rows as FeedbackRecord[];
+  }
+
+  return memoryLogs()
+    .filter((item) => item.feedback || item.feedbackText)
+    .slice(-limit)
+    .reverse()
+    .map((item) => ({
+      id: null,
+      user_id: item.userId,
+      question_index: item.questionIndex,
+      question: item.question,
+      answer: item.answer,
+      created_at: item.createdAt,
+      feedback: item.feedback || null,
+      feedback_text: item.feedbackText || null,
+    }));
 }
 
 export async function databaseReady() {

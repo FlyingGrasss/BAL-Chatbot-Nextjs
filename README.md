@@ -18,7 +18,7 @@ Migration to Next.js by [FlyingGrasss](https://github.com/FlyingGrasss) | [Emre 
 ## Features
 
 - RAG pipeline over BAL knowledge-base chunks using local JSON vectors
-- Query embeddings with `@xenova/transformers`
+- Query embeddings through the Hugging Face Inference API
 - Streaming chat responses through Server-Sent Events
 - Groq model fallback chain and support for multiple API keys
 - Anonymous FingerprintJS-based visitor identity
@@ -38,7 +38,7 @@ Migration to Next.js by [FlyingGrasss](https://github.com/FlyingGrasss) | [Emre 
 | App | Next.js 16, React 19, TypeScript |
 | API | Next.js App Router route handlers |
 | LLM | Groq Chat Completions API |
-| Embeddings | `@xenova/transformers`, `Xenova/multilingual-e5-small` |
+| Embeddings | Hugging Face Inference API, `intfloat/multilingual-e5-small` |
 | Retrieval | Bundled vectorstore JSON, cosine-style dot product over normalized vectors |
 | Storage | PostgreSQL via `pg`, with in-memory fallback |
 | Frontend | Static HTML/CSS/JS, FingerprintJS vendor bundle |
@@ -53,11 +53,13 @@ BAL-Chatbot-Nextjs/
 |-- app/
 |   |-- api/
 |   |   |-- auth/status/route.ts       # Visitor identity and quota status
+|   |   |-- admin/feedback/route.ts    # Password-protected feedback listing
 |   |   |-- chat/route.ts              # RAG + Groq SSE chat endpoint
 |   |   |-- chat/feedback/route.ts     # Response feedback endpoint
 |   |   |-- clear/route.ts             # Session clear endpoint
 |   |   `-- health/route.ts            # System health endpoint
 |   |-- globals.css                    # App styling
+|   |-- admin/page.tsx                 # Admin feedback view
 |   |-- layout.tsx
 |   `-- page.tsx                       # Chat UI and client interactions
 |-- public/
@@ -69,7 +71,7 @@ BAL-Chatbot-Nextjs/
 |   |-- data/vectorstore.json          # 142 embedded BAL chunks
 |   `-- lib/
 |       |-- config.ts                  # Models, limits, retrieval settings
-|       |-- embeddings.ts              # Local embedding pipeline
+|       |-- embeddings.ts              # Hugging Face embedding API client
 |       |-- groq.ts                    # Streaming Groq client + fallback
 |       |-- rag.ts                     # Retrieval and context formatting
 |       |-- sessions.ts                # In-memory conversation sessions
@@ -111,12 +113,17 @@ Set at least one Groq key:
 GROQ_API_KEY=your_groq_key_here
 # or:
 # GROQ_API_KEYS=key1,key2,key3
+# also supported:
+# GROQ_API_KEY_2=...
+# GROQ_API_KEY_3=...
 ```
 
 Optional production persistence:
 
 ```env
 DATABASE_URL=postgresql://user:password@host:5432/database
+HF_TOKEN=your_hugging_face_token
+ADMIN_PASSWORD=your_admin_password
 ```
 
 Run the development server:
@@ -139,10 +146,13 @@ http://localhost:3000
 | --- | --- | --- |
 | `GROQ_API_KEY` | Yes | Single Groq API key |
 | `GROQ_API_KEYS` | No | Comma-separated Groq API key pool |
+| `GROQ_API_KEY_2` ... `GROQ_API_KEY_5` | No | Additional Groq fallback keys |
 | `GROQ_MODEL_CHAIN` | No | Comma-separated fallback model chain |
 | `DATABASE_URL` | No | PostgreSQL connection string |
 | `PGSSL` | No | Set to `false` for local PostgreSQL without SSL |
-| `EMBEDDING_MODEL` | No | Defaults to `Xenova/multilingual-e5-small` |
+| `HF_TOKEN` | Recommended | Hugging Face token for query embeddings |
+| `ADMIN_PASSWORD` | Recommended | Password for `/admin` feedback view |
+| `EMBEDDING_MODEL` | No | Defaults to `intfloat/multilingual-e5-small` |
 | `RETRIEVAL_TOP_K` | No | Defaults to `5` |
 | `RETRIEVAL_SCORE_THRESHOLD` | No | Defaults to `0.35` |
 | `GROQ_TIMEOUT_MS` | No | Defaults to `120000` |
@@ -210,6 +220,16 @@ Stores feedback for a previously saved response.
   "feedback_text": "Helpful answer"
 }
 ```
+
+### `GET /api/admin/feedback`
+
+Returns feedback records. Requires:
+
+```text
+X-Admin-Password: your_admin_password
+```
+
+The browser view is available at `/admin`.
 
 ### `POST /api/clear`
 

@@ -1,6 +1,6 @@
 export const CONFIG = {
   provider: "groq",
-  embeddingModel: process.env.EMBEDDING_MODEL || "Xenova/multilingual-e5-small",
+  embeddingModel: process.env.EMBEDDING_MODEL || "intfloat/multilingual-e5-small",
   retrievalTopK: Number(process.env.RETRIEVAL_TOP_K || 5),
   retrievalScoreThreshold: Number(process.env.RETRIEVAL_SCORE_THRESHOLD || 0.35),
   groqUrl: "https://api.groq.com/openai/v1/chat/completions",

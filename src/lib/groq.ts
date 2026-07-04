@@ -10,6 +10,7 @@ type StreamEvent =
 
 type FailureInfo = {
   retryable: boolean;
+  rotateKey: boolean;
   model: string;
   keyIndex: number;
   reason: string;
@@ -39,11 +40,11 @@ export async function* streamChat(recentHistory: ChatMessage[], augmentedMessage
 
 async function* streamGroq(messages: ChatMessage[]): AsyncGenerator<StreamEvent> {
   if (!CONFIG.groqApiKeys.length) {
-    yield { error: "GROQ_API_KEY ayarli degil.", error_type: "technical" };
+    yield { error: "GROQ_API_KEY ayarlı değil.", error_type: "technical" };
     return;
   }
 
-  let lastError = "Groq API hatasi.";
+  let lastError = "Groq API hatası.";
 
   for (let keyIndex = 0; keyIndex < CONFIG.groqApiKeys.length; keyIndex += 1) {
     const apiKey = CONFIG.groqApiKeys[keyIndex];
@@ -67,7 +68,7 @@ async function* streamGroq(messages: ChatMessage[]): AsyncGenerator<StreamEvent>
             model_fallback: {
               from_model: CONFIG.groqModelChain[0],
               to_model: model,
-              message: "Yogunluk nedeniyle model degistirildi.",
+              message: "Yoğunluk nedeniyle model değiştirildi.",
             },
           };
         }
@@ -76,6 +77,7 @@ async function* streamGroq(messages: ChatMessage[]): AsyncGenerator<StreamEvent>
       }
 
       lastError = result?.fullResponse || lastError;
+      if (result?.failureInfo?.rotateKey) break;
       if (result?.failureInfo && !result.failureInfo.retryable) {
         yield { error: lastError, error_type: "technical" };
         return;
@@ -119,9 +121,10 @@ async function* streamGroqModel(
       const text = await response.text().catch(() => "");
       const statusCode = response.status;
       return {
-        fullResponse: `Groq API hatasi: HTTP ${statusCode}${text ? ` ${text.slice(0, 160)}` : ""}`,
+        fullResponse: `Groq API hatası: HTTP ${statusCode}${text ? ` ${text.slice(0, 160)}` : ""}`,
         failureInfo: {
-          retryable: statusCode === 404 || statusCode === 429 || statusCode >= 500,
+          retryable: statusCode === 401 || statusCode === 404 || statusCode === 429 || statusCode >= 500,
+          rotateKey: statusCode === 401 || statusCode === 429,
           model,
           keyIndex,
           reason: `http_${statusCode}`,
@@ -132,8 +135,8 @@ async function* streamGroqModel(
 
     if (!response.body) {
       return {
-        fullResponse: "Groq API yaniti bos geldi.",
-        failureInfo: { retryable: true, model, keyIndex, reason: "empty_body" },
+        fullResponse: "Groq API yanıtı boş geldi.",
+        failureInfo: { retryable: true, rotateKey: false, model, keyIndex, reason: "empty_body" },
       };
     }
 
@@ -173,8 +176,8 @@ async function* streamGroqModel(
   } catch (error) {
     const reason = error instanceof Error && error.name === "AbortError" ? "timeout" : "exception";
     return {
-      fullResponse: reason === "timeout" ? "Groq API zaman asimina ugradi. Lutfen tekrar deneyin." : "Groq API hatasi.",
-      failureInfo: { retryable: true, model, keyIndex, reason },
+      fullResponse: reason === "timeout" ? "Groq API zaman aşımına uğradı. Lütfen tekrar deneyin." : "Groq API hatası.",
+      failureInfo: { retryable: true, rotateKey: false, model, keyIndex, reason },
     };
   } finally {
     clearTimeout(timeout);

@@ -11,7 +11,7 @@ export async function POST(request: Request) {
   }
 
   const identity = await getIdentity(request.headers);
-  if (!identity) return Response.json({ error: "Kimlik alinamadi" }, { status: 401 });
+  if (!identity) return Response.json({ error: "Kimlik alınamadı" }, { status: 401 });
 
   const feedback = typeof body?.feedback === "string" ? body.feedback : undefined;
   const feedbackText = typeof body?.feedback_text === "string" ? body.feedback_text.trim() : undefined;
@@ -21,6 +21,6 @@ export async function POST(request: Request) {
   }
 
   const ok = await saveFeedback(identity, questionIndex, feedback, feedbackText);
-  if (!ok) return Response.json({ error: "Soru bulunamadi" }, { status: 404 });
+  if (!ok) return Response.json({ error: "Soru bulunamadı" }, { status: 404 });
   return Response.json({ ok: true });
 }

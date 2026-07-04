@@ -26,17 +26,17 @@ export async function retrieve(query: string, topK = CONFIG.retrievalTopK): Prom
 }
 
 export function formatContext(retrieved: RetrievedChunk[], threshold = CONFIG.retrievalScoreThreshold) {
-  if (!retrieved.length) return "Baglamda ilgili bilgi bulunamadi.";
+  if (!retrieved.length) return "Bağlamda ilgili bilgi bulunamadı.";
 
   const parts = retrieved
     .filter((chunk) => chunk.relevance_score >= threshold)
     .map((chunk) => `[Kaynak: ${chunk.breadcrumb || ""}]\n${chunk.text}`);
 
-  return parts.length ? parts.join("\n\n---\n\n") : "Baglamda yeterince ilgili bilgi bulunamadi.";
+  return parts.length ? parts.join("\n\n---\n\n") : "Bağlamda yeterince ilgili bilgi bulunamadı.";
 }
 
 export function buildAugmentedUserMessage(userInput: string, context: string) {
-  return `## Ilgili Baglam (Okul Bilgi Kaynagi)\n\n${context}\n\n---\n\n## Kullanici Sorusu\n\n${userInput}`;
+  return `## İlgili Bağlam (Okul Bilgi Kaynağı)\n\n${context}\n\n---\n\n## Kullanıcı Sorusu\n\n${userInput}`;
 }
 
 export function buildSourcesPayload(retrieved: RetrievedChunk[], threshold = CONFIG.retrievalScoreThreshold) {

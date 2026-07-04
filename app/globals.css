@@ -885,6 +885,147 @@ button {
     box-shadow: none;
 }
 
+.admin-shell {
+    width: min(1120px, 100%);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: clamp(20px, 4vw, 42px);
+    overflow-y: auto;
+}
+
+.admin-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+}
+
+.admin-kicker {
+    margin: 0 0 6px;
+    color: var(--brand);
+    font-size: 0.78rem;
+    font-weight: 820;
+}
+
+.admin-header h1 {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.04;
+}
+
+.admin-auth {
+    display: flex;
+    gap: 8px;
+}
+
+.admin-auth input {
+    min-width: 210px;
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
+    color: var(--text);
+    outline: none;
+}
+
+.admin-auth input:focus {
+    border-color: rgba(31, 111, 214, 0.45);
+}
+
+.admin-auth button {
+    height: 40px;
+    padding: 0 14px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--brand);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.admin-auth button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.admin-error,
+.admin-empty {
+    padding: 14px;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+    background: #fff7ed;
+    color: #9a3412;
+    font-weight: 700;
+}
+
+.admin-empty {
+    border-color: var(--border);
+    background: #fff;
+    color: var(--muted);
+}
+
+.feedback-list {
+    display: grid;
+    gap: 12px;
+}
+
+.feedback-card {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: var(--shadow-sm);
+}
+
+.feedback-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+    color: var(--soft);
+    font-size: 0.74rem;
+    font-weight: 760;
+}
+
+.feedback-card-meta strong {
+    color: var(--brand);
+}
+
+.feedback-card h2 {
+    margin: 0 0 10px;
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.35;
+}
+
+.feedback-answer,
+.feedback-text {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.feedback-answer {
+    max-height: 120px;
+    overflow: auto;
+}
+
+.feedback-text {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-left: 3px solid var(--brand);
+    border-radius: 8px;
+    background: var(--brand-soft);
+    color: var(--text);
+    font-weight: 650;
+}
+
 @keyframes fade-up {
     from {
         opacity: 0;
@@ -991,6 +1132,17 @@ button {
     .composer-meta span:first-child,
     .project-note {
         display: none;
+    }
+
+    .admin-header,
+    .admin-auth {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .admin-auth input,
+    .admin-auth button {
+        width: 100%;
     }
 }
 
