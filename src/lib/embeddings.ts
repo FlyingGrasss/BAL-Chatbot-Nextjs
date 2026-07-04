@@ -1,43 +1,31 @@
-import { pipeline, env } from "@xenova/transformers";
 import { CONFIG } from "./config";
 
-// --- VERCEL CRASH ÇÖZÜMÜ (WASM FORCING) ---
-// Native (.so) binary aramayı kapat, tamamen WebAssembly (WASM) motoruna zorla
-env.allowLocalModels = false;
+const HF_TOKEN = process.env.HF_TOKEN || "";
 
-// TypeScript'in kızmasını engellemek için any üzerinden güvenli atama yapıyoruz
-const backends = (env as any).backends || {};
-backends.onnx = backends.onnx || {};
-backends.onnx.wasm = backends.onnx.wasm || {};
-backends.onnx.wasm.numThreads = 1;
-backends.onnx.wasm.wasmPaths =
-  "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.14.0/dist/";
+export async function embedQuery(text: string): Promise<number[]> {
+  // Use the exact model matching your JSON vectorstore dimensions (384)
+  const modelId = "intfloat/multilingual-e5-small";
 
-(env as any).backends = backends;
-// ------------------------------------------
+  const response = await fetch(
+    `https://api-inference.huggingface.co/pipeline/feature-extraction/${modelId}`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${HF_TOKEN}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ inputs: `query: ${text}` }),
+    },
+  );
 
-type Extractor = (
-  input: string,
-  options?: Record<string, unknown>,
-) => Promise<{ data: Float32Array | number[] }>;
-
-let extractorPromise: Promise<Extractor> | null = null;
-
-export async function embedQuery(text: string) {
-  const extractor = await getExtractor();
-  const output = await extractor(`query: ${text}`, {
-    pooling: "mean",
-    normalize: true,
-  });
-  return Array.from(output.data, Number);
-}
-
-async function getExtractor() {
-  if (!extractorPromise) {
-    extractorPromise = pipeline(
-      "feature-extraction",
-      CONFIG.embeddingModel,
-    ) as Promise<Extractor>;
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.error("Hugging Face API Details:", errorText);
+    throw new Error(`Hugging Face API Error: ${response.status}`);
   }
-  return extractorPromise;
+
+  const result = await response.json();
+
+  // Cleanly flatten the tensor output to a flat number array
+  return Array.isArray(result[0]) ? result[0] : result;
 }
