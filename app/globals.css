@@ -586,21 +586,21 @@ button {
 }
 
 .composer-meta {
-  margin-top: 9px;
-  padding: 0 4px;
-  display: flex;
+    margin-top: 9px;
+    padding: 0 4px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
     color: var(--soft);
     font-size: 0.72rem;
-  font-weight: 720;
+    font-weight: 720;
 }
 
 .project-note {
-  flex: 1;
-  min-width: 0;
-  text-align: center;
+    flex: 1;
+    min-width: 0;
+    text-align: center;
 }
 
 .gate {
@@ -664,15 +664,15 @@ button {
 }
 
 .gate-meta {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: 12px;
-  margin-top: 30px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 0.78rem;
-  font-weight: 650;
-  line-height: 1.45;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 12px;
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.78rem;
+    font-weight: 650;
+    line-height: 1.45;
 }
 
 .gate-panel {
@@ -685,35 +685,35 @@ button {
 }
 
 .gate-dev-warning {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 12px 14px;
-  margin-bottom: 0;
-  border: 1px solid #fed7aa;
-  border-radius: 14px;
-  background: #fff7ed;
-  color: #9a3412;
-  font-size: 0.88rem;
-  line-height: 1.55;
-  font-weight: 650;
-  box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 14px;
+    margin-bottom: 0;
+    border: 1px solid #fed7aa;
+    border-radius: 14px;
+    background: #fff7ed;
+    color: #9a3412;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    font-weight: 650;
+    box-shadow: var(--shadow-sm);
 }
 
 .gate-dev-warning::before {
-  content: "!";
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2px;
-  border-radius: 999px;
-  background: #fed7aa;
-  color: #9a3412;
-  font-size: 0.78rem;
-  font-weight: 900;
+    content: "!";
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2px;
+    border-radius: 999px;
+    background: #fed7aa;
+    color: #9a3412;
+    font-size: 0.78rem;
+    font-weight: 900;
 }
 
 .gate-tabs {
@@ -727,8 +727,8 @@ button {
 }
 
 .gate-tabs button {
-  position: relative;
-  min-height: 44px;
+    position: relative;
+    min-height: 44px;
     border: 0;
     border-radius: 10px;
     background: transparent;
@@ -739,25 +739,25 @@ button {
 }
 
 .gate-tabs button.active {
-  background: #fff;
-  color: var(--text);
-  box-shadow: var(--shadow-sm);
+    background: #fff;
+    color: var(--text);
+    box-shadow: var(--shadow-sm);
 }
 
 .gate-tabs button.visited::after {
-  content: "";
-  position: absolute;
-  top: 9px;
-  right: 10px;
-  width: 7px;
-  height: 7px;
-  border-radius: 999px;
-  background: #12b76a;
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    width: 7px;
+    height: 7px;
+    border-radius: 999px;
+    background: #12b76a;
 }
 
 .gate-content {
     flex: 1;
-    min-height: 260px;
+    min-height: 180px;
     padding: 22px;
     border: 1px solid var(--border);
     border-radius: 18px;
@@ -860,11 +860,11 @@ button {
 }
 
 .gate-status {
-  min-height: 20px;
-  color: var(--amber);
-  font-size: 0.78rem;
-  font-weight: 700;
-  line-height: 1.45;
+    min-height: 20px;
+    color: var(--amber);
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.45;
 }
 
 .gate-continue {
@@ -960,38 +960,38 @@ button {
         overflow-y: auto;
     }
 
-  .gate-hero {
-    min-height: 250px;
-  }
+    .gate-hero {
+        min-height: 250px;
+    }
 
-  .gate-meta {
-    display: none;
-  }
+    .gate-meta {
+        display: none;
+    }
 
-  .gate-content {
-    min-height: 220px;
-  }
+    .gate-content {
+        min-height: 220px;
+    }
 
-  .gate-tabs button {
-    font-size: 0.78rem;
-  }
+    .gate-tabs button {
+        font-size: 0.78rem;
+    }
 
-  .gate-status {
-    min-height: 16px;
-    font-size: 0.68rem;
-    line-height: 1.25;
-  }
+    .gate-status {
+        min-height: 16px;
+        font-size: 0.68rem;
+        line-height: 1.25;
+    }
 
-  .composer-meta {
-    justify-content: flex-end;
-    font-size: 0.66rem;
-    margin-top: 6px;
-  }
+    .composer-meta {
+        justify-content: flex-end;
+        font-size: 0.66rem;
+        margin-top: 6px;
+    }
 
-  .composer-meta span:first-child,
-  .project-note {
-    display: none;
-  }
+    .composer-meta span:first-child,
+    .project-note {
+        display: none;
+    }
 }
 
 @media (max-width: 380px) {
