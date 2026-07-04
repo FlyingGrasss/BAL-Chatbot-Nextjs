@@ -1,14 +1,14 @@
 export const CONFIG = {
   provider: "groq",
-  embeddingModel: process.env.EMBEDDING_MODEL || "intfloat/multilingual-e5-small",
+  embeddingModel: process.env.EMBEDDING_MODEL || "Xenova/multilingual-e5-small",
   retrievalTopK: Number(process.env.RETRIEVAL_TOP_K || 5),
   retrievalScoreThreshold: Number(process.env.RETRIEVAL_SCORE_THRESHOLD || 0.35),
   groqUrl: "https://api.groq.com/openai/v1/chat/completions",
   groqModelChain: csv(process.env.GROQ_MODEL_CHAIN, [
     "llama-3.3-70b-versatile",
-    "meta-llama/llama-4-maverick-17b-128e-instruct",
     "qwen/qwen3-32b",
     "meta-llama/llama-4-scout-17b-16e-instruct",
+    "llama-3.1-8b-instant",
   ]),
   groqApiKeys: groqKeys(),
   groqTimeoutMs: Number(process.env.GROQ_TIMEOUT_MS || 120000),

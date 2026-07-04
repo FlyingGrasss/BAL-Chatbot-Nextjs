@@ -26,7 +26,7 @@ Migration to Next.js by [FlyingGrasss](https://github.com/FlyingGrasss) | [Emre 
 - Conversation memory for recent turns per session
 - Optional PostgreSQL persistence for users, quotas, chat logs, and feedback
 - In-memory fallback when `DATABASE_URL` is not configured
-- Static migrated frontend served from `public/index.html`
+- Native Next.js page rendered from `app/page.tsx`
 - TypeScript-first Next.js API backend
 
 ---
@@ -38,7 +38,7 @@ Migration to Next.js by [FlyingGrasss](https://github.com/FlyingGrasss) | [Emre 
 | App | Next.js 16, React 19, TypeScript |
 | API | Next.js App Router route handlers |
 | LLM | Groq Chat Completions API |
-| Embeddings | `@xenova/transformers`, `intfloat/multilingual-e5-small` |
+| Embeddings | `@xenova/transformers`, `Xenova/multilingual-e5-small` |
 | Retrieval | Bundled vectorstore JSON, cosine-style dot product over normalized vectors |
 | Storage | PostgreSQL via `pg`, with in-memory fallback |
 | Frontend | Static HTML/CSS/JS, FingerprintJS vendor bundle |
@@ -57,10 +57,10 @@ BAL-Chatbot-Nextjs/
 |   |   |-- chat/feedback/route.ts     # Response feedback endpoint
 |   |   |-- clear/route.ts             # Session clear endpoint
 |   |   `-- health/route.ts            # System health endpoint
+|   |-- globals.css                    # App styling
 |   |-- layout.tsx
-|   `-- page.tsx                       # Redirects to /index.html
+|   `-- page.tsx                       # Chat UI and client interactions
 |-- public/
-|   |-- index.html                     # Migrated chatbot UI
 |   |-- BAL_Logo.png
 |   `-- vendor/fingerprintjs/fp.esm.js
 |-- scripts/
@@ -142,7 +142,7 @@ http://localhost:3000
 | `GROQ_MODEL_CHAIN` | No | Comma-separated fallback model chain |
 | `DATABASE_URL` | No | PostgreSQL connection string |
 | `PGSSL` | No | Set to `false` for local PostgreSQL without SSL |
-| `EMBEDDING_MODEL` | No | Defaults to `intfloat/multilingual-e5-small` |
+| `EMBEDDING_MODEL` | No | Defaults to `Xenova/multilingual-e5-small` |
 | `RETRIEVAL_TOP_K` | No | Defaults to `5` |
 | `RETRIEVAL_SCORE_THRESHOLD` | No | Defaults to `0.35` |
 | `GROQ_TIMEOUT_MS` | No | Defaults to `120000` |
@@ -156,9 +156,9 @@ Default Groq model chain:
 
 ```text
 llama-3.3-70b-versatile,
-meta-llama/llama-4-maverick-17b-128e-instruct,
 qwen/qwen3-32b,
-meta-llama/llama-4-scout-17b-16e-instruct
+meta-llama/llama-4-scout-17b-16e-instruct,
+llama-3.1-8b-instant
 ```
 
 ---

@@ -32,13 +32,23 @@ const globalState = globalThis as typeof globalThis & {
 function getPool() {
   if (!process.env.DATABASE_URL) return null;
   if (!globalState.balPool) {
-    const isLocal = /localhost|127\.0\.0\.1/i.test(process.env.DATABASE_URL);
+    const connectionString = normalizeDatabaseUrl(process.env.DATABASE_URL);
+    const isLocal = /localhost|127\.0\.0\.1/i.test(connectionString);
     globalState.balPool = new Pool({
-      connectionString: process.env.DATABASE_URL,
+      connectionString,
       ssl: isLocal || process.env.PGSSL === "false" ? false : { rejectUnauthorized: false },
     });
   }
   return globalState.balPool;
+}
+
+function normalizeDatabaseUrl(value: string) {
+  const url = new URL(value);
+  url.searchParams.delete("sslmode");
+  url.searchParams.delete("sslcert");
+  url.searchParams.delete("sslkey");
+  url.searchParams.delete("sslrootcert");
+  return url.toString();
 }
 
 function memoryUsers() {
@@ -93,7 +103,12 @@ export async function ensureSchema() {
       );
 
       CREATE INDEX IF NOT EXISTS ix_chat_logs_user_question ON chat_logs (user_id, question_index);
-    `).then(() => undefined);
+    `)
+      .then(() => undefined)
+      .catch((error) => {
+        globalState.balSchemaReady = undefined;
+        throw error;
+      });
   }
   await globalState.balSchemaReady;
 }
