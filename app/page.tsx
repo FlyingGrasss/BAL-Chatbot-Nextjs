@@ -9,6 +9,7 @@ import {
   useRef,
   useState,
 } from "react";
+import { estimateTokens } from "../src/lib/tokenCounter";
 
 type Role = "user" | "assistant";
 
@@ -50,6 +51,20 @@ type FingerprintModule = {
 const API_BASE = "/api";
 const SESSION_ID = `session_${Math.random().toString(36).slice(2)}_${Date.now()}`;
 const MAX_CHARS = 500;
+
+const MAX_MESSAGE_TOKENS = 500;
+const ESTIMATED_CONTEXT_TOKENS = 2000; // Rough estimate of what RAG adds
+
+function estimateRequestTokens(message: string) {
+  const messageTokens = estimateTokens(message);
+  // Rough estimate: message + context + system prompt overhead
+  const estimatedTotal = messageTokens + ESTIMATED_CONTEXT_TOKENS + 500;
+  
+  return {
+    messageTokens,
+    estimatedTotal,
+  };
+}
 
 const SUGGESTIONS = [
   "LGS taban puanı nedir?",
@@ -100,6 +115,7 @@ export default function Home() {
   const [quota, setQuota] = useState<QuotaInfo>(INITIAL_QUOTA);
   const [notices, setNotices] = useState<Notice[]>([]);
   const [fingerprint, setFingerprint] = useState("");
+  const [tokenEstimate, setTokenEstimate] = useState({ messageTokens: 0, estimatedTotal: 0 });
 
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
   const messagesRef = useRef<HTMLDivElement | null>(null);
@@ -203,6 +219,7 @@ export default function Home() {
     const assistantId = createId();
     setIsStreaming(true);
     setInput("");
+    setTokenEstimate({ messageTokens: 0, estimatedTotal: 0 });
     setMessages((current) => [
       ...current,
       { id: createId(), role: "user", text: message },
@@ -372,6 +389,7 @@ export default function Home() {
     }
     setMessages([]);
     setInput("");
+    setTokenEstimate({ messageTokens: 0, estimatedTotal: 0 });
   }
 
   function submitForm(event: FormEvent<HTMLFormElement>) {
@@ -468,7 +486,11 @@ export default function Home() {
                       ? "BAL hakkında bir soru sor..."
                       : "Kimlik hazırlanıyor..."
                   }
-                  onChange={(event) => setInput(event.target.value)}
+                  onChange={(event) => {
+                    const value = event.target.value;
+                    setInput(value);
+                    setTokenEstimate(estimateRequestTokens(value));
+                  }}
                   onKeyDown={handleInputKeyDown}
                   disabled={isStreaming || !fingerprint}
                 />
@@ -484,7 +506,17 @@ export default function Home() {
                   <button
                     className="send-button"
                     type="submit"
-                    disabled={!input.trim() || isStreaming || !fingerprint}
+                    disabled={
+                      !input.trim() ||
+                      isStreaming ||
+                      !fingerprint ||
+                      tokenEstimate.messageTokens > MAX_MESSAGE_TOKENS
+                    }
+                    title={
+                      tokenEstimate.messageTokens > MAX_MESSAGE_TOKENS
+                        ? "Mesaj çok uzun. Lütfen kısaltın."
+                        : ""
+                    }
                   >
                     Gönder
                   </button>
@@ -498,7 +530,13 @@ export default function Home() {
                   duyuruları ve idare esas alınır.
                 </span>
                 <span>
-                  {input.length} / {MAX_CHARS}
+                  {input.length} / {MAX_CHARS} • {tokenEstimate.messageTokens} tokens
+                  {tokenEstimate.messageTokens > MAX_MESSAGE_TOKENS && (
+                    <span style={{ color: "var(--color-error)" }}>
+                      {" "}
+                      ⚠️ Çok uzun
+                    </span>
+                  )}
                 </span>
               </div>
             </div>
