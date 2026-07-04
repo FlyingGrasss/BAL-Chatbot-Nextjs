@@ -10,6 +10,7 @@
     "export:vectors": "python scripts/export_faiss_vectors.py"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "next": "^16.0.0",
     "pg": "^8.13.1",
     "react": "^19.0.0",
