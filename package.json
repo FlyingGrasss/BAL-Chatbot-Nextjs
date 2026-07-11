@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export:vectors": "python scripts/export_faiss_vectors.py"
+    "index:data": "node --env-file=.env.local scripts/build-vectorstore.mjs",
+    "index:data:dry": "node scripts/build-vectorstore.mjs --dry-run",
+    "export:legacy-vectors": "python scripts/export_faiss_vectors.py"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

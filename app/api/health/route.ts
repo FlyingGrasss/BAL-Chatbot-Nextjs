@@ -1,6 +1,6 @@
 import vectorstore from "../../../src/data/vectorstore.json";
 import { CONFIG } from "../../../src/lib/config";
-import { providerStatus } from "../../../src/lib/groq";
+import { providerStatus } from "../../../src/lib/llm";
 import { databaseReady } from "../../../src/lib/storage";
 
 export const runtime = "nodejs";

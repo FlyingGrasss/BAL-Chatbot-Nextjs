@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  ClipboardEvent,
   FormEvent,
   KeyboardEvent,
   useCallback,
@@ -51,30 +52,77 @@ type FingerprintModule = {
 
 const API_BASE = "/api";
 const SESSION_ID = `session_${Math.random().toString(36).slice(2)}_${Date.now()}`;
-const MAX_CHARS = 500;
+const TERMS_ACCEPTED_KEY = "bal_asistan_terms_accepted_v1";
+const MAX_HISTORY_MESSAGES = 120;
 
 const MAX_MESSAGE_TOKENS = 500;
-const ESTIMATED_CONTEXT_TOKENS = 2000; // Rough estimate of what RAG adds
 
 function estimateRequestTokens(message: string) {
-  const messageTokens = estimateTokens(message);
-  // Rough estimate: message + context + system prompt overhead
-  const estimatedTotal = messageTokens + ESTIMATED_CONTEXT_TOKENS + 500;
-  
-  return {
-    messageTokens,
-    estimatedTotal,
-  };
+  return { messageTokens: estimateTokens(message) };
 }
 
-const SUGGESTIONS = [
-  "LGS taban puanı nedir?",
-  "Ayran Günü nedir?",
-  "Okula nasıl kayıt yapılır?",
-  "BALEV bursu hakkında bilgi ver",
-  "Okula nasıl giderim?",
-  "YKS başarıları nasıl?",
-];
+const SUGGESTION_GROUPS = [
+  {
+    id: "genel",
+    label: "Genel",
+    questions: [
+      "BAL hakkında genel bilgi ver",
+      "Bornova Anadolu Lisesi müdürü kim?",
+      "BAL'ın tarihçesi nedir?",
+      "BAL ruhu nedir?",
+      "Kampüste hangi imkânlar var?",
+      "Hazırlık sınıfı nasıl?",
+    ],
+  },
+  {
+    id: "kayit",
+    label: "Kayıt ve tercih",
+    questions: [
+      "2025 LGS taban puanları nedir?",
+      "Okula nasıl kayıt yapılır?",
+      "BAL'a nakil şartları nelerdir?",
+      "Dil bölümleri ve kontenjanları nasıl?",
+      "Pansiyona nasıl başvurulur?",
+      "Okulu ziyaret etmek için nasıl randevu alınır?",
+    ],
+  },
+  {
+    id: "akademik",
+    label: "Akademik",
+    questions: [
+      "YKS başarıları nasıl?",
+      "Yabancı dil eğitimi nasıl?",
+      "DSD programı nedir?",
+      "DELF-DALF sınav merkezi ne demek?",
+      "AP dersleri nelerdir?",
+      "Bilim ve matematik olimpiyatları nasıl?",
+    ],
+  },
+  {
+    id: "yasam",
+    label: "Kültür ve yaşam",
+    questions: [
+      "Ayran Günü nedir?",
+      "Hangi kulüp ve topluluklar var?",
+      "BALÖDER nedir?",
+      "BALEV bursu hakkında bilgi ver",
+      "BALPOD nedir?",
+      "Tiyatro, müzik ve spor faaliyetleri nasıl?",
+    ],
+  },
+  {
+    id: "ulasim",
+    label: "Ulaşım ve saatler",
+    questions: [
+      "Okula nasıl giderim?",
+      "Hangi otobüsler okula gidiyor?",
+      "Servis güzergâhları nelerdir?",
+      "Ders giriş ve çıkış saatleri nedir?",
+      "Okulun adresi ve telefonu nedir?",
+      "Kampüs haritasına nereden ulaşabilirim?",
+    ],
+  },
+] as const;
 
 const TERMS_PARAGRAPHS = [
   "BAL Asistan, Bornova Anadolu Lisesi hakkında genel bilgi sunmak amacıyla hazırlanmış bağımsız bir öğrenci projesidir; okul idaresi veya Milli Eğitim Bakanlığı adına resmi işlem yapmaz.",
@@ -90,18 +138,20 @@ const TERMS_PARAGRAPHS = [
 const ABOUT_PARAGRAPHS = [
   "BAL Asistan, Bornova Anadolu Lisesi ile ilgili bilgilere daha hızlı ve düzenli ulaşılabilmesi için geliştirilen yapay zeka destekli bir sohbet asistanıdır. Proje; okulun akademik yapısı, kampüsü, gelenekleri, ulaşım bilgileri, sosyal etkinlikleri ve sık sorulan konular hakkında kısa, anlaşılır ve kaynak odaklı yanıtlar vermeyi amaçlar.",
   "Asistan, hazırlanmış bilgi setinden ilgili parçaları bulur ve kullanıcının sorusuna göre yanıt üretir. Bu nedenle resmi bir okul sistemi değildir; bilgilendirme ve teknoloji geliştirme amacıyla hazırlanmış bir öğrenci çalışmasıdır.",
+  "Proje kendi yapay zeka modelini eğitmez. Yanıt üretiminde öncelikli olarak Gemini modelleri kullanılır; BAL hakkında hazırlanan özel veri seti ve kaynak sistemi yanıtların okula özgü bilgilerle desteklenmesini sağlar.",
+  "Web sitesi Next.js ile geliştirilmiştir. Veri seti düzenlenebilir ve kaynak metninden yeniden indekslenebilir.",
   "Proje şu anda test aşamasındadır. Yanıt kalitesi, kaynak kapsamı ve kullanıcı deneyimi zamanla geliştirilebilir.",
 ];
 
 const INITIAL_QUOTA: QuotaInfo = {
   daily_used: 0,
   minute_used: 0,
-  daily_limit: 40,
+  daily_limit: 30,
   minute_limit: 5,
 };
 
 export default function Home() {
-  const [gateOpen, setGateOpen] = useState(true);
+  const [gateOpen, setGateOpen] = useState<boolean | null>(null);
   const [activeGateTab, setActiveGateTab] = useState<"terms" | "about">(
     "terms",
   );
@@ -116,12 +166,24 @@ export default function Home() {
   const [quota, setQuota] = useState<QuotaInfo>(INITIAL_QUOTA);
   const [notices, setNotices] = useState<Notice[]>([]);
   const [fingerprint, setFingerprint] = useState("");
-  const [tokenEstimate, setTokenEstimate] = useState({ messageTokens: 0, estimatedTotal: 0 });
+  const [welcomeVisible, setWelcomeVisible] = useState(true);
+  const [tokenEstimate, setTokenEstimate] = useState({ messageTokens: 0 });
 
   const inputRef = useRef<HTMLTextAreaElement | null>(null);
   const messagesRef = useRef<HTMLDivElement | null>(null);
+  const stickToBottom = useRef(true);
   const noticeIds = useRef(new Set<string>());
   const fallbackModels = useRef(new Set<string>());
+
+  useEffect(() => {
+    try {
+      const accepted = window.localStorage.getItem(TERMS_ACCEPTED_KEY) === "true";
+      setGateChecked(accepted);
+      setGateOpen(!accepted);
+    } catch {
+      setGateOpen(true);
+    }
+  }, []);
 
   const remainingDaily = Math.max(quota.daily_limit - quota.daily_used, 0);
   const remainingMinute = Math.max(quota.minute_limit - quota.minute_used, 0);
@@ -158,7 +220,7 @@ export default function Home() {
       setQuota({
         daily_used: numberOr(data.daily_used, 0),
         minute_used: numberOr(data.minute_used, 0),
-        daily_limit: numberOr(data.daily_limit, 40),
+        daily_limit: numberOr(data.daily_limit, 30),
         minute_limit: numberOr(data.minute_limit, 5),
       });
     } catch {
@@ -180,19 +242,35 @@ export default function Home() {
     loadAuthStatus();
   }, [loadAuthStatus]);
 
+  function handleMessagesScroll() {
+    const element = messagesRef.current;
+    if (!element) return;
+    stickToBottom.current =
+      element.scrollHeight - element.scrollTop - element.clientHeight < 120;
+  }
+
   useEffect(() => {
-    messagesRef.current?.scrollTo({
-      top: messagesRef.current.scrollHeight,
+    const element = messagesRef.current;
+    if (!element || !stickToBottom.current) return;
+    element.scrollTo({
+      top: element.scrollHeight,
       behavior: "smooth",
     });
   }, [messages]);
 
   useEffect(() => {
-    if (remainingDaily <= 10 || remainingMinute <= 1) {
+    if (remainingDaily <= 10) {
       addNotice({
-        id: "quota-low",
+        id: "quota-low-daily",
         tone: "warning",
         text: `Hakkın az kaldı. Bugün ${remainingDaily} soru hakkın var.`,
+      });
+    }
+    if (remainingMinute <= 1) {
+      addNotice({
+        id: "quota-low-minute",
+        tone: "warning",
+        text: "Dakikalık soru limitine yaklaştın. Birazdan tekrar deneyebilirsin.",
       });
     }
   }, [addNotice, remainingDaily, remainingMinute]);
@@ -214,13 +292,21 @@ export default function Home() {
   );
 
   async function sendMessage(value = input) {
-    const message = value.trim().slice(0, MAX_CHARS);
-    if (!message || isStreaming || !fingerprint) return;
+    const message = value.trim();
+    if (
+      !message ||
+      isStreaming ||
+      !fingerprint ||
+      estimateTokens(message) > MAX_MESSAGE_TOKENS
+    ) {
+      return;
+    }
 
     const assistantId = createId();
+    stickToBottom.current = true;
     setIsStreaming(true);
     setInput("");
-    setTokenEstimate({ messageTokens: 0, estimatedTotal: 0 });
+    setTokenEstimate({ messageTokens: 0 });
     setMessages((current) => [
       ...current,
       { id: createId(), role: "user", text: message },
@@ -232,7 +318,19 @@ export default function Home() {
         method: "POST",
         credentials: "same-origin",
         headers: headersForApi(),
-        body: JSON.stringify({ message, session_id: SESSION_ID }),
+        body: JSON.stringify({
+          message,
+          session_id: SESSION_ID,
+          history: messages
+            .filter(
+              (item) =>
+                item.text.trim() &&
+                !item.streaming &&
+                item.tone !== "error",
+            )
+            .slice(-MAX_HISTORY_MESSAGES)
+            .map((item) => ({ role: item.role, content: item.text })),
+        }),
       });
 
       if (!response.ok) {
@@ -263,7 +361,64 @@ export default function Home() {
       const reader = response.body.getReader();
       const decoder = new TextDecoder();
       let rawText = "";
+      let displayedText = "";
       let buffer = "";
+      let renderTimer: number | null = null;
+      let pendingDone: {
+        sources: Source[];
+        questionIndex?: number;
+      } | null = null;
+      const renderCharsPerTick = 3;
+      const renderIntervalMs = 32;
+
+      const renderStep = () => {
+        if (displayedText.length >= rawText.length) return;
+        displayedText = rawText.slice(
+          0,
+          Math.min(
+            displayedText.length + renderCharsPerTick,
+            rawText.length,
+          ),
+        );
+        setMessages((current) =>
+          current.map((item) =>
+            item.id === assistantId
+              ? {
+                  ...item,
+                  text: stripReasoningText(displayedText, false),
+                  streaming: true,
+                }
+              : item,
+          ),
+        );
+      };
+
+      const requestRender = () => {
+        if (renderTimer !== null) return;
+        renderTimer = window.setTimeout(() => {
+          renderTimer = null;
+          renderStep();
+          if (displayedText.length < rawText.length) requestRender();
+        }, renderIntervalMs);
+      };
+
+      const drainRenderedText = () =>
+        new Promise<void>((resolve) => {
+          if (renderTimer !== null) {
+            window.clearTimeout(renderTimer);
+            renderTimer = null;
+          }
+
+          const drain = () => {
+            renderStep();
+            if (displayedText.length >= rawText.length) {
+              resolve();
+            } else {
+              window.setTimeout(drain, renderIntervalMs);
+            }
+          };
+          drain();
+        });
 
       const processLine = (line: string) => {
         if (!line.startsWith("data: ")) return;
@@ -271,17 +426,7 @@ export default function Home() {
 
         if (data.token) {
           rawText += data.token;
-          setMessages((current) =>
-            current.map((item) =>
-              item.id === assistantId
-                ? {
-                    ...item,
-                    text: stripReasoningText(rawText),
-                    streaming: true,
-                  }
-                : item,
-            ),
-          );
+          requestRender();
         }
 
         if (data.error) {
@@ -322,22 +467,22 @@ export default function Home() {
           }
         }
 
+        if (data.search_grounding) {
+          addNotice({
+            id: "search-grounding",
+            tone: "info",
+            text: "Bu yanıt güncel Google Search sonuçlarıyla desteklendi.",
+          });
+        }
+
         if (data.done) {
-          setMessages((current) =>
-            current.map((item) =>
-              item.id === assistantId
-                ? {
-                    ...item,
-                    streaming: false,
-                    sources: Array.isArray(data.sources) ? data.sources : [],
-                    questionIndex:
-                      typeof data.question_index === "number"
-                        ? data.question_index
-                        : undefined,
-                  }
-                : item,
-            ),
-          );
+          pendingDone = {
+            sources: Array.isArray(data.sources) ? data.sources : [],
+            questionIndex:
+              typeof data.question_index === "number"
+                ? data.question_index
+                : undefined,
+          };
         }
       };
 
@@ -357,6 +502,22 @@ export default function Home() {
       }
 
       if (buffer.trim()) processLine(buffer.trim());
+      await drainRenderedText();
+      if (pendingDone) {
+        setMessages((current) =>
+          current.map((item) =>
+            item.id === assistantId
+              ? {
+                  ...item,
+                  text: stripReasoningText(rawText),
+                  streaming: false,
+                  sources: pendingDone?.sources || [],
+                  questionIndex: pendingDone?.questionIndex,
+                }
+              : item,
+          ),
+        );
+      }
       await loadAuthStatus();
     } catch {
       setMessages((current) =>
@@ -390,7 +551,7 @@ export default function Home() {
     }
     setMessages([]);
     setInput("");
-    setTokenEstimate({ messageTokens: 0, estimatedTotal: 0 });
+    setTokenEstimate({ messageTokens: 0 });
   }
 
   function submitForm(event: FormEvent<HTMLFormElement>) {
@@ -403,6 +564,31 @@ export default function Home() {
       event.preventDefault();
       sendMessage();
     }
+  }
+
+  function handleInputPaste(event: ClipboardEvent<HTMLTextAreaElement>) {
+    const pasted = event.clipboardData.getData("text");
+    if (!pasted) return;
+
+    event.preventDefault();
+    const textarea = event.currentTarget;
+    const start = textarea.selectionStart;
+    const end = textarea.selectionEnd;
+    const nextValue = `${input.slice(0, start)}${pasted}${input.slice(end)}`;
+    setInput(nextValue);
+    setTokenEstimate(estimateRequestTokens(nextValue));
+    window.requestAnimationFrame(() => {
+      const nextCursor = start + pasted.length;
+      textarea.setSelectionRange(nextCursor, nextCursor);
+    });
+  }
+
+  if (gateOpen === null) {
+    return (
+      <main className="app-shell">
+        <div className="app-loading">BAL Asistan yükleniyor...</div>
+      </main>
+    );
   }
 
   return (
@@ -419,6 +605,7 @@ export default function Home() {
           }}
           onContinue={() => {
             if (!gateChecked) return;
+            window.localStorage.setItem(TERMS_ACCEPTED_KEY, "true");
             setGateOpen(false);
             window.setTimeout(() => inputRef.current?.focus(), 0);
           }}
@@ -433,15 +620,26 @@ export default function Home() {
                 <span>Bornova Anadolu Lisesi bilgi asistanı</span>
               </div>
             </div>
+            <nav className="topbar-actions" aria-label="Sayfa bağlantıları">
+              <Link className="about-link" href="/hakkinda">
+                Hakkında
+              </Link>
+              <Link className="suggestion-link" href="/oneriler">
+                <span aria-hidden="true">+</span>
+                Bilgi / Öneri Ekle
+              </Link>
+            </nav>
           </header>
 
           <section className="chat-layout">
-            <div className="messages" ref={messagesRef}>
+            <div className="messages" ref={messagesRef} onScroll={handleMessagesScroll}>
               {!messages.length ? (
                 <Welcome
                   title={welcome.title}
                   description={welcome.description}
                   onSuggestion={sendMessage}
+                  introVisible={welcomeVisible}
+                  onDismiss={() => setWelcomeVisible(false)}
                 />
               ) : null}
 
@@ -480,7 +678,6 @@ export default function Home() {
                 <textarea
                   ref={inputRef}
                   value={input}
-                  maxLength={MAX_CHARS}
                   rows={1}
                   placeholder={
                     fingerprint
@@ -493,9 +690,18 @@ export default function Home() {
                     setTokenEstimate(estimateRequestTokens(value));
                   }}
                   onKeyDown={handleInputKeyDown}
+                  onPaste={handleInputPaste}
                   disabled={isStreaming || !fingerprint}
                 />
                 <div className="composer-actions">
+                  {tokenEstimate.messageTokens > 100 ? (
+                    <span className="token-meter">
+                      {tokenEstimate.messageTokens} / {MAX_MESSAGE_TOKENS} token
+                      {tokenEstimate.messageTokens > MAX_MESSAGE_TOKENS
+                        ? " · Çok uzun"
+                        : ""}
+                    </span>
+                  ) : null}
                   <button
                     className="icon-button"
                     type="button"
@@ -513,35 +719,21 @@ export default function Home() {
                       !fingerprint ||
                       tokenEstimate.messageTokens > MAX_MESSAGE_TOKENS
                     }
+                    aria-label="Mesaj gönder"
                     title={
                       tokenEstimate.messageTokens > MAX_MESSAGE_TOKENS
                         ? "Mesaj çok uzun. Lütfen kısaltın."
                         : ""
                     }
                   >
-                    Gönder
+                    <span aria-hidden="true">↑</span>
                   </button>
                 </div>
               </form>
 
-              <div className="composer-meta">
-                <span>
-                  Enter'e basarak gönder · <Link href="/oneriler" style={{ color: "var(--brand)", textDecoration: "none", fontWeight: "600" }}>Bilgi/Öneri Ekle</Link>
-                </span>
-                <span className="project-note">
-                  BAL Asistan öğrenci projesidir; resmi işlemler için okul
-                  duyuruları ve idare esas alınır.
-                </span>
-                <span>
-                  {input.length} / {MAX_CHARS} • {tokenEstimate.messageTokens} tokens
-                  {tokenEstimate.messageTokens > MAX_MESSAGE_TOKENS && (
-                    <span style={{ color: "var(--color-error)" }}>
-                      {" "}
-                      ⚠️ Çok uzun
-                    </span>
-                  )}
-                </span>
-              </div>
+              <footer className="site-footer">
+                Bu website Emre Bozkurt'28 tarafından yapılmıştır.
+              </footer>
             </div>
           </section>
         </>
@@ -627,7 +819,9 @@ function EntryGate({
             <div>
               <h2>Proje Hakkında</h2>
               <div className="gate-author">
-                Hazırlayan: Burak Güldilek 9/K | Next.js: Emre Bozkurt 10/C
+                Bu Websiteyi Hazırlayan: Emre Bozkurt'28 - 10/C
+                <br />
+                Veri Hazırlamada Yardımcı: Burak Güldilek'29 - 9/K
               </div>
               {ABOUT_PARAGRAPHS.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
@@ -671,18 +865,56 @@ function Welcome({
   title,
   description,
   onSuggestion,
+  introVisible,
+  onDismiss,
 }: {
   title: string;
   description: string;
   onSuggestion: (value: string) => void;
+  introVisible: boolean;
+  onDismiss: () => void;
 }) {
+  const [activeGroupId, setActiveGroupId] = useState<string>(
+    SUGGESTION_GROUPS[0].id,
+  );
+  const activeGroup =
+    SUGGESTION_GROUPS.find((group) => group.id === activeGroupId) ||
+    SUGGESTION_GROUPS[0];
+
   return (
     <section className="welcome">
-      <img src="/BAL_Logo.png" alt="BAL" />
-      <h2>{title}</h2>
-      <p>{description}</p>
+      {introVisible ? (
+        <div className="welcome-intro">
+          <button
+            className="welcome-close"
+            type="button"
+            onClick={onDismiss}
+            aria-label="BAL hakkında bilgi panelini kapat"
+            title="Kapat"
+          >
+            ×
+          </button>
+          <img src="/BAL_Logo.png" alt="BAL" />
+          <h2>{title}</h2>
+          <p>{description}</p>
+        </div>
+      ) : null}
+      <div className="suggestion-tabs" role="tablist" aria-label="Hazır soru kategorileri">
+        {SUGGESTION_GROUPS.map((group) => (
+          <button
+            aria-selected={group.id === activeGroup.id}
+            className={group.id === activeGroup.id ? "active" : ""}
+            key={group.id}
+            onClick={() => setActiveGroupId(group.id)}
+            role="tab"
+            type="button"
+          >
+            {group.label}
+          </button>
+        ))}
+      </div>
       <div className="suggestions">
-        {SUGGESTIONS.map((suggestion) => (
+        {activeGroup.questions.map((suggestion) => (
           <button
             key={suggestion}
             type="button"
@@ -707,19 +939,30 @@ function MessageBubble({
 }) {
   return (
     <article className={`message-row ${message.role}`}>
-      <div className={`bubble ${message.tone || "normal"}`}>
-        {message.streaming && !message.text ? (
-          <span className="typing" aria-label="Yanıt hazırlanıyor">
-            <i />
-            <i />
-            <i />
-          </span>
-        ) : (
-          <div
-            dangerouslySetInnerHTML={{ __html: formatMessage(message.text) }}
-          />
-        )}
-      </div>
+      {message.role === "assistant" ? (
+        <img
+          className="message-avatar"
+          src="/BAL_Logo.png"
+          alt="BAL Asistan"
+        />
+      ) : null}
+      <div className="message-content">
+        {message.role === "assistant" ? (
+          <span className="message-identity">BAL Asistan</span>
+        ) : null}
+        <div className={`bubble ${message.tone || "normal"}`}>
+          {message.streaming && !message.text ? (
+            <span className="typing" aria-label="Yanıt hazırlanıyor">
+              <i />
+              <i />
+              <i />
+            </span>
+          ) : (
+            <div
+              dangerouslySetInnerHTML={{ __html: formatMessage(message.text) }}
+            />
+          )}
+        </div>
 
       {/*{message.sources?.length ? (
         <div className="sources" aria-label="Kaynaklar">
@@ -731,12 +974,13 @@ function MessageBubble({
         </div>
       ) : null} */}
 
-      {message.questionIndex && fingerprintReady ? (
-        <FeedbackBar
-          questionIndex={message.questionIndex}
-          headersForApi={headersForApi}
-        />
-      ) : null}
+        {message.questionIndex && fingerprintReady ? (
+          <FeedbackBar
+            questionIndex={message.questionIndex}
+            headersForApi={headersForApi}
+          />
+        ) : null}
+      </div>
     </article>
   );
 }
@@ -877,13 +1121,13 @@ function numberOr(value: unknown, fallback: number) {
   return typeof value === "number" && Number.isFinite(value) ? value : fallback;
 }
 
-function stripReasoningText(text: string) {
-  return text
+function stripReasoningText(text: string, trim = true) {
+  const cleaned = text
     .replace(/<think\b[^>]*>[\s\S]*?<\/think>/gi, "")
     .replace(/<thinking\b[^>]*>[\s\S]*?<\/thinking>/gi, "")
     .replace(/<think\b[^>]*>[\s\S]*$/gi, "")
     .replace(/<thinking\b[^>]*>[\s\S]*$/gi, "")
-    .trim();
+  return trim ? cleaned.trim() : cleaned;
 }
 
 function formatMessage(text: string) {

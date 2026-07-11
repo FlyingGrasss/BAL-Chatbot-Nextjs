@@ -9,9 +9,9 @@
     --text: #141b2d;
     --muted: #607086;
     --soft: #8d9aab;
-    --brand: #1f6fd6;
-    --brand-strong: #1557ad;
-    --brand-soft: #e8f1ff;
+    --brand: #a21a2a;
+    --brand-strong: #861523;
+    --brand-soft: #fbeaec;
     --green: #0f766e;
     --amber: #b45309;
     --amber-soft: #fff7ed;
@@ -81,12 +81,61 @@ button {
     padding: 12px clamp(18px, 4vw, 34px);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 18px;
     border-bottom: 1px solid rgba(220, 227, 236, 0.82);
     background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(18px);
     box-shadow: var(--shadow-sm);
+}
+
+.suggestion-link {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 0 13px;
+    border: 1px solid rgba(162, 26, 42, 0.24);
+    border-radius: 10px;
+    background: var(--brand-soft);
+    color: var(--brand-strong);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 780;
+    white-space: nowrap;
+    transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.suggestion-link:hover {
+    border-color: rgba(162, 26, 42, 0.46);
+    background: #f6dce0;
+}
+
+.suggestion-link span {
+    font-size: 1.12rem;
+    line-height: 1;
+}
+
+.topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.about-link {
+    min-height: 40px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 10px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 760;
+    text-decoration: none;
+}
+
+.about-link:hover {
+    color: var(--brand);
 }
 
 .brand-lockup {
@@ -99,11 +148,10 @@ button {
 .brand-lockup img {
     width: 46px;
     height: 46px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: #fff;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
     object-fit: contain;
-    box-shadow: 0 8px 22px rgba(31, 111, 214, 0.13);
 }
 
 .brand-lockup p {
@@ -158,20 +206,52 @@ button {
     width: min(720px, 100%);
     flex: 0 0 auto;
     margin: 0 auto;
-    padding: clamp(38px, 9vh, 76px) 0 28px;
+    padding: 20px 0 28px;
     text-align: center;
     animation: fade-up 0.24s ease both;
+}
+
+.welcome-intro {
+    position: relative;
+    padding: clamp(18px, 7vh, 58px) 0 28px;
+}
+
+.welcome-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 1.45rem;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0 0 2px;
+    box-shadow: none;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.welcome-close:hover {
+    color: var(--brand-strong);
+    transform: scale(1.08);
 }
 
 .welcome img {
     width: 92px;
     height: 92px;
     margin-bottom: 22px;
-    border: 1px solid var(--border);
-    border-radius: 18px;
-    background: #fff;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
     object-fit: contain;
-    box-shadow: var(--shadow-md);
 }
 
 .welcome h2 {
@@ -199,6 +279,43 @@ button {
     margin: 0 auto;
 }
 
+.suggestion-tabs {
+    max-width: 680px;
+    margin: 0 auto 12px;
+    padding: 4px;
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface-muted);
+    scrollbar-width: none;
+}
+
+.suggestion-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.suggestion-tabs button {
+    min-height: 34px;
+    flex: 1 0 auto;
+    padding: 0 11px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 0.76rem;
+    font-weight: 760;
+    white-space: nowrap;
+}
+
+.suggestion-tabs button.active {
+    background: #fff;
+    color: var(--brand-strong);
+    box-shadow: var(--shadow-sm);
+}
+
 .suggestions button {
     min-height: 52px;
     padding: 13px 15px;
@@ -220,7 +337,7 @@ button {
 }
 
 .suggestions button:hover {
-    border-color: rgba(31, 111, 214, 0.28);
+    border-color: rgba(162, 26, 42, 0.28);
     background: var(--brand-soft);
     box-shadow: var(--shadow-md);
     transform: translateY(-1px);
@@ -228,21 +345,51 @@ button {
 
 .message-row {
     display: flex;
-    flex-direction: column;
     gap: 9px;
     animation: fade-up 0.18s ease both;
 }
 
 .message-row.user {
+    flex-direction: column;
     align-items: flex-end;
 }
 
 .message-row.assistant {
+    flex-direction: row;
     align-items: flex-start;
 }
 
+.message-content {
+    min-width: 0;
+    max-width: min(720px, calc(100% - 44px));
+    display: grid;
+    gap: 7px;
+}
+
+.message-row.user .message-content {
+    max-width: min(660px, 88%);
+}
+
+.message-avatar {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    margin-top: 2px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    object-fit: contain;
+}
+
+.message-identity {
+    color: var(--brand-strong);
+    font-size: 0.74rem;
+    font-weight: 820;
+    letter-spacing: 0.01em;
+}
+
 .bubble {
-    max-width: min(720px, 92%);
+    max-width: 100%;
     color: var(--text);
     font-size: 0.98rem;
     font-weight: 450;
@@ -251,16 +398,19 @@ button {
 }
 
 .message-row.user .bubble {
-    max-width: min(660px, 88%);
     padding: 11px 16px;
     border-radius: 20px 20px 7px 20px;
     background: var(--brand);
     color: #fff;
-    box-shadow: 0 12px 28px rgba(31, 111, 214, 0.2);
+    box-shadow: 0 12px 28px rgba(162, 26, 42, 0.2);
 }
 
 .message-row.assistant .bubble {
-    padding: 2px 3px;
+    padding: 13px 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px 18px 18px 18px;
+    background: rgba(255, 255, 255, 0.88);
+    box-shadow: var(--shadow-sm);
 }
 
 .bubble.warning {
@@ -359,7 +509,7 @@ button {
 }
 
 .feedback {
-    max-width: min(720px, 92%);
+    max-width: 100%;
     display: grid;
     gap: 8px;
 }
@@ -394,7 +544,7 @@ button {
 .feedback-buttons button:hover,
 .feedback-buttons button.active,
 .icon-button:hover {
-    border-color: rgba(31, 111, 214, 0.25);
+    border-color: rgba(162, 26, 42, 0.25);
     background: var(--brand-soft);
     color: var(--brand);
     transform: translateY(-1px);
@@ -423,7 +573,7 @@ button {
 }
 
 .feedback-box textarea:focus {
-    border-color: rgba(31, 111, 214, 0.48);
+    border-color: rgba(162, 26, 42, 0.48);
 }
 
 .feedback-box div {
@@ -461,7 +611,7 @@ button {
     bottom: 0;
     z-index: 10;
     flex-shrink: 0;
-    padding: 12px 0 max(16px, env(safe-area-inset-bottom));
+    padding: 8px 0 max(10px, env(safe-area-inset-bottom));
     background: linear-gradient(
         180deg,
         rgba(245, 247, 251, 0),
@@ -513,10 +663,10 @@ button {
 .composer {
     display: flex;
     align-items: flex-end;
-    gap: 10px;
-    padding: 10px;
+    gap: 8px;
+    padding: 8px 9px 8px 14px;
     border: 1px solid var(--border);
-    border-radius: 18px;
+    border-radius: 28px;
     background: rgba(255, 255, 255, 0.95);
     box-shadow: var(--shadow-lg);
     backdrop-filter: blur(18px);
@@ -526,8 +676,8 @@ button {
 }
 
 .composer:focus-within {
-    border-color: rgba(31, 111, 214, 0.42);
-    box-shadow: 0 24px 74px rgba(31, 111, 214, 0.15);
+    border-color: rgba(162, 26, 42, 0.42);
+    box-shadow: 0 24px 74px rgba(162, 26, 42, 0.15);
 }
 
 .composer textarea {
@@ -550,23 +700,38 @@ button {
 }
 
 .composer-actions {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: end;
+    gap: 6px;
+}
+
+.token-meter {
+    grid-column: 1 / -1;
+    justify-self: end;
+    color: var(--brand);
+    font-size: 0.68rem;
+    font-weight: 800;
+    line-height: 1;
 }
 
 .send-button {
-    min-width: 82px;
-    height: 38px;
-    padding: 0 15px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     border: 0;
-    border-radius: 12px;
+    border-radius: 50%;
     background: var(--brand);
     color: #fff;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1.35rem;
     font-weight: 800;
-    box-shadow: 0 10px 22px rgba(31, 111, 214, 0.23);
+    line-height: 1;
+    box-shadow: 0 10px 22px rgba(162, 26, 42, 0.23);
     transition:
         background 0.15s ease,
         box-shadow 0.15s ease,
@@ -575,7 +740,7 @@ button {
 
 .send-button:hover:not(:disabled) {
     background: var(--brand-strong);
-    box-shadow: 0 14px 30px rgba(31, 111, 214, 0.28);
+    box-shadow: 0 14px 30px rgba(162, 26, 42, 0.28);
     transform: translateY(-1px);
 }
 
@@ -583,6 +748,11 @@ button {
     cursor: not-allowed;
     opacity: 0.48;
     box-shadow: none;
+}
+
+.send-button span {
+    display: block;
+    transform: translateY(-1px);
 }
 
 .composer-meta {
@@ -597,6 +767,21 @@ button {
     font-weight: 720;
 }
 
+.site-footer {
+    padding: 6px 4px 0;
+    color: var(--soft);
+    font-size: 0.64rem;
+    font-weight: 650;
+    text-align: center;
+}
+
+.app-loading {
+    margin: auto;
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 720;
+}
+
 .project-note {
     flex: 1;
     min-width: 0;
@@ -604,59 +789,66 @@ button {
 }
 
 .gate {
-    width: min(980px, calc(100% - 32px));
-    height: min(720px, calc(100dvh - 56px));
+    width: min(940px, calc(100% - 32px));
+    height: min(820px, calc(100dvh - 40px));
     min-height: 0;
     margin: auto;
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    overflow: hidden;
-    border: 1px solid rgba(196, 207, 221, 0.8);
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.88);
-    box-shadow: var(--shadow-lg);
+    grid-template-columns: 1fr;
+    grid-template-rows: auto minmax(0, 1fr);
+    overflow: auto;
+    border: 1px solid #e5d8da;
+    border-radius: 26px;
+    background: #fff;
+    box-shadow: 0 28px 90px rgba(70, 24, 31, 0.15);
 }
 
 .gate-hero {
-    padding: clamp(28px, 4vw, 42px);
-    display: flex;
-    flex-direction: column;
-    background:
-        linear-gradient(
-            155deg,
-            rgba(31, 111, 214, 0.96),
-            rgba(15, 118, 110, 0.92)
-        ),
-        var(--brand);
+    padding: clamp(24px, 4vw, 36px) clamp(24px, 5vw, 52px);
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+        "logo eyebrow"
+        "logo title"
+        "logo copy"
+        "logo meta";
+    column-gap: 22px;
+    align-items: center;
+    background: var(--brand);
     color: #fff;
 }
 
 .gate-hero img {
-    width: 70px;
-    height: 70px;
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.96);
+    grid-area: logo;
+    width: 84px;
+    height: 84px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
     object-fit: contain;
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.18);
 }
 
 .eyebrow {
-    margin: 44px 0 12px;
+    grid-area: eyebrow;
+    margin: 0 0 5px;
     color: rgba(255, 255, 255, 0.78);
     font-size: 0.78rem;
     font-weight: 820;
 }
 
 .gate-hero h1 {
+    grid-area: title;
     margin: 0;
-    font-size: clamp(2.6rem, 7vw, 4.6rem);
+    max-width: none;
+    font-size: clamp(2.2rem, 5vw, 3.45rem);
     font-weight: 820;
-    line-height: 0.95;
+    line-height: 0.98;
 }
 
 .gate-copy {
-    max-width: 360px;
-    margin: 18px 0 0;
+    grid-area: copy;
+    max-width: 680px;
+    margin: 8px 0 0;
     color: rgba(255, 255, 255, 0.84);
     font-size: 0.98rem;
     font-weight: 530;
@@ -664,11 +856,13 @@ button {
 }
 
 .gate-meta {
+    grid-area: meta;
     position: relative;
     z-index: 1;
     display: grid;
     gap: 12px;
-    margin-top: 30px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 14px;
     color: rgba(255, 255, 255, 0.78);
     font-size: 0.78rem;
     font-weight: 650;
@@ -676,7 +870,7 @@ button {
 }
 
 .gate-panel {
-    padding: clamp(24px, 4vw, 38px);
+    padding: clamp(20px, 3vw, 30px) clamp(24px, 5vw, 52px) 24px;
     display: flex;
     flex-direction: column;
     gap: 14px;
@@ -690,10 +884,10 @@ button {
     gap: 10px;
     padding: 12px 14px;
     margin-bottom: 0;
-    border: 1px solid #fed7aa;
+    border: 1px solid #ecc8cd;
     border-radius: 14px;
-    background: #fff7ed;
-    color: #9a3412;
+    background: #fff8f8;
+    color: #7e1b29;
     font-size: 0.88rem;
     line-height: 1.55;
     font-weight: 650;
@@ -710,8 +904,8 @@ button {
     justify-content: center;
     margin-top: 2px;
     border-radius: 999px;
-    background: #fed7aa;
-    color: #9a3412;
+    background: #f3d7db;
+    color: #8d1c2b;
     font-size: 0.78rem;
     font-weight: 900;
 }
@@ -722,8 +916,8 @@ button {
     gap: 7px;
     padding: 5px;
     border: 1px solid var(--border);
-    border-radius: 14px;
-    background: var(--surface-muted);
+    border-radius: 12px;
+    background: #f8f3f4;
 }
 
 .gate-tabs button {
@@ -740,7 +934,7 @@ button {
 
 .gate-tabs button.active {
     background: #fff;
-    color: var(--text);
+    color: var(--brand);
     box-shadow: var(--shadow-sm);
 }
 
@@ -758,9 +952,9 @@ button {
 .gate-content {
     flex: 1;
     min-height: 180px;
-    padding: 22px;
+    padding: clamp(20px, 3vw, 30px);
     border: 1px solid var(--border);
-    border-radius: 18px;
+    border-radius: 14px;
     background: #fff;
     box-shadow: var(--shadow-sm);
     overflow-y: auto;
@@ -814,8 +1008,8 @@ button {
     max-width: 100%;
     margin: 0 0 14px;
     padding: 7px 10px;
-    border: 1px solid rgba(31, 111, 214, 0.14);
-    border-radius: 10px;
+    border: 1px solid rgba(162, 26, 42, 0.14);
+    border-radius: 9px;
     background: var(--brand-soft);
     color: var(--text);
     font-size: 0.78rem;
@@ -837,10 +1031,9 @@ button {
     display: flex;
     align-items: flex-start;
     gap: 11px;
-    padding: 13px;
-    border: 1px solid var(--border);
-    border-radius: 14px;
-    background: var(--surface-muted);
+    padding: 13px 0 0;
+    border-top: 1px solid var(--border);
+    background: transparent;
     cursor: pointer;
 }
 
@@ -876,7 +1069,7 @@ button {
     cursor: pointer;
     font-size: 0.96rem;
     font-weight: 830;
-    box-shadow: 0 14px 32px rgba(31, 111, 214, 0.25);
+    box-shadow: 0 14px 32px rgba(162, 26, 42, 0.25);
 }
 
 .gate-continue:disabled {
@@ -934,7 +1127,7 @@ button {
 }
 
 .admin-auth input:focus {
-    border-color: rgba(31, 111, 214, 0.45);
+    border-color: rgba(162, 26, 42, 0.45);
 }
 
 .admin-auth button {
@@ -1026,6 +1219,113 @@ button {
     font-weight: 650;
 }
 
+.info-page-shell {
+    min-height: 100dvh;
+    overflow-y: auto;
+    background: var(--page);
+}
+
+.info-page-header {
+    width: min(900px, calc(100% - 32px));
+    min-height: 72px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.info-brand,
+.info-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.info-brand img {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    object-fit: contain;
+}
+
+.info-back {
+    color: var(--brand);
+    font-size: 0.82rem;
+}
+
+.info-page {
+    width: min(760px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: clamp(52px, 9vw, 96px) 0 42px;
+}
+
+.info-eyebrow {
+    margin: 0 0 10px;
+    color: var(--brand);
+    font-size: 0.78rem;
+    font-weight: 850;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.info-page h1 {
+    margin: 0;
+    color: var(--text);
+    font-size: clamp(2.3rem, 6vw, 4rem);
+    line-height: 1;
+}
+
+.info-lead {
+    max-width: 650px;
+    margin: 22px 0 0;
+    color: var(--muted);
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+.info-section {
+    margin-top: 50px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+}
+
+.info-section h2 {
+    margin: 0 0 12px;
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.info-section p {
+    margin: 0 0 13px;
+    color: var(--muted);
+    font-size: 0.96rem;
+    line-height: 1.75;
+}
+
+.info-note {
+    padding: 22px 24px 8px;
+    border: 1px solid #ecc8cd;
+    border-radius: 14px;
+    background: #fff8f8;
+}
+
+.info-page-footer {
+    width: min(760px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 0 0 28px;
+    color: var(--soft);
+    font-size: 0.72rem;
+    font-weight: 650;
+    text-align: center;
+}
+
 @keyframes fade-up {
     from {
         opacity: 0;
@@ -1057,7 +1357,33 @@ button {
 
     .topbar {
         min-height: 66px;
-        justify-content: flex-start;
+        justify-content: space-between;
+        gap: 8px;
+        padding-inline: 14px;
+    }
+
+    .brand-lockup {
+        gap: 8px;
+    }
+
+    .brand-lockup img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .suggestion-link {
+        min-height: 38px;
+        padding-inline: 9px;
+        font-size: 0.73rem;
+    }
+
+    .topbar-actions {
+        gap: 2px;
+    }
+
+    .about-link {
+        padding-inline: 6px;
+        font-size: 0.72rem;
     }
 
     .brand-lockup span {
@@ -1069,7 +1395,16 @@ button {
     }
 
     .welcome {
+        padding-top: 4px;
+    }
+
+    .welcome-intro {
         padding-top: 22px;
+    }
+
+    .welcome-close {
+        top: 0;
+        right: 0;
     }
 
     .welcome img {
@@ -1078,31 +1413,70 @@ button {
         margin-bottom: 16px;
     }
 
+    .message-content {
+        max-width: calc(100% - 40px);
+    }
+
+    .message-row.user .message-content {
+        max-width: 92%;
+    }
+
+    .message-avatar {
+        width: 29px;
+        height: 29px;
+        flex-basis: 29px;
+        border-radius: 9px;
+    }
+
+    .message-row.assistant .bubble {
+        padding: 11px 13px;
+    }
+
     .composer {
-        align-items: stretch;
-        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .composer textarea {
+        min-width: 0;
+        font-size: 0.84rem;
+        line-height: 1.4;
+    }
+
+    .composer textarea::placeholder {
+        white-space: nowrap;
     }
 
     .composer-actions {
-        justify-content: space-between;
-    }
-
-    .send-button {
-        flex: 1;
+        grid-template-columns: auto auto;
+        flex-shrink: 0;
     }
 
     .gate {
-        width: 100%;
-        height: 100dvh;
+        width: calc(100% - 20px);
+        height: min(820px, calc(100dvh - 20px));
         min-height: 0;
-        border: 0;
-        border-radius: 0;
-        grid-template-columns: 1fr;
+        border-radius: 22px;
         overflow-y: auto;
     }
 
     .gate-hero {
-        min-height: 250px;
+        grid-template-columns: auto minmax(0, 1fr);
+        column-gap: 15px;
+        padding: 22px 20px;
+    }
+
+    .gate-hero img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .gate-hero h1 {
+        font-size: 2rem;
+    }
+
+    .gate-copy {
+        font-size: 0.83rem;
+        line-height: 1.45;
     }
 
     .gate-meta {
@@ -1123,15 +1497,25 @@ button {
         line-height: 1.25;
     }
 
-    .composer-meta {
-        justify-content: flex-end;
+    .site-footer {
+        padding-top: 7px;
         font-size: 0.66rem;
-        margin-top: 6px;
     }
 
-    .composer-meta span:first-child,
-    .project-note {
-        display: none;
+    .info-page-header {
+        min-height: 64px;
+    }
+
+    .info-page {
+        padding-top: 50px;
+    }
+
+    .info-lead {
+        font-size: 1rem;
+    }
+
+    .info-section {
+        margin-top: 38px;
     }
 
     .admin-header,

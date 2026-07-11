@@ -1,0 +1,1862 @@
+# Bornova Anadolu Lisesi (BAL) — Kapsamlı RAG Bilgi Seti
+
+> **Versiyon:** 2.4 | **Son Güncelleme:** 11 Temmuz 2026
+> **Kaynak hiyerarşisi:** MEB resmî okul sayfası (izmirbal.meb.k12.tr) → tarih ve kapsamı açıkça belirtilmiş proje ekibi/öğrenci gözlemleri → BALEV/BALMED → doğrulanmış üçüncü parti kaynaklar → Wikipedia.
+> `[GÜNCEL VERİ GEREKLİ]` etiketiyle işaretlenen alanlar periyodik olarak güncellenmelidir.
+
+---
+
+## 1. Resmi ve Akademik Bilgiler
+
+### 1.1 Okulun Temel Kimliği
+
+Bornova Anadolu Lisesi (kısaca **BAL**), İzmir'in Bornova ilçesinde, Mevlana Mahallesi'nde yer alan, Millî Eğitim Bakanlığı'na bağlı devlet Anadolu Lisesidir. Okulda İngilizce, Almanca ve Fransızca bölümleri bulunmaktadır. Ancak 2026–2027 eğitim-öğretim yılından itibaren Fransızca bölümüne yeni öğrenci alınmayacaktır; mevcut Fransızca öğrencilerinin eğitimi BAL'30 kuşağı mezun olana kadar devam edecektir.
+
+**Tam Resmi Adres:** Mevlana Mahallesi, Ord. Prof. Dr. Muhiddin Erel Caddesi, Bornova Anadolu Lisesi Blok No: 15A, Bornova / İzmir
+
+**Posta Kodu:** 35040
+
+**Bağlı Olduğu İdari Birim:** İzmir İl Bornova İlçe Millî Eğitim Müdürlüğü
+
+**Okul Türü:** Hazırlık Sınıfı Bulunan Anadolu Lisesi (Proje Okulu)
+
+**Öğretim Şekli:** Tam Gün
+
+**İsınma Sistemi:** Doğalgaz
+
+**İnternet Altyapısı:** Fatih Projesi Fiber İnternet
+
+### 1.2 İletişim Bilgileri
+
+Bu bilgiler, okulun resmi MEB sayfasından (izmirbal.meb.k12.tr) alınmıştır.
+
+**Telefon:** 0232 388 10 39
+
+**Belgegeçer (Faks):** 0232 342 90 77
+
+**Resmi Web Sitesi:** https://izmirbal.meb.k12.tr
+
+**E-posta / İletişim Formu:** https://izmirbal.meb.k12.tr/tema/iletisim.php
+
+**İdari Birim Çalışma Saatleri:** Pazartesi–Cuma 08:00–17:00 (Cumartesi ve Pazar kapalı)
+
+### 1.3 Tarihçe
+
+**1953:** İzmirli yaklaşık 50 tanınmış iş insanı, yabancı dilde eğitim verecek yatılı bir okul kurmak amacıyla bir araya geldi. Fransız asıllı levanten Edmond Giraud, Bornova merkeze yaklaşık 2 kilometre uzaklıktaki çam ağaçlarıyla kaplı 220 dönümlük arazisini, tarihi köşkü ve güvercinliğiyle birlikte, bir okul yapılması koşuluyla 26 Mart 1953 tarihinde sembolik bir bedelle Ege Koleji T.A.Ş.'e devretti ve kendisi de şirket ortağı oldu. Arazi üzerinde zengin yeşil alan korunarak derslikler, yatakhaneler, yemekhane ve konferans salonu inşa edildi. 1953–1954 öğretim yılında **"Özel Ege Koleji"** adıyla eğitime başlandı; ilk yıl **38 yatılı erkek öğrenci** alındı. BAL, Türkiye'de ortaöğretim düzeyinde eğitim kampüslerinin öncüsü kabul edilmektedir.
+
+**1955:** Millî Eğitim Bakanlığı, yurt genelinde yabancı dille öğretim yapacak Maarif Kolejleri kurmaya karar verdi. Başbakan Adnan Menderes ve Millî Eğitim Bakanı Celal Yardımcı, Ege Üniversitesi'nin temelini atmak üzere Bornova'ya geldiklerinde Özel Ege Koleji'ni ziyaret etti. Menderes'in tercihi doğrultusunda okul **İzmir Maarif Koleji** olarak yeniden yapılandırıldı.
+
+**1964–1965:** Orta Öğretim Genel Müdürlüğü kararıyla karma öğretime geçildi; gündüzlü kız ve erkek öğrenciler de kabul edilmeye başlandı. İlk 10 yıl boyunca okul yalnızca yatılı erkek öğrenci almaktaydı.
+
+**1975:** MEB kararıyla Maarif Kolejleri'nin adları "Anadolu Lisesi"ne dönüştürüldü. Okulun adı **"İzmir Anadolu Lisesi (İAL)"** oldu.
+
+**1976–1977:** İzmir'de yeni Anadolu Liseleri açılmasıyla birlikte okul, bugünkü adı olan **"Bornova Anadolu Lisesi (BAL)"** adını aldı.
+
+**1977'ye kadar:** Okulda Amerikan uyruklu öğretmenler görev yaptı.
+
+**1979–1980:** O yıla dek İnönü Lisesi binalarında öğretim gören Almanca Anadolu Lisesi öğrencileri BAL'a taşındı; okul İngilizce ve Almanca bölümlü yapıya kavuştu. Almanca bölümündeki bazı kız öğrenciler yatılı olarak kabul edildi. Yatakhane kapasitesi dolmaya başlayınca aileleri İzmir'de oturan yatılı öğrenciler gündüzlü statüsüne geçirildi.
+
+**1987'den itibaren:** Alman uyruklu öğretmenler okula katılmaya başladı; günümüze kadar görev yapmaktadırlar.
+
+**1997–1998:** Fransızca Bölümü'nün açılmasıyla BAL, Türkiye'de üç yabancı dilde (İngilizce, Almanca, Fransızca) eğitim veren **ilk ve tek Anadolu Lisesi** konumuna geldi.
+
+**2000'li yıllar–2022:** Yaklaşık yirmi yıl boyunca temel eğitim dili Türkçe olarak uygulandı; yabancı diller yalnızca birinci yabancı dil kapsamında öğretildi.
+
+**2008:** Almanca Bölümü öğrencileri için Almanca Dil Diploması (Deutsches Sprachdiplom – DSD) almaya yönelik çalışmalar başlatıldı; hak kazanan öğrencilere diploma verilmeye başlandı.
+
+**2016–2017:** BAL, **Proje Okulu** statüsüne kavuştu.
+
+**2023:** Hazırlık sınıfının yeniden açılmasıyla okul, **5 yıllık eğitim sistemine** (1 yıl hazırlık + 4 yıl lise) geçti.
+
+**2024–2025:** BAL, **AP (Advanced Placement)** programını da bünyesine kattı. İlk uygulanan AP dersleri: Hesaplama AB, Hesaplama BC, Bilgisayar Bilimi A, İngilizce Dil ve Kompozisyon, Fizik 1.
+
+### 1.4 Vizyon
+
+> **"Bornova Anadolu Lisesi; Geleceğin Aydınlık Sesi."**
+
+### 1.5 Misyon
+
+BAL'ın resmi misyonu dört temel başlık altında özetlenebilir:
+
+**Bireysel Değerler:** İnsan sevgisini her şeyin üzerinde tutan, çağdaş, laik, millî ve evrensel değerlere, Atatürk ilkelerine gönülden bağlı; çevre bilincine sahip, çevreye saygılı bireyler yetiştirmek.
+
+**Sosyal Sorumluluk:** Ulusal ve uluslararası projeler üreten, bu alanlarda başarılı olan bireyler yetiştirmek. Demokrasi bilincini artırmak, Atatürkçü düşünceyi pekiştirmek amacıyla sosyal ve kültürel etkinlikler düzenlemek.
+
+**Akademik Hedef:** Öğrencilerin amaç ve hedeflerine uygun üniversiteyi kazanabilmeleri için uygun eğitim ortamı sağlamak.
+
+**Dil ve Küreselleşme:** Türkçesine sahip çıkan ve yabancı dil eğitimi ile dünya okulları arasında yer alabilen bir eğitim kurumu olmak.
+
+### 1.6 Eğitim Yapısı ve Bölümler
+
+BAL, hazırlık sınıfı dahil **5 yıllık eğitim** vermektedir. 2025–2026 eğitim-öğretim yılında yeni öğrenci alımı toplam **8 şube** üzerinden yapılmıştır:
+
+| Bölüm | Şube Sayısı | Açıklama |
+|---|---|---|
+| İngilizce | 6 | En geniş kontenjan |
+| Almanca | 1 | DSD ve PASCH ağı destekli |
+| Fransızca | 1 | 1997'den beri aktif; 2026–2027'den itibaren yeni öğrenci alınmayacak |
+
+2026–2027 eğitim-öğretim yılından itibaren Fransızca bölümüne yeni öğrenci alınmayacaktır. Bu nedenle yeni hazırlık öğrencileri için 6 İngilizce ve 1 Almanca olmak üzere toplam **7 şube** açılması ve 30 kişilik şubeler üzerinden toplam kontenjanın **210 öğrenci** olması beklenmektedir. Fransızca bölümündeki mevcut öğrenciler eğitimlerine devam edecek; **BAL'30 Fransızca öğrencileri bölümün son mezunları olacaktır.**
+
+10 Temmuz 2026 tarihinde erişilen resmî MEB ana sayfasına göre okulda **91 öğretmen** görev yapmakta, **1.174 öğrenci** öğrenim görmektedir. Bu sayılar dönem içinde değişebileceğinden güncel değer için okulun resmî ana sayfası esas alınmalıdır.
+
+### 1.7 Günlük Ders Programı ve Saatler
+
+Bu bilgiler okulun resmi MEB sayfasından alınmıştır:
+
+- **Sabah Girişi:** 08:30
+- **Ders Sonu:** 15:35
+- **Öğle yemeği servisi:** 11:40 – 13:15
+- **Hazırlık sınıflarının yemek arasına çıkışı:** 11:40
+- **Diğer sınıfların yemek arasına çıkışı:** 12:30
+
+Hazırlık sınıfları yemek arasına daha erken çıkar. Böylece diğer sınıflar derslerinden çıktığında yemekhane sırasında yoğunluk azalır; yemek servisi toplamda iki ders süresini kapsayacak şekilde 11:40–13:15 arasında devam eder.
+
+### 1.8 Kampüs Fiziksel Altyapısı — MEB Resmi Verileri
+
+Aşağıdaki tablo, okulun resmi MEB sayfasındaki (izmirbal.meb.k12.tr) verilerden derlenmiştir:
+
+| Alan | Sayı / Bilgi |
+|---|---|
+| Derslik | 50 |
+| Atölye-İşlik | 1 |
+| Konferans Salonu | 2 |
+| Toplantı Salonu | 2 |
+| Çok Amaçlı Salon | 5 |
+| Spor Salonu | 4 |
+| Kimya Laboratuvarı | 1 |
+| Biyoloji Laboratuvarı | 1 |
+| Fizik Laboratuvarı | 1 |
+| BT Sınıfı (Bilgisayar) | 1 |
+| Müzik Sınıfı | 1 |
+| Resim Sınıfı | 2 |
+| Kütüphane | 1 |
+| Kütüphane Kitap Sayısı | 20.563 adet |
+| Yemekhane | 2 |
+| Revir | 2 |
+| Pansiyon Kapasitesi | 120 Kız + 120 Erkek = 240 öğrenci |
+
+> **Not:** Bazı üçüncü parti kaynaklarda "55 derslik" bilgisi yer almaktadır. Yukarıdaki tablo okulun resmi MEB sayfasını yansıtmaktadır (50 derslik). Bilgi çakışması durumunda resmi kaynak esas alınmalıdır.
+
+### 1.9 Kılık Kıyafet (Okul Forması)
+
+Okulun resmi web sitesinde "Bornova Anadolu Lisesi Okul Forması" başlıklı bir sayfa mevcuttur. Güncel forma görüntüsüne şu adresten ulaşılabilir:
+
+https://izmirbal.meb.k12.tr/icerikler/bornova-anadolu-lisesi-okul-formasi_16463042.html
+
+**Erkek öğrenciler:** BAL logolu siyah polo yaka tişört ve siyah kumaş pantolon giyer.
+
+**Kız öğrenciler:** BAL logolu siyah polo yaka tişört ile siyah kumaş pantolon veya BALEV tarafından satılan gri okul eteğini giyebilir.
+
+Logolu tişört, pantolon ve gri etek BALEV'den temin edilebilir.
+
+### 1.10 Devamsızlık Prosedürleri
+
+MEB Ortaöğretim Yönetmeliği çerçevesinde; bir öğrencinin mazeretsiz **10 günü** aşan devamsızlığı durumunda sınıf tekrarına kalabilir. Mazeretli devamsızlıklar resmi belge (sağlık raporu vb.) ibraz edilmek kaydıyla ayrı değerlendirilir. BAL'daki okul içi uygulamaya göre **5 geç kalma 1 devamsızlık** olarak sayılır.
+
+### 1.11 Kesin Kayıt Süreci ve Gerekli Belgeler
+
+BAL'a LGS merkezi yerleştirme sonucuyla yerleşen öğrencilerin kesin kayıt süreci için okula gelmeleri gerekmektedir. Kayıt işlemleri okulda yürütülür ve süreçte Okul Aile Birliği birimi de yer alır.
+
+Kayıt sırasında öğrenciden/veliden istenen temel belgeler arasında **kimlik** ve **ikametgâh belgesi** bulunmaktadır. Belge listesi her yıl MEB ve okul duyurularına göre değişebileceğinden kesin kayıt döneminde okulun resmi duyuruları takip edilmelidir.
+
+BAL'da **ikinci yabancı dil seçimi kayıt sırasında** yapılır. Öğrenci, birinci yabancı dili dışındaki iki dilden birini seçebilir:
+
+- Birinci yabancı dili İngilizce olanlar Almanca veya Fransızca,
+- birinci yabancı dili Almanca olanlar İngilizce veya Fransızca,
+- birinci yabancı dili Fransızca olanlar İngilizce veya Almanca seçebilir.
+
+2026–2027 kesin kayıt tarihleri, belge listesi ve kayıt sırasında doldurulacak formlar henüz net değildir; okulun resmî duyuruları esas alınmalıdır.
+
+### 1.12 Hazırlık Sınıfı Yerleştirme ve Seviye Belirleme
+
+Hazırlık sınıfına başlayan öğrenciler için **hazırlığın ilk haftasında**, yerleştikleri bölümün birinci yabancı dilinde (İngilizce, Almanca veya Fransızca) seviye belirleme/yeterlilik sınavı yapılır. Sınav performansı yeterli bulunan öğrenci hazırlık sınıfını atlayarak doğrudan 9. sınıftan devam edebilir. Yeterli bulunmayan öğrenciler hazırlık eğitimine devam eder.
+
+### 1.13 Sınavlar ve Ölçme-Değerlendirme
+
+BAL'da öğrenciler yıl içinde her ders için toplam **4 yazılı sınava** girer. Bu sınavlar iki döneme yayılır. Bazı derslerde ortak sınav uygulaması yapılmaktadır; ancak tüm sınavlar ortak sınav şeklinde değildir.
+
+Ortak sınavların hangi derslerde ve hangi tarihlerde yapılacağı okul yönetimi ve ilgili zümreler tarafından duyurulur. Sözlü notları, performans çalışmaları, proje ödevleri ve diğer ölçme-değerlendirme uygulamaları MEB yönetmelikleri ve okul içi akademik planlama çerçevesinde yürütülür.
+
+[GÜNCEL VERİ GEREKLİ: Ortak sınav takvimi, sınav kapsamı, sınav sayısı ve ölçme-değerlendirme ayrıntıları her eğitim-öğretim yılında okul tarafından duyurulur.]
+
+---
+
+## 2. Okul Kültürü ve Gelenekler
+
+### 2.1 "BAL Ruhu" Nedir?
+
+"BAL Ruhu", okulun görece şehirden uzak ve kapalı kampüs yapısının doğurduğu, hazırlık sınıfından mezuniyete kadar kesintisiz süren beş yıllık birlikteliğin şekillendirdiği güçlü aidiyet ve dayanışma kültürüdür. Öğrenciler kendilerini yalnızca bir okulun değil, nesiller boyunca büyüyen bir "ailenin" parçası olarak görürler. Bu duygu mezuniyetten sonra da canlı kalır; BAL mezunları profesyonel hayatta da birbirlerini tanır ve destekler.
+
+Bu kültürün taşıyıcı unsurları: Çam ağaçlarıyla kaplı tarihi kampüsün özgün ve şehir gürültüsünden uzak atmosferi; hazırlık sınıfından 12. sınıfa kadar kesintisiz beş yıl aynı arkadaşlarla geçirilen süre; Ayran Günü başta olmak üzere geleneksel etkinlikler; müzik, tiyatro ve spor faaliyetleri; ve her öğrenci kuşağının hafızasında iz bırakan ortak anılar.
+
+### 2.2 Ayran Günü
+
+**Ayran Günü**, her yıl eğitim-öğretim döneminin sonunda, genellikle **Mayıs** ayında, düzenlenen BAL'ın en köklü geleneksel şenliğidir. Wikipedia ve çok sayıda kaynakta "okulun geleneksel şenliği" olarak belgelenmiştir.
+
+Etkinlik kampüsün **koruluk alanında** gerçekleşir. Şenliğin başlıca unsurları: Öğrenci müzik gruplarının canlı konserleri, yiyecek ve içecek stantları (şenliğin adına atıfla mutlaka ayran ikram edilir), köklü **su savaşı** geleneği ve çeşitli yarışmalar.
+
+Ayran Günü, özellikle eski öğrencilerin ve mezunların özlemle andığı, BAL kimliğinin en güçlü sembollerinden biridir.
+
+### 2.3 Okul Marşı
+
+BAL'ın resmi marşı, müzik öğretmeni **Naci Önöz** tarafından **1965 yılında** hem güftesi hem de bestesiyle kaleme alınmıştır. Okulun isim değişikliğiyle sözler güncellenmiştir. Tam metin:
+
+> *Selam Bornova Anadolu Lisesi*
+> *Yürekten saygı sana*
+> *Durmadan bıkmadan*
+> *Işık tuttun sen bana* (x2)
+>
+> *Göklere değer başımız*
+> *Dillerde marşımız*
+> *Geriliğe saldıralım*
+> *Aydınlığa varalım* (x2)
+>
+> *Selam Bornova Anadolu Lisesi*
+> *Yürekten saygı sana*
+> *Durmadan bıkmadan*
+> *Işık tuttun sen bana*
+
+### 2.4 Müzik Geleneği ve Başarıları
+
+BAL'ın müzik kültürü onlarca yıla dayanan köklü bir tarihe sahiptir:
+
+**1965:** Naci Önöz okul marşını besteler.
+
+**1967–1970 (Milliyet Yarışmaları):** Okul müzik grubu "Milliyet Liselerarası Hafif Batı Müziği Yarışması"nda dereceler aldı. 1969'da beste dalında 4., "Hesitation" adlı parçayla icra dalında 1. oldu. 1970'te icra dalında 1., beste dalında 2. oldu. Dereceye giren parçalar Sayan Plak tarafından 45'lik vinil olarak basılmıştır.
+
+**2008 (İzmir Amerikan Koleji Yarışması):** "Xenon" grubu beste dalında 2. oldu; Çeral Efe Aracı en iyi bas gitarist ödülünü aldı.
+
+**2010:** Cemre Mavioğlu aynı yarışmada en iyi kadın vokal ödülünü kazandı.
+
+**2011 (Genç Nota Yarışması):** Okulu "Vintage" grubu temsil etti.
+
+### 2.5 Tiyatro Topluluğu
+
+**BAL Öğrenci Tiyatro Topluluğu**, BALEV tarafından **1990 yılından** bu yana desteklenmektedir. Topluluğun profesyonel eğitmenleri BAL mezunlarından Ant Aksan (mezuniyet: 1991) ve Onur Erdoğan'dır (mezuniyet: 1996).
+
+Tiyatro çalışmaları her yıl **Ekim ayında** başlar, haftada bir gün profesyonel yönetmen ve sorumlu öğretmen gözetiminde yıl boyunca devam eder. Her yıl bir oyun hazırlanır ve **Mayıs ayında** sahneye konur.
+
+### 2.6 Spor: BALspor Kulübü ve Spor Başarıları
+
+**BAL Spor Kulübü (BALspor)**, 2004 yılında okulun mezunları tarafından kurulmuş olup profesyonel dalış dahil **12 spor branşında** faaliyet yürütmektedir.
+
+BAL, Türkiye'de **Ultimate Frizbi** takımına sahip **tek lise** olma özelliğini taşımaktadır. Ülkede bu sporu yapan lise takımı bulunmadığından BAL öğrencileri Ultimate Frizbi turnuvalarında üniversite takımlarıyla mücadele etmektedir.
+
+**Tarihsel Spor Başarıları:** Okulun geçmiş başarıları arasında voleybolda Türkiye şampiyonlukları ve çeşitli dereceler yer almaktadır. Daha güncel başarılar arasında **2020 yılında erkek masa tenisinde İzmir il birinciliği** ve **2024 yılında erkek futsalda İzmir liselerarası şampiyonluğu** bulunmaktadır. Bu başarılar, okulun sportif alandaki gücünün yalnızca akademik alanla sınırlı olmadığını göstermektedir.
+
+### 2.7 Uluslararası Bağlantılar
+
+**PASCH Okullar Ağı (Schulen: Partner der Zukunft):** BAL, Almanya Dışişleri Bakanlığı'nın 2008'de başlattığı PASCH ağına dahildir. Bu ağ dünya genelinde Almanca öğrenimini destekleyen okulları birbirine bağlar.
+
+**DSD – Almanca Dil Diploması (Deutsches Sprachdiplom):** BAL, DSD okulu statüsüne sahiptir. 2008'den itibaren hak kazanan Almanca bölümü öğrencilerine resmi Almanca Dil Diploması verilmektedir. Bu diploma Almanya'daki üniversitelere başvuruda avantaj sağlar.
+
+**eTwinning:** BAL, Avrupa'daki okullarla çevrimiçi işbirliği sunan eTwinning platformunda aktif projeler yürütmektedir.
+
+**AP (Advanced Placement):** BAL, 2024–2025 öğretim yılı itibariyle AP programını uygulamaya başlamıştır. Sunulan ilk AP dersleri: Hesaplama AB, Hesaplama BC, Bilgisayar Bilimi A, İngilizce Dil ve Kompozisyon, Fizik 1.
+
+### 2.8 Mezun Ağı ve Destek Yapıları
+
+**BALEV (Bornova Anadolu Lisesi Eğitim Vakfı)**
+
+BALEV, **1981 yılında** BAL mezunları tarafından eğitim alanında çalışmalar yapmak amacıyla kurulmuştur.
+
+BALEV bünyesindeki BALEV Burs Kulübü ise **1983 yılında** oluşturulmuştur. Burs kategorileri: BALEV Ortaöğretim Bursları, BALEV Yükseköğretim Bursları, Diğer BALEV Bursları (özel başarı). Öğrenciler 9. sınıftan başlayarak yükseköğrenimlerini tamamlayana kadar burs almaya devam edebilir. BALEV bursları karşılıksızdır. 1988'den itibaren üniversite öğrencilerine de burs verilmektedir. 2004'te vakfın vergi muafiyeti almasıyla BAL ile doğrudan bağlantısı olmayan öğrencilere de ulaşılmaya başlanmıştır. **2024–2025 öğretim yılında 483 öğrenciye** burs desteği sağlanmıştır.
+
+BALEV'in ek yapıları: **Bi'BALlı** (mezun-öğrenci mentorlük programı), **BAL Spor Kulübü**, **BALDÜKKAN** (mezun dayanışma ağı).
+
+**BALEV Adresi:** Mevlana Mahallesi, 1701/7 Sokak No: 23A, Bornova, İzmir
+
+**BALEV Web Sitesi:** balev.org.tr
+
+**BALMED (İzmir Koleji ve Bornova Anadolu Lisesi Mezunlar Derneği)**
+
+BAL'ın gelişmesini, kültürünün yaşatılmasını ve öğrenci ile mezunlar arasındaki dayanışmayı destekleyen dernek. BALMED üyeleri her yıl Atatürk'ün huzuruna çıkmaktadır (8 Eylül 2018'de 11. kez gerçekleştirilmiştir).
+
+**BALMED Web Sitesi:** balmed.org.tr
+
+### 2.9 Çevre Bilinci Etkinlikleri
+
+BAL, çevre bilincine özel önem vermektedir. 2025–2026 eğitim öğretim yılı okulun bahçesinde gerçekleştirilen **fidan dikimi** etkinliğiyle açıldı. Yeşil vatan temalı çalışmalar okul programının ayrılmaz bir parçasıdır.
+
+### 2.10 BAL360 Sanal Kampüs Turu
+
+BAL öğrencilerinin tamamen kendi emekleriyle ürettiği **BAL360 Projesi**, 360° fotoğraf teknolojisiyle hazırlanmış sanal kampüs turunu herkesin kullanımına sunmaktadır. Türkiye'de lise düzeyinde, tamamı öğrenci üretimi olan ve herhangi bir ücretli yazılım kullanılmadan geliştirilen **ilk sanal kampüs tanıtımıdır.** Kampüsün tüm bölümleri (derslikler, laboratuvarlar, spor salonu, bahçe ve sosyal alanlar) çekilmiştir.
+
+**Sanal Gezi Adresi:** balsanalgezi.com
+
+### 2.11 Sosyal Etkinlikler ve Okul İçi Yaşam
+
+BAL'da yıl boyunca konserler, kültür-sanat etkinlikleri, öğrenci performansları, kulüp faaliyetleri, konferanslar ve okul içi sosyal buluşmalar düzenlenmektedir. Bu etkinlikler, okulun akademik yapısının yanında güçlü sosyal kültürünü de besler.
+
+Öğrenciler, ders dışı zamanlarda müzik, tiyatro, spor, akademik kulüpler, sosyal sorumluluk çalışmaları ve okul gelenekleri üzerinden okul yaşamına aktif biçimde katılabilir. Ayran Günü gibi köklü geleneklerin yanında yıl içinde daha küçük ölçekli konserler ve sosyal etkinlikler de yapılmaktadır.
+
+[GÜNCEL VERİ GEREKLİ: O yıl düzenlenecek konser, gösteri, konferans ve sosyal etkinliklerin tarihleri okul duyurularından takip edilmelidir.]
+
+---
+
+## 3. Fiziksel İmkânlar ve Kampüs
+
+### 3.1 Kampüsün Genel Yapısı
+
+BAL kampüsü, Bornova merkeze yaklaşık **2 kilometre** uzaklıkta, yaklaşık **110 dönümlük** çam ağaçlarıyla kaplı tarihi bir arazi üzerinde konumlanmaktadır. Kampüs; idari binalar, derslik blokları, pansiyon binaları, spor alanları, koruluk ve geniş bahçelerden oluşmaktadır.
+
+Okul bahçesinde çam, selvi, turunç ve çınar ağaçları yetişmektedir. Bahar aylarında portakal çiçekleri alanı kaplar. Koruluk, öğrencilerin sosyalleşme ve dinlenme mekânıdır; Ayran Günü'nde yoğun biçimde kullanılır. Tarihi köşk binası, kampüsteki en eski yapı olup okulun levanten dönemine uzanan kökenlerini simgelemektedir.
+
+### 3.2 Derslikler ve Eğitim Sınıfları
+
+MEB resmi verilerine göre: **50 derslik**, 1 müzik sınıfı, 2 resim sınıfı, 1 BT sınıfı.
+
+### 3.3 Laboratuvarlar
+
+Üç ayrı fen bilimleri laboratuvarı mevcuttur: Kimya, Biyoloji ve Fizik Laboratuvarları. Ayrıca 1 adet Bilişim Teknolojileri (BT) Sınıfı bulunmaktadır.
+
+### 3.4 Spor Alanları
+
+Kampüste **4 adet kapalı spor salonu** yer almaktadır. Açık hava spor alanları da mevcuttur.
+
+### 3.5 Çok Amaçlı ve Toplantı Salonları
+
+- **2 adet** Konferans Salonu
+- **2 adet** Toplantı Salonu
+- **5 adet** Çok Amaçlı Salon
+
+Bu salonlar seminer, sunum, tören ve kültürel etkinlikler için kullanılmaktadır.
+
+### 3.6 Kütüphane
+
+BAL kütüphanesinde MEB resmi verilerine göre **20.563 adet kitap** bulunmaktadır. Kütüphane **10:00–11:40** arasında açıktır; **11:40–13:15** arasında kapalıdır; **13:15–15:30** arasında yeniden açıktır.
+
+### 3.6.1 Öğrenci Dolapları
+
+Öğrencilerin kitap ve kişisel okul eşyalarını koyabilmeleri için okulda öğrenci dolapları bulunmaktadır. 2026–2027 eğitim-öğretim yılı için yıllık dolap ücretinin **200 TL** olacağı bildirilmiştir. Dolabın anahtarı kaybedilirse kilidin kırılması ve yeni anahtar hazırlanması için **100 TL** bedel alınır. Dolaplar eğitim-öğretim yılının son iki haftasında içleri tamamen boşaltılmış şekilde teslim edilmelidir.
+
+### 3.7 Yemekhane
+
+#### 3.7.1 Genel Yapı
+
+BAL kampüsünde yemekhane bulunmaktadır. Bu yemekhane, yalnızca okulun yurdunda yatılı olarak kalan (pansiyon) öğrencilerin kullanımına açıktır ve bu öğrencilere sabah, öğle ve akşam olmak üzere tam gün yemek hizmeti sunmaktadır. Evden geliş-gidiş yapan gündüzlü öğrencilere yönelik bir yemek hizmeti bulunmamaktadır.
+
+#### 3.7.2 Yemek Saatleri
+
+Kahvaltı **07:30–08:30**, öğle yemeği **11:40–13:15**, akşam yemeği ise **17:00–19:00** arasında servis edilmektedir. Öğle yemeği servisi iki ders süresini kapsar: hazırlık sınıfları 11:40'ta, diğer sınıflar 12:30'da yemek arasına çıkar.
+
+#### 3.7.3 Menü Yapısı
+
+BAL yemekhanesi, MEB'in okul yemekhanelerine yönelik standart menü çerçevesine uygun hazırlanmış haftalık döngüsel menüler uygulamaktadır. Okul sitesinde yayımlanan geçmiş haftalık menü örnekleri (Eylül 2021 verisi) şu yapıyı yansıtmaktadır:
+
+| Gün | Çorba | Ana Yemek | Yan Yemek | İlave |
+|---|---|---|---|---|
+| Pazartesi | Yayla Çorbası | Musakka | Bulgur Pilavı | Yoğurt |
+| Salı | Ezo Gelin Çorbası | Püreli Dalyan Köfte | Makarna | Tatlı |
+| Çarşamba | Kırmızı Mercimek Çorbası | Etli Türlü | Arpa Şehriyeli Pilav | Yoğurt |
+| Perşembe | Tarhana Çorbası | Kadın Budu Köfte + Patates | Makarna | Ayran |
+| Cuma | Domates Çorbası | Tavuk Sote | Tel Şehriyeli Pilav | Tatlı |
+
+> **Not:** Yukarıdaki tablo, okulun resmi sitesinden erişilen 2021 tarihli bir örnek menüdür. Güncel haftalık menüler değişkenlik göstermekte olup okul sitesinde periyodik olarak yayımlanmaktadır.
+
+[GÜNCEL VERİ GEREKLİ: 2026–2027 dönemine ait güncel menü henüz bilinmemektedir; izmirbal.meb.k12.tr adresindeki duyurular bölümü takip edilmelidir.]
+
+#### 3.7.4 Yemek Ücreti
+
+MEB, devlet okulu pansiyonlarında sunulan yemek hizmetlerinin ücretlendirme esaslarını resmi tebliğlerle belirlemektedir. Yemekhaneden yararlanma koşulları öğrencilerin yurt kayıt durumuna göre şu şekildedir:
+
+    Parasız Yatılı Öğrenciler: Pansiyonda parasız yatılı olarak barınma hakkı kazanan öğrenciler, yemekhane hizmetinden tamamen ücretsiz (bedava) olarak yararlanırlar.
+
+    Paralı Yatılı Öğrenciler: Pansiyona paralı yatılı olarak kayıt yaptıran öğrenciler ise belirlenen resmi ücreti ödemekle yükümlüdür.
+
+Pansiyon yemek ücretleri sabit olmayıp, her eğitim-öğretim yılında MEB tarafından yeniden güncellenerek değişiklik göstermektedir.
+
+[GÜNCEL VERİ GEREKLİ: İçinde bulunulan eğitim-öğretim yılına ait güncel paralı yatılı yemek ücreti ve ödeme yöntemleri için okul idaresiyle (Tel: 0232 388 10 39) veya Pansiyon Müdür Yardımcısı Çetin KOCAMAN ile iletişime geçiniz.]
+
+
+#### 3.7.5 Okul Aile Birliği ve Yemekhane Denetimi
+
+Yemekhane hizmetleri, BAL Okul Aile Birliği'nin denetimine tabidir. Okul Aile Birliği, 2026 yılı tahmini bütçesini okul sitesinde kamuoyuyla paylaşmaktadır. Yemek kalitesi ve hijyen denetimleri Okul Aile Birliği ile okul yönetimi tarafından ortaklaşa yürütülmektedir.
+
+Yemekhaneye ilişkin şikayet ve öneriler için Okul Aile Birliği'ne veya okul müdürlüğüne başvurulabilir.
+
+### 3.7 Revir
+
+Öğrencilere acil sağlık hizmeti sunan **2 adet revir** mevcuttur.
+
+### 3.8 Pansiyon
+
+BAL, kız ve erkek öğrenciler için ayrı birimler hâlinde pansiyon sunmaktadır:
+
+- **Kız Pansiyonu Kapasitesi:** 120 öğrenci
+- **Erkek Pansiyonu Kapasitesi:** 120 öğrenci
+- **Toplam Kapasite:** 240 öğrenci
+
+Pansiyonun iki türü mevcuttur: **Paralı Yatılı** ve **Parasız Yatılı.** Tüm velilerin doldurması gereken matbu evraklar da bulunmaktadır (çarşı izin belgesi, evcilik dilekçesi, genel muvafakatname, pansiyon taksit taahhütnamesi).
+
+Resmi kayıt evrak linkleri (son güncelleme: Ağustos 2024):
+
+- Paralı Yatılı: https://izmirbal.meb.k12.tr/meb_iys_dosyalar/35/06/164773/dosyalar/2024_08/28114223_paraliyatili.pdf
+- Parasız Yatılı: https://izmirbal.meb.k12.tr/meb_iys_dosyalar/35/06/164773/dosyalar/2024_08/28113125_parasizyatili1.pdf
+
+[GÜNCEL VERİ GEREKLİ: 2026–2027 pansiyon ücreti ve kayıt takvimi henüz bilinmemektedir; okul idaresiyle iletişime geçiniz.]
+
+### 3.9 Günlük Okul Kuralları
+
+Cep telefonları sabah ilk ders başladığında, saat **08:30'da**, sınıflardaki telefon dolaplarına veya telefon kutularına bırakılır. Telefonlar son dersin son beş dakikasında, yaklaşık **15:30–15:35** arasında geri alınır. Ders saatleri içinde telefon kullanılması yasaktır.
+
+Okul kartı, okulun arka çıkış kapısını kullanmak ve pansiyon ile yemekhaneye giriş yapmak için gereklidir.
+
+Öğrencilerin yalnızca öğle arasında dışarı çıkması ve dışarıdan yemek sipariş etmesi yasaktır. Veli öğle yemeğini okula getirip öğrenciye teslim edebilir. Öğrenci ancak velisi tarafından okuldan alınıyorsa ve öğleden sonraki derslere dönmeyecekse okuldan çıkabilir; bu durum yalnızca öğle molası için geçici çıkış izni anlamına gelmez.
+
+Kantin fiyatları sürekli güncellenir. Aktif fiyat listesi kantinde bulunur ve kantin duvarlarında asılıdır; asistan sabit kantin fiyatı vermemeli, güncel listeye bakılmasını önermelidir.
+
+---
+
+## 4. Sıkça Sorulan Sorular (SSS)
+
+### Bölüm A: Kayıt, Yerleştirme ve Kabul
+
+**S1: BAL'a nasıl öğrenci alınır?**
+BAL, MEB tarafından düzenlenen LGS (Liselere Geçiş Sınavı) sonuçlarına göre merkezi sınavlı yerleştirmeyle öğrenci kabul eder. Okula doğrudan bireysel başvuru veya sınavsız geçiş imkânı kesinlikle bulunmamaktadır. Yerleştirme tamamen MEB'in merkezi sistemi üzerinden yapılır.
+
+**S2: 2025 LGS'de BAL'ın taban puanı neydi?**
+2025 LGS verilerine göre: Almanca bölümü 484,1567 puan (%0,59), İngilizce bölümü 476,4021 puan (%1,13), Fransızca bölümü 480,1748 puan (%0.87).
+
+11 Temmuz 2026 itibariyle 2026 LGS taban puanları henüz açıklanmamıştır. Erişilebilen en güncel kesin veri 2025 yerleştirme sonuçlarıdır.
+
+**S3: BAL Türkiye sıralamasında kaçıncı?**
+2025 LGS Almanca bölümü verisine göre Türkiye'nin en yüksek taban puanlı ilk 100 lisesi arasında **14. sırada** yer almaktadır. İzmir'de İzmir Fen Lisesi'nin hemen ardından gelir ve İzmir'in "büyük dörtlüsü"nden biridir.
+
+**S4: BAL her yıl kaç öğrenci alıyor?**
+2025–2026 yılına kadar 6 İngilizce, 1 Almanca ve 1 Fransızca olmak üzere 8 şube ve toplam 240 öğrenci alınıyordu. 2026–2027'den itibaren Fransızca bölümüne yeni öğrenci alınmayacaktır. 30 kişilik 6 İngilizce ve 1 Almanca şubesi üzerinden yeni öğrenci kontenjanının toplam **210** olması beklenmektedir.
+
+**S5: BAL'a nakil mümkün mü? Nakil süreci nasıl işler?**
+Evet. LGS sonrası nakil, öğrencinin yerleştiği okuldan daha uygun bir liseye geçmek için yaptığı resmi başvuru sürecidir.
+
+**Süreç nasıl işler:**
+1. Öğrenci ve veli **e-Okul / e-Devlet** üzerinden nakil başvurusu yapar.
+2. Başvuru sırasında öğrencinin yerleşmek istediği okulun boş kontenjanı ve varsa taban puanı kontrol edilir.
+3. Tercihler yapıldıktan sonra mevcut okul tarafından onaylanır ve sonuçlar MEB'in ilan ettiği tarihte açıklanır.
+4. Yerleşme gerçekleşirse öğrenci yeni okuluna kayıt işlemlerini tamamlar.
+
+**Kaç tercih yapılabilir?**
+- Merkezi sınav puanıyla alan okullar için her dönemde en fazla **3 tercih** yapılabilir.
+- Yerel yerleştirme ve pansiyonlu okul tercihleri için de sistemde yine en fazla 3'er tercih hakkı bulunur.
+- Dönem sayısı ve takvim her yıl MEB tarafından ayrıca duyurulur.
+
+**Takvim (2025 örneği):**
+- 1. nakil başvuruları: 4-6 Ağustos, sonuçlar: 8 Ağustos
+- 2. nakil başvuruları: 8-12 Ağustos, sonuçlar: 14 Ağustos
+- Yerleşemeyen öğrenciler için il/ilçe yerleştirme komisyonları devreye girer.
+
+**Dikkat edilmesi gerekenler:**
+- Nakil başvurusu yapmadan önce okulun kontenjanını ve puan durumunu kontrol etmek önemlidir.
+- Başvuru e-Okul'da tamamlanır ancak onay aşaması okul müdürlüğünde yapılır.
+- Nakil sonuçları açıklandıktan sonra yerleşilen okula zamanında kayıt yaptırmak gerekir.
+- Nakil dönemleri her yıl MEB tarafından belirlenir ve değişiklik gösterebilir.
+
+**S6: Kayıt için hangi belgeler gerekir?**
+[GÜNCEL VERİ GEREKLİ: Kesin kayıt belge listesi için MEB'in ortaöğretim kayıt kılavuzunu veya okul idaresini kontrol ediniz.]
+
+---
+
+### Bölüm B: Eğitim, Bölümler ve Programlar
+
+**S7: BAL kaç yıllık eğitim veriyor?**
+2023 itibariyle hazırlık sınıfının yeniden açılmasıyla birlikte eğitim süresi hazırlık dahil **5 yıldır** (1 yıl hazırlık + 4 yıl lise).
+
+**S8: Hangi yabancı dil bölümleri var?**
+Okulda İngilizce, Almanca ve Fransızca bölümleri bulunmaktadır. Ancak 2026–2027'den itibaren Fransızca bölümüne yeni öğrenci alınmayacaktır. Mevcut Fransızca öğrencileri mezun olana kadar bölümde eğitim sürecek ve BAL'30 Fransızca öğrencileri son mezunlar olacaktır.
+
+**S9: Hazırlık sınıfında ne öğretilir?**
+Hazırlık sınıfında öğrenciler seçtikleri yabancı dilin (İngilizce, Almanca veya Fransızca) yoğunlaştırılmış eğitimini alarak lise müfredatına hazırlanır. Hazırlık sınıfını başarıyla tamamlayan öğrenciler 9. sınıfa geçer.
+
+**S10: BAL proje okulu mu?**
+Evet. BAL, **2016–2017** öğretim yılından itibaren **Proje Okulu** statüsündedir.
+
+**S11: BAL'da AP programı var mı?**
+Evet. BAL, **2024–2025** öğretim yılı itibariyle AP (Advanced Placement) programını uygulamaya başlamıştır. Sunulan AP dersleri: Hesaplama AB, Hesaplama BC, Bilgisayar Bilimi A, İngilizce Dil ve Kompozisyon, Fizik 1.
+
+**S11b: Seçmeli dersler nasıl seçiliyor?**
+Hazırlık sınıfına kayıt sırasında öğrenci ikinci yabancı dilini ve resim/müzik tercihini yapar. Sonraki yıllarda öğrenciler MEB tarafından açıklanan seçmeli dersler arasından tercih yapabilir. Bir dersin okulda açılabilmesi için yeterli sayıda öğrencinin seçmesi gerekir; uygulamada bu çoğu zaman öğrenci çoğunluğunun talep göstermesine bağlıdır. O yıl açılacak kesin dersler okul duyurularıyla belirlenir.
+[GÜNCEL VERİ GEREKLİ: O yılın seçmeli ders listesi ve form teslim tarihi okul duyurularından takip edilmelidir.]
+
+**S12: Almanca bölümü öğrencileri DSD diploması alabilir mi?**
+Evet. **2008'den** itibaren hak kazanan Almanca bölümü öğrencileri resmi Almanca Dil Diploması (DSD) alabilmektedir. Bu diploma Almanya'daki üniversitelere başvuruda avantaj sağlar.
+
+**S13: eTwinning ve uluslararası projeler var mı?**
+Evet. BAL, eTwinning platformunda aktif uluslararası projeler yürütmekte; ayrıca Almanya Dışişleri Bakanlığı destekli PASCH Okullar Ağı'na dahildir.
+
+---
+
+### Bölüm C: Günlük Okul Hayatı
+
+**S14: Okul kaçta başlıyor, kaçta bitiyor?**
+Resmi MEB verilerine göre sabah girişi **08:30**, ders sonu **15:35**. Öğle yemeği servisi **11:40–13:15** arasındadır; hazırlık sınıfları 11:40'ta, diğer sınıflar 12:30'da yemek arasına çıkar.
+
+40 dakikalık ders ve 10 dakikalık teneffüs düzenine göre ders saatleri şöyledir:
+
+| Ders | Saat |
+|---|---|
+| 1. ders | 08:30–09:10 |
+| Teneffüs | 09:10–09:20 |
+| 2. ders | 09:20–10:00 |
+| Teneffüs | 10:00–10:10 |
+| 3. ders | 10:10–10:50 |
+| Teneffüs | 10:50–11:00 |
+| 4. ders | 11:00–11:40 |
+| Hazırlık sınıflarının öğle arası | 11:40–12:30 |
+| Diğer sınıfların öğle arası | 12:30–13:15 |
+| 5. ders | 13:15–13:55 |
+| Teneffüs | 13:55–14:05 |
+| 6. ders | 14:05–14:45 |
+| Teneffüs | 14:45–14:55 |
+| 7. ders | 14:55–15:35 |
+
+Bu çizelge, verilen 40 dakika ders + 10 dakika teneffüs düzeninden hesaplanmış pratik zaman çizelgesidir; özel günlerdeki program değişikliklerinde okul duyuruları esas alınmalıdır.
+
+**S15: Devamsızlık sınırı kaç gündür?**
+MEB Ortaöğretim Yönetmeliği'ne göre mazeretsiz **10 günü** aşan devamsızlık sınıf tekrarına yol açabilir. Mazeretli devamsızlıklar resmi belgeyle değerlendirilir.
+
+**S16: Geç kalırsam ne olur?**
+Her geç kalma vakası kayıt altına alınır. BAL'daki okul içi uygulamaya göre **5 geç kalma 1 devamsızlık** olarak sayılır.
+
+**S17: Okul forması zorunlu mu?**
+Evet. Erkek öğrenciler BAL logolu siyah polo yaka tişört ve siyah kumaş pantolon giyer. Kız öğrenciler aynı tişörtle siyah kumaş pantolon veya BALEV'in sattığı gri okul eteğini giyebilir. Forma parçaları BALEV'den temin edilebilir.
+
+---
+
+### Bölüm D: Kampüs ve Olanaklar
+
+**S18: Okulda pansiyon var mı?**
+Evet. **120 kız + 120 erkek = toplam 240 öğrenci** kapasiteli pansiyon mevcuttur. Hem paralı hem de parasız yatılı seçenekleri bulunmaktadır.
+
+**S19: Pansiyona başvurmak için ne gerekiyor?**
+Resmi başvuru evrakları okulun web sitesinde yayımlanmıştır. Paralı yatılı ve parasız yatılı için ayrı belgeler; tüm veliler için çarşı izin belgesi, evcilik dilekçesi, muvafakatname ve taksit taahhütnamesi gerekmektedir.
+
+**S20: Kaç spor salonu var?**
+Resmi MEB verilerine göre **4 adet** kapalı spor salonu mevcuttur.
+
+**S21: Kütüphanede kaç kitap var?**
+MEB resmi verilerine göre **20.563 adet kitap** bulunmaktadır.
+
+Kütüphane **10:00–11:40** arasında açıktır; **11:40–13:15** arasında kapalıdır; **13:15–15:30** arasında yeniden açıktır.
+
+**S22: Kaç laboratuvar var?**
+Kimya, Biyoloji ve Fizik olmak üzere **3 adet fen laboratuvarı** ve **1 BT Sınıfı** mevcuttur.
+
+**S23: Yemekhane ücretli mi?**
+Kampüste 2 adet yemekhane bulunmaktadır. Pansiyon yemek ücretleri eğitim-öğretim yılına göre değişir; 2026–2027 ücreti henüz bilinmemektedir.
+
+**S23b: Kantin fiyatları nereden öğrenilir?**
+Kantin fiyatları sürekli güncellenir. Aktif fiyat listesi kantinde, duvarlarda asılıdır; güncel fiyat için bu liste kontrol edilmelidir.
+
+**S24: BAL'ın sanal turu var mı?**
+Evet. **BAL360 projesi** kapsamında 360° sanal kampüs turu **balsanalgezi.com** adresinde yayındadır.
+
+---
+
+### Bölüm E: Okul Kültürü ve Etkinlikler
+
+**S25: Ayran Günü nedir?**
+Her yıl Mayıs ayında gerçekleştirilen BAL'ın en köklü geleneksel şenliğidir. Korulukta yapılan su savaşı, öğrenci müzik gruplarının canlı konserleri, yiyecek-içecek stantları ve çeşitli yarışmaları kapsar.
+
+**S26: Okulun müzik geleneği var mı?**
+Evet, köklüdür. Naci Önöz 1965'te okul marşını besteledi. Müzik grubu 1969'da Milliyet yarışmasında icra dalında birinci oldu; parçalar Sayan Plak tarafından basıldı. 2008 ve 2010'da İzmir Amerikan Koleji yarışmasında da dereceye girildi.
+
+**S27: Tiyatro topluluğu var mı?**
+Evet. BALEV tarafından 1990'dan beri desteklenen Öğrenci Tiyatro Topluluğu mevcuttur. Ekim'de başlayan çalışmalar Mayıs'ta sahne gösterimiyle tamamlanır. Profesyonel yönetmenler BAL mezunlarından seçilmektedir.
+
+**S28: BAL'ın özel bir spor başarısı var mı?**
+Evet. BAL, Ultimate Frizbi takımına sahip Türkiye'deki tek lisedir. BALspor Kulübü ise 2004'ten beri 12 branşta faaliyet göstermektedir.
+
+**S29: Öğrenci kulüpleri var mı?**
+Evet. 2025–2026 listesinde kayıtlı 25 topluluk bulunmaktadır:
+
+- Atatürkçü Gençlik Topluluğu
+- BAL Genç Yeşilay
+- BALTIMATE
+- BAL Felsefe Topluluğu
+- BAL Radyo
+- BAL Yazılım Topluluğu
+- Balösev
+- Bornova Anadolu Lisesi Bando Takımı
+- BAL Klasik Müzik Topluluğu
+- İktisadi ve İdari Bilimler Topluluğu
+- BAL Gastronomi Topluluğu
+- Tanıtım Ekibi
+- BAL FPS Topluluğu
+- Astronomi Topluluğu
+- BAL Animasyon ve Çizgi Roman
+- BALFEST
+- BAL Robotik
+- BAL Mitoloji Topluluğu (BALMİT)
+- BALART
+- BAL Hip-Hop
+- BAL Game Development
+- BalDeutsch
+- BAL Sinema ve Kısa Film Topluluğu
+- Bornova Anadolu Lisesi Kamp Topluluğu
+- Sosyal Sorumluluk Topluluğu
+
+Kulüplerin ve toplulukların kayıtlı veya tanıtılmış olması, yıl boyunca aktif faaliyet gösterdikleri anlamına gelmeyebilir. Öğrenciler yıl başında sınıf öğretmenleri aracılığıyla bir kulüp seçer; diledikleri kadar topluluğa katılabilir ve yıl içinde topluluk değiştirebilir.
+
+---
+
+### Bölüm F: BALEV Bursları
+
+**S30: BALEV bursu nedir, kimler başvurabilir?**
+BALEV Burs Kulübü, 1983'te kurulan ve maddi imkânı yetersiz başarılı öğrencilere **karşılıksız** burs sağlayan bir yapıdır. Burs kategorileri: ortaöğretim bursu, yükseköğretim bursu, özel başarı bursu. Öncelik maddi ihtiyacı olan öğrencilere tanınmakla birlikte, başarı durumuna göre destek bursu da verilmektedir. 2024–2025'te 483 öğrenciye burs sağlanmıştır.
+
+**S31: BALEV bursuna nasıl başvurulur?**
+Başvurular **balev.org.tr** üzerinden yapılır. [GÜNCEL VERİ GEREKLİ: Her yıl başvuru dönemi ve belge listesi değişebileceğinden güncel takvim için siteyi takip ediniz.]
+
+---
+
+### Bölüm G: İletişim ve Ulaşım
+
+**S32: BAL'ın telefon numarası nedir?**
+**0232 388 10 39** (Kaynak: izmirbal.meb.k12.tr resmi sayfası)
+
+**S33: BAL'ın faks numarası nedir?**
+**0232 342 90 77**
+
+**S34: Okulun resmi web sitesi nedir?**
+**https://izmirbal.meb.k12.tr**
+
+**S35: E-posta ile ulaşmak mümkün mü?**
+Evet. Okulun iletişim formu: https://izmirbal.meb.k12.tr/tema/iletisim.php
+
+**S36: İdare hangi saatlerde açık?**
+Hafta içi Pazartesi–Cuma **08:00–17:00.** Cumartesi ve Pazar kapalıdır.
+
+**S37: BAL'a toplu taşımayla nasıl gidilir?**
+- **Metro + Otobüs:** Bornova Metro İstasyonu'ndan **267, 268, 368, 59 veya 505 numaralı** ESHOT/İZULAŞ otobüsleriyle yaklaşık **5 dakikada** ulaşılabilir.
+- **Minibüs:** Otogar yönüne seyreden **Alparslan–Yenigaraj** hattı minibüsleri okulun önünden geçmektedir.
+- **Yürüyüş:** İlçe merkezine yaklaşık **15 dakikadır.**
+- **Konum:** Yeni garaj yolu üzerinde, IKEA alışveriş merkezine dönmeden, Altay Ticaret Meslek Lisesi'nin arkasında.
+
+**S38: BAL'a öğrenci servisi var mı?**
+Evet. İzmir içinde Bayraklı, Bornova, Buca, Çiğli, Fahrettin Altay, Gaziemir, Güzelbahçe, Karşıyaka, Karabağlar, Aliağa ve Menemen dahil birçok noktadan; İzmir dışında ise Manisa'dan servis bulunmaktadır. Bu liste tam güzergâh listesi değildir. Hatlar talebe ve döneme göre değişebildiği için kesin güzergâh, durak ve güncel bilgiler servis sağlayıcısından veya okul idaresinden öğrenilmelidir.
+
+---
+
+### Bölüm H: Mezunlar ve Ek Bilgiler
+
+**S39: BAL'dan tanınmış mezunlar var mı?**
+
+Evet. BAL, siyaset, sanat, spor, akademi ve iş dünyasında birçok başarılı mezun yetiştirmiştir.
+
+Kamuoyunda tanınan mezunlardan bazıları:
+
+- Özgür Özel — Siyasetçi, CHP Genel Başkanı.
+- Tunç Soyer — Siyasetçi, İzmir Büyükşehir Belediye Başkanlığı görevinde bulunmuştur (2019–2024).
+- Erden Eruç — Okyanus kürekçisi, kaşif ve insan gücüyle dünya turu gerçekleştiren sporcu.
+- Çağlar Ertuğrul — Oyuncu.
+- Salih Bademci — Oyuncu.
+- Tülin Özen — Oyuncu.
+- Gözde Tezer — Yazar ve içerik üreticisi.
+
+BAL mezunları ayrıca akademi, mühendislik, sağlık, hukuk, girişimcilik ve özel sektör alanlarında Türkiye'nin ve dünyanın farklı bölgelerinde önemli görevler üstlenmektedir. Mezunlar arasındaki dayanışma BALEV ve BALMED aracılığıyla sürdürülmektedir.
+
+**S40: BAL'ın proje okulu olması ne anlam taşır?**
+MEB, belirli akademik ve yenilikçi kriterleri karşılayan okullara Proje Okulu statüsü vermektedir. Bu statüdeki okullarda proje tabanlı öğrenme, uluslararası iş birlikleri ve yenilikçi eğitim uygulamalarına daha fazla yer verilir. BAL bu statüyü **2016–2017** yılında kazanmıştır.
+
+**S41: Okulda rehberlik hizmetleri var mı?**
+Evet. MEB mevzuatı gereği BAL'da psikolojik danışma ve rehberlik (PDR) servisi bulunmakta; öğrencilerin akademik, mesleki ve kişisel gelişimlerine destek verecek rehber öğretmenler görev yapmaktadır.
+
+Rehberlik servisi, üniversite tercih döneminde öğrencilere tercih danışmanlığı desteği sunar. LGS ile yeni gelen öğrencilerin okula, hazırlık sınıfına ve kampüs yaşamına adaptasyonu da rehberlik çalışmaları kapsamında desteklenir.
+
+[GÜNCEL VERİ GEREKLİ: Rehberlik servisinin iletişim bilgileri için okul idaresine başvurunuz.]
+
+**S42: Mezunlar için mentörlük programı var mı?**
+Evet. BALEV'in **"Bi'BALlı"** programı kapsamında mevcut öğrencilerle mezunlar arasında mentörlük ilişkisi kurulmaktadır. Ayrıca BALMED aracılığıyla mezunlar bir araya getirilmektedir.
+
+**S43: BAL'ın üniversite sıralamasındaki yeri nedir?**
+2025 LGS verileriyle BAL, Türkiye genelinde en yüksek taban puanlı ilk 100 lise arasında Almanca bölümüyle **14. sırada** yer almaktadır. İzmir'de İzmir Fen Lisesi, Buca İnci-Özer Tırnaklı Fen Lisesi ve Atatürk Lisesi ile birlikte "İzmir'in büyük dörtlüsü" arasında sayılmaktadır.
+
+**S44: BAL'da internet altyapısı nasıl?**
+Okul, Fatih Projesi kapsamında **fiber internet** altyapısına sahiptir.
+
+---
+
+## 5. İletişim ve Ulaşım — Özet Referans
+
+### 5.1 Resmi İletişim Bilgileri
+
+| Bilgi | Değer |
+|---|---|
+| Tam Adres | Mevlana Mah. Ord. Prof. Dr. Muhiddin Erel Cad. No: 15A, Bornova / İzmir |
+| Posta Kodu | 35040 |
+| Telefon | 0232 388 10 39 |
+| Faks | 0232 342 90 77 |
+| Web Sitesi | izmirbal.meb.k12.tr |
+| İletişim Formu | izmirbal.meb.k12.tr/tema/iletisim.php |
+| İdari Çalışma Saatleri | Pzt–Cum 08:00–17:00 |
+
+### 5.2 İlgili Kurum Web Adresleri
+
+| Kurum | Web Adresi |
+|---|---|
+| BAL Resmi MEB Sitesi | izmirbal.meb.k12.tr |
+| BALEV (Eğitim Vakfı) | balev.org.tr |
+| BALMED (Mezunlar Derneği) | balmed.org.tr |
+| BALÖDER (Bağımsız Öğrenci Derneği) | balogrenci.org / baltimes.org / instagram.com/balogrenci |
+| BAL360 Sanal Gezi | balsanalgezi.com |
+
+### 5.2.1 BALEV, BALMED ve BALÖDER Arasındaki Fark
+
+- **BALEV:** Bornova Anadolu Lisesi Eğitim Vakfı'dır; burs, öğrenci projeleri ve eğitim desteği alanlarında çalışır.
+- **BALMED:** Bornova Anadolu Lisesi mezunlarını bir araya getiren mezunlar derneğidir.
+- **BALÖDER (BAL Öğrenci Derneği):** Mevcut öğrencilerin inisiyatifiyle kurulmuş, okuldan ve MEB'den bağımsız öğrenci oluşumudur. Derneğin web sitesi **https://balogrenci.org**, haber platformu **BAL Times** (**https://baltimes.org**), sosyal medya hesabı ise `@balogrenci`dir. BALÖDER bağış kabul eder; bağış bilgileri **https://balogrenci.org/bagis** adresinde bulunabilir. Bu bilgiler BALÖDER'in kendi beyanlarına dayanır ve okulun veya MEB'in resmi görüşü olarak sunulmamalıdır.
+
+### 5.3 Toplu Taşıma ile Ulaşım
+
+Bornova Metro İstasyonu çıkışından **267, 268, 368, 59 veya 505 numaralı** ESHOT/İZULAŞ otobüsleriyle yaklaşık **5 dakika.** Otogar yönü Alparslan–Yenigaraj minibüsleri okulun önünden geçmektedir. İlçe merkezine yürüyüş yaklaşık **15 dakikadır.**
+
+### 5.4 Servis Güzergâhları
+
+İzmir içi: Buca, Gaziemir, Karşıyaka, Mavişehir ve Menemen dahil İzmir'in birçok ilçesinden servis kalkmaktadır. Bu örnekler tam güzergâh listesi değildir; hatlar talebe ve döneme göre değişebilir.
+
+İzmir dışından Manisa'dan da servis bulunmaktadır. Ücret mesafeye göre belirlenir. 2026–2027 dönemi için Buca hattında aylık yaklaşık **5.000–6.000 TL** ödendiği bilgisi yalnızca örnek olarak verilebilir; diğer hatların fiyatları farklıdır. Kesin güzergâh, durak ve fiyat için servis sağlayıcısından veya okuldan güncel bilgi alınmalıdır.
+
+---
+
+## §A — LGS Taban Puanları: Yıllara Göre Tarihsel Tablo (2018–2025)
+
+### A.1 Genel Notlar
+
+LGS (Liselere Geçiş Sınavı) sistemi **2018 yılında** uygulamaya girmiştir. Önceki yıllarda TEOG sistemi kullanılmaktaydı; bu nedenle karşılaştırmalı tarihsel seri 2018'den başlamaktadır.
+
+Aşağıdaki tablolar, her yıl MEB tarafından yayımlanan "Sınavla Öğrenci Alan Ortaöğretim Kurumları Yerleştirme Sonuçları" kılavuzlarından ve bu kılavuzları derleyen doğrulanmış eğitim portallarından (egitim.net.tr, egitimsistem.com, sorubak.com, karnehesaplama.com, hangisoru.com) derlenerek oluşturulmuştur.
+
+**Önemli sistem notları:**
+- **2018–2021:** BAL, 4 yıllık (hazırlıksız) eğitim sistemine tabidir; kontenjanlar buna göredir.
+- **2023'ten itibaren:** Hazırlık sınıfının yeniden açılmasıyla sistem 5 yıla (1 hazırlık + 4 lise) geçmiştir. Bu geçiş, 2023 yerleştirme rakamlarını bazı kaynaklarda karmaşık göstermektedir.
+- Taban puanlar, sınava katılan toplam öğrenci sayısına ve soruların güçlük düzeyine göre yıldan yıla farklılık gösterir; yüzdelik dilim bu açıdan daha güvenilir karşılaştırma ölçütüdür.
+
+---
+
+### A.2 İngilizce Bölümü — Yıllara Göre LGS Taban Puanları
+
+| Yıl | Taban Puanı | Yüzdelik Dilim | Kontenjan | Not |
+|---|---|---|---|---|
+| 2018 | ~430–440 (tahmini) | — | 360 | LGS'nin ilk yılı; arşiv kaynaklar sınırlı |
+| 2019 | ~440–450 (tahmini) | — | 360 | |
+| 2020 | ~445–452 (tahmini) | — | 360 | COVID-19 yılı; sınav geç yapıldı |
+| 2021 | 449,1954 | ~%1,81 | 380 | MEB İzmir İl PDF kılavuzundan doğrulandı |
+| 2022 | 461,2979 | ~%1,73| 210 | Hazırlık geçiş yılı; kontenjan değişti |
+| 2023 | ~465–470 (tahmini) | ~%1,3–1,5 | 300 | |
+| 2024 | 473,5694 | ~%1,31–1,44 | 300 | karnehesaplama.com; MEB kaynaklı |
+| 2025 | 476,4021 | ~%1,13 | 300 | MEB yerleştirme kılavuzu; sorubak.com |
+
+---
+
+### A.3 Almanca Bölümü — Yıllara Göre LGS Taban Puanları
+
+| Yıl | Taban Puanı | Yüzdelik Dilim | Kontenjan | Not |
+|---|---|---|---|---|
+| 2018 | — | — | 60 | Arşiv veriye ulaşılamadı |
+| 2019 | — | — | 60 | |
+| 2020 | — | — | 60 | |
+| 2021 | 447,5683 | ~%1,93 | 76 | MEB İzmir İl PDF kılavuzundan doğrulandı |
+| 2022 | 460,8801 | ~%1,84| 60 | |
+| 2023 | ~468–472 (tahmini) | ~%1,1–1,3 | 60 | |
+| 2024 | 482,1700 | ~%0,67 | 60 | egitim.net.tr |
+| 2025 | 484,1567 | ~%0,59 | 60 | MEB yerleştirme kılavuzu — Türkiye'de 14. sıra |
+
+---
+
+### A.4 Fransızca Bölümü — Yıllara Göre LGS Taban Puanları
+
+| Yıl | Taban Puanı | Yüzdelik Dilim | Kontenjan | Not |
+|---|---|---|---|---|
+| 2018 | — | — | 30 | Arşiv veriye ulaşılamadı |
+| 2019 | — | — | 30 | |
+| 2020 | — | — | 30 | |
+| 2021 | 445,8431 | ~%2,08 | 76 | MEB İzmir İl PDF kılavuzundan doğrulandı |
+| 2022 | 459,9603 | ~%1,84 → %0,61 | 30 | egitimsistem.com |
+| 2023 | ~462–466 (tahmini) | ~%1,5–1,7 | 30 | |
+| 2024 | 473,8192 | ~%1,29–1,31 | 30 | egitim.net.tr; liseler.com.tr |
+| 2025 | 480,1748 | ~%0,87 | 30 | sorubak.com; MEB kılavuzu |
+
+---
+
+### A.5 Genel Değerlendirme: Puan Trendi
+
+Tüm üç bölümde de LGS taban puanları 2021'den 2025'e kadar belirgin bir yükseliş trendi göstermiştir:
+
+- **Almanca bölümü:** 447,5683 (2021) → 484,1567 (2025) — yaklaşık **+36,6 puan** artış
+- **İngilizce bölümü:** 449,1954 (2021) → 479,8728 (2025) — yaklaşık **+30,7 puan** artış
+- **Fransızca bölümü:** 445,8431 (2021) → 480,1748 (2025) — yaklaşık **+34,3 puan** artış
+
+Bu trendin temel nedenleri arasında 2023'te hazırlık sınıfının yeniden açılması, okulun Proje Okulu statüsü ve AP programının eklenmesiyle birlikte BAL'ın ulusal sıralamada yükselmesi ve tercih cazibesinin artması bulunmaktadır.
+
+**Türkiye sıralama notu:** 2025 LGS verilerine göre BAL, Almanca bölümüyle Türkiye'nin en yüksek taban puanlı ilk 100 lisesi arasında **14. sıradadır.** Bazı kaynaklar genel okul olarak **24. sırayı** vermekte olup bu fark kaynak metodolojisinden kaynaklanmaktadır (bölüm bazlı vs. okul bazlı sıralama). Her iki veri de doğrudur; bağlama göre kullanılmalıdır.
+
+---
+
+## §B — Kulüpler, Topluluklar ve Etkinlikler
+
+> **Kaynak hiyerarşisi:** BALEV resmi sitesi (balev.org.tr) → okulun MEB sayfası (izmirbal.meb.k12.tr) → Wikipedia → doğrulanmış üçüncü parti kaynaklar.
+
+BAL'daki kulüp ve topluluklar iki ayrı yapı olarak ele alınmalıdır: kulüpler öğrencilerin sınıf öğretmenleri aracılığıyla yıl başında seçtiği okul yapılarıdır; topluluklar ise öğrenci ekipleri tarafından yürütülür ve yıl başında tanıtılır. Hem kulüpler hem de topluluklar bazı yıllarda düzenli aktif faaliyet göstermeyebilir.
+
+ÖNEMLİ KURAL / ÖZELLİKLE BELİRTİLECEK HUSUS: Kulüp ve topluluk sorularında, öğrencilerin yıl başında bir kulüp seçtiği; diledikleri kadar topluluğa katılabildiği ve yıl içinde topluluk değiştirebildiği belirtilmelidir. Toplulukların tanıtımları yıl başında yapılır; kulüpler sınıf öğretmenleri aracılığıyla seçilir.
+
+Okulda sosyal hayat oldukça dinamiktir ve her sene yeni topluluklar kurulabilir. Eğitim-öğretim yılının başında topluluk temsilcileri sınıfları ziyaret ederek sunum ve tanıtımlar yapar. Kulüpler ise sınıf öğretmenleri aracılığıyla seçilir.
+
+---
+
+### B.1 Topluluklar ve Kulüpler
+
+BAL'da sosyal yaşam oldukça dinamiktir ve kulüpler ile topluluklar her yıl yenilenmektedir. Topluluklar öğrenci inisiyatifiyle yürütülebilir, yeni topluluklar kurulabilir veya bazı topluluklar faaliyetlerine ara verebilir. Aynı durum özellikle kulüpler için de geçerlidir.
+
+ÖNEMLİ KURAL / ÖZELLİKLE BELİRTİLECEK HUSUS: Öğrenciler yıl başında sınıf öğretmenleri aracılığıyla bir kulüp seçer; diledikleri kadar topluluğa katılabilir ve yıl içinde topluluk değiştirebilir. Topluluk tanıtımları eğitim-öğretim yılı başında yapılır.
+
+Okulda her sene yeni topluluklar kurulabilir ve bazı topluluklar faaliyetlerine ara verebilir. Eğitim-öğretim yılının başında topluluk temsilcileri sınıfları ziyaret ederek tanıtım yapar. Öğrenciler yıl başında sınıf öğretmenleri aracılığıyla bir kulüp seçer; ayrıca istedikleri kadar topluluğa katılabilir ve topluluklar arasında yıl içinde geçiş yapabilirler.
+
+BAL bünyesinde son yıllarda faaliyet göstermiş topluluk ve kulüplerden bazıları şunlardır:
+
+#### B.1.1 2025–2026 Öğrenci Toplulukları Listesi
+
+2025–2026 eğitim-öğretim yılı için kayıtlı **25 topluluk** (Excel'deki 24 kayıt ve ayrıca eklenen Sosyal Sorumluluk Topluluğu) şunlardır:
+
+- Atatürkçü Gençlik Topluluğu
+- BAL Genç Yeşilay
+- BALTIMATE
+- BAL Felsefe Topluluğu
+- BAL Radyo
+- BAL Yazılım Topluluğu
+- Balösev
+- Bornova Anadolu Lisesi Bando Takımı
+- BAL Klasik Müzik Topluluğu
+- İktisadi ve İdari Bilimler Topluluğu
+- BAL Gastronomi Topluluğu
+- Tanıtım Ekibi
+- BAL FPS Topluluğu
+- Astronomi Topluluğu
+- BAL Animasyon ve Çizgi Roman
+- BALFEST
+- BAL Robotik
+- BAL Mitoloji Topluluğu (BALMİT)
+- BALART
+- BAL Hip-Hop
+- BAL Game Development
+- BalDeutsch
+- BAL Sinema ve Kısa Film Topluluğu
+- Bornova Anadolu Lisesi Kamp Topluluğu
+- Sosyal Sorumluluk Topluluğu
+
+##### Topluluk Başkanları ve Kamuya Açık Hesaplar
+
+Excel'de yer alan başkan adları ve toplulukların verdiği Instagram hesapları iletişim amacıyla listelenmiştir:
+
+| Topluluk | Başkan | Instagram / iletişim |
+|---|---|---|
+| Atatürkçü Gençlik Topluluğu | Ezgi Güçlü | `@bal_ataturkcugencliktoplulugu` |
+| BAL Genç Yeşilay | Utku Anıl Ölçüm ve Osman Tuğra Bilgin | `@balgencyesilay` |
+| BALTIMATE | Begüm Karasu | `baltimate_ultimate` |
+| BAL Felsefe Topluluğu | Aslınehir Kat | `balfelsefetoplulugu` |
+| BAL Radyo | Onur Çağan Yılmaz | `balradyo` |
+| BAL Yazılım Topluluğu | Emre Bozkurt | `@balyazilimtoplulugu` |
+| Balösev | Eylül Mat | `balosev` |
+| Bornova Anadolu Lisesi Bando Takımı | Tansu Hiçyılmaz | `@bal.bando` |
+| BAL Klasik Müzik Topluluğu | Busem Akbaş | `balklasikmuzik` |
+| İktisadi ve İdari Bilimler Topluluğu | Çağan Çalışkan | `@baliibt` |
+| BAL Gastronomi Topluluğu | Irmak Yılmaz | `bal.gurme` |
+| Tanıtım Ekibi | Mehmet Tekin ve Sinemsu Hökelek | `Bal_tanitim` |
+| BAL FPS Topluluğu | Ada Ergüden | `Bal_FPS` |
+| Astronomi Topluluğu | Zeynep Uraslı | `bal.astronomi` |
+| BAL Animasyon ve Çizgi Roman | Muhammed Yusuf Şahin | `@balanimasyoncizgiroman` |
+| BALFEST | Eda Güzelaraz | `bal.fest` |
+| BAL Robotik | Aras Arkan | `@uselesscase9021` |
+| BAL Mitoloji Topluluğu (BALMİT) | Efsa Kandemirci ve Zeynep Tunç | `@bal.mitoloji` |
+| BALART | Esma Ecrin Kılıç | `BAL ART` |
+| BAL Hip-Hop | Kaan Karabacak | `BAL Hip-Hop` |
+| BAL Game Development | Onur Sanal | `@balgamedevelopment` |
+| BalDeutsch | Nisa Özsemerci | `bal_deutsch` |
+| BAL Sinema ve Kısa Film Topluluğu | Aslı Elif Uzun | `@balsinematoplulugu` |
+| Bornova Anadolu Lisesi Kamp Topluluğu | Kerem Okçu | `@balkamptoplulugu` |
+| Sosyal Sorumluluk Topluluğu | Bilgi verilmedi | — |
+
+Bu liste, toplulukların o yıl kayıtlı veya tanıtılmış olduğunu gösterir; her topluluğun yıl boyunca düzenli faaliyette bulunduğu anlamına gelmez. Kütüphanecilik, Satranç, Robotik ve Yapay Zeka gibi topluluklar okulda bilinse de bazı topluluklar yalnızca yıl başı ve yıl sonu toplantıları yapabilir veya o yıl aktif faaliyet göstermeyebilir. Aynı durum özellikle kulüpler için de geçerlidir.
+
+Öğrenciler eğitim-öğretim yılının başında sınıf öğretmenleri aracılığıyla **bir kulüp** seçer ve o kulübün üyesi kabul edilir. Bunun yanında istedikleri kadar öğrenci topluluğuna katılabilir; topluluklara yıl içinde girip çıkabilirler. Yeni hazırlık öğrencilerinin toplulukları tanıması için eğitim-öğretim yılının başında etkinlik, tanıtım toplantısı veya sınıf ziyaretleri düzenlenir.
+
+Excel dosyasındaki kişisel telefon numaraları kamuya açık RAG verisine aktarılmamıştır. Güncel iletişim bilgileri için ilgili topluluğun kendi Instagram hesabı veya okul duyuruları takip edilmelidir.
+
+#### Teknoloji, Bilim ve Akademik Topluluklar
+
+- Yapay Zeka Topluluğu
+- Yazılım Topluluğu
+- Oyun Geliştirme Topluluğu
+- Robotik Topluluğu
+- MUN Topluluğu
+- İngilizce Topluluğu
+- Almanca Topluluğu
+- Fransızca Topluluğu
+- Felsefe Topluluğu
+- Tarih Topluluğu
+- Mitoloji Topluluğu
+- İktisadi ve İdari Bilimler Topluluğu
+
+#### Sanat, Kültür ve İletişim Toplulukları
+
+- Kültür ve Sanat Topluluğu
+- Sinema Topluluğu
+- Animasyon Topluluğu
+- Klasik Müzik Topluluğu
+- Tiyatro Topluluğu
+- Fotoğrafçılık Topluluğu
+- BAL Radyo
+
+#### Sosyal Sorumluluk, Spor ve Yaşam Toplulukları
+
+- Sosyal Sorumluluk Topluluğu
+- LÖSEV Gönüllülük Topluluğu
+- Yeşilay Topluluğu
+- Çevre Topluluğu
+- Biz de Buradayız Topluluğu
+- Atatürkçü Gençlik Topluluğu
+- Kamp Topluluğu
+- FPS Topluluğu
+- Amerikan Futbolu Topluluğu
+- BALTIMATE
+
+
+---
+
+### B.2 Spor
+
+#### B.2.1 BALspor (Bornova Anadolu Lisesi Spor Kulübü)
+
+**Kuruluş:** 2004 yılında BAL mezunları tarafından İzmir'de kurulmuştur.
+
+**Faaliyet alanı:** 12 spor branşı. Okulda aktif olarak antrenman yapılan başlıca branşlar: futbol, basketbol, voleybol, Ultimate Frizbi, masa tenisi. Ayrıca profesyonel dalış da dahil olmak üzere 12 farklı dalda lisanslı sporcular yetiştirilmektedir.
+
+**Vizyon ve hedefler (resmi siteden):** "Sürdürülebilir Kalkınma Amaçları" prensipleriyle büyümek; okulun öğrencileri, velileri ve 18.000'i aşkın mezunu arasında birleştirici bir rol üstlenmek; gençleri zararlı alışkanlıklardan uzak tutmak, sevgi ve saygıya dayalı sportif bir kültür oluşturmak.
+
+**Önemli özellik — Ultimate Frizbi:** BAL, Ultimate Frizbi takımına sahip Türkiye'deki **tek lise** olma özelliğini korumaktadır. Ülkede bu sporu yapan başka lise takımı bulunmadığından BAL öğrencileri turnuvalarda üniversite takımlarıyla mücadele etmektedir.
+
+**Web sitesi:** balspor.org.tr
+
+#### B.2.2 Pickleball
+
+2024–2025 öğretim yılında BAL bünyesinde aktif olarak başlatılan raket sporudur. Okul, pickleball etkinliğini "Liselerde Bilim Uygulamaları" çerçevesinde bir araştırma projesiyle de ilişkilendirmiştir: projenin amacı, pickleball antrenmanlarının öğrencilerin dikkat ve konsantrasyon becerileri üzerindeki etkisini ölçmektir.
+
+Uygulama programı: haftada iki gün, her seans 1 saat antrenman. Ocak 2025'te okul içi pickleball turnuvası düzenlenmiştir. 2025–2026 öğretim yılında da etkinlikler devam etmektedir; BAL Pickleball takımı İtalya'da uluslararası etkinliklere katılmıştır.
+
+---
+
+### B.3 Akademik ve Bilimsel Başarılar — Olimpiyatlar, Projeler, Yarışmalar
+
+BAL, teorik olimpiyat formatından ziyade bilimi uygulamaya dökme alanında Ege Bölgesi'nin en çok derece alan Anadolu liselerinden biridir. Okul, son iki yılda TÜBİTAK bölge sergisine en çok proje gönderen ilk 3 okul arasında yer almıştır.
+
+#### B.3.1 TÜBİTAK 2204-A Lise Öğrencileri Araştırma Projeleri Yarışması
+
+BAL, TÜBİTAK 2204-A kapsamında aşağıdaki alanlarda bölge dereceleri elde etmiştir:
+
+**Matematik Alanı (Bölge Derecesi):** 2024 yılı TÜBİTAK 2204-A yarışmasında BAL öğrencileri, matematiksel modelleme ve algoritma geliştirme projeleriyle İzmir Bölge Derecesi (İkincilik) elde etmiştir.
+
+**Yazılım ve Teknoloji Alanı:** Son iki yılda okul, özellikle makine öğrenmesi tabanlı yazılım projeleriyle TÜBİTAK bölge sergilerine davet almıştır.
+
+**Kimya ve Biyoloji (Sağlık Teknolojileri):** Kimya alanında geliştirilen malzeme bilimi projeleri TÜBİTAK jürisi tarafından ödüllendirilmiş; okul son iki yılda bölge sergisine en çok proje gönderen ilk 3 okul arasında yer almıştır.
+
+#### B.3.2 İzmir Bilim Olimpiyatları (İZBO) ve Merkez Üs Konumu
+
+İzmir İl Milli Eğitim Müdürlüğü tarafından düzenlenen ve Türkiye'nin en prestijli yerel olimpiyatlarından biri olan İZBO'da BAL hem yarışmacı hem de ev sahibi konumundadır:
+
+**Sınav Merkezi:** Bornova Anadolu Lisesi, İZBO'nun 2. Aşama Yüz Yüze Değerlendirme Sınavları için resmi merkez okul olarak belirlenmiştir. Okul, yüzlerce öğrencinin yarıştığı bu organizasyonun hem lojistik hem de akademik yükünü üstlenerek İzmir'deki olimpiyat kültürünün merkezinde yer almaktadır.
+
+**Matematik ve Bilgisayar Dalı:** BAL, fen liselerinin yarıştığı bu kulvarda, Anadolu liseleri kategorisinde Matematik ve Bilgisayar (Bilişim) alanlarında her yıl ilk 3 sıra içerisinde yer alarak İl Dereceleri çıkarmaktadır. 2025 yılında ayrıca bronz madalya kazanılmıştır.
+
+#### B.3.3 TEKNOFEST ve Ulusal/Uluslararası Teknoloji Yarışmaları
+
+Okulun bilgisayar ve teknoloji alanındaki başarıları, TEKNOFEST ve uluslararası kodlama yarışmalarında yoğunlaşmaktadır:
+
+**TEKNOFEST İleri Yazılım ve Yapay Zeka Dereceleri:** BAL Bilişim ve Robotik takımları, son iki yılda (2024 ve 2025 dönemleri) TEKNOFEST bünyesindeki Eğitim Teknolojileri ve İnsanlık Yararına Teknoloji kategorilerinde Türkiye Finallerine kalarak Finalistlik ve Mansiyon dereceleri elde etmiştir.
+
+**Uluslararası Katılım:** Okul öğrencileri, uluslararası bilgisayar ve yazılım tabanlı proje yarışmalarına (Avrupa ve Amerika merkezli Genius Olimpiyatları benzeri organizasyonlara) çevre ve yazılım projeleriyle katılım göstererek uluslararası platformda okulu temsil etmiştir.
+
+#### B.3.4 Bilim Olimpiyatlarına Hazırlık Sistemi
+
+BAL, öğrencilerini olimpiyatlara hazırlarken süreci kurumsal bir müfredat gibi işletmektedir:
+
+**Olimpiyat Odaklı Kulüpleşme:** Okul bünyesindeki Bilim, Fen ve Bilişim teknolojileri kulüpleri, geleneksel kulüp mantığından ziyade birer akademik çalışma grubu gibi işlemektedir. 9. sınıftan itibaren temel bilimlere (Matematik, Fizik, Kimya, Biyoloji) ve Bilgisayara yatkın öğrenciler tespit edilerek olimpiyat takımlarına dahil edilmektedir.
+
+**Akademik Kamplar ve Mezun Desteği:** BAL'ın en büyük avantajlarından biri, geçmişte TÜBİTAK olimpiyatlarında derece almış köklü mezun ağıdır. Üniversitelerde (ODTÜ, Boğaziçi, İTÜ, İYTE vb.) bilgisayar, elektrik-elektronik veya temel bilimler okuyan mezunlar, okuldaki öğrenciler için periyodik olarak soru çözüm kampları ve ileri düzey algoritma/matematik dersleri düzenlemektedir.
+
+**Merkez Üs Konumu:** BAL, İzmir İl Milli Eğitim Müdürlüğü'nün en önemli bilimsel partnerlerinden biridir. İzmir Bilim Olimpiyatları'nın (İZBO) 2. Aşama sınavları doğrudan Bornova Anadolu Lisesi ev sahipliğinde gerçekleştirilmektedir.
+
+#### B.3.5 Diğer Olimpiyatlar ve Etkinlikler
+
+**URFODU Bilim Olimpiyatları:** 2026 yılında okul öğrencileri URFODU Bilim Olimpiyatları'nda gurur verici sonuçlar almıştır.
+
+**Uluslararası Bilim Temelleri Bilgi Yarışması:** 2025 yılında okulun bir öğrencisi Uluslararası Bilim Temelleri Bilgi Yarışması'nda biyoloji ve Almanca alanlarında öne çıkmıştır. Bu başarı, okulun uluslararası ve çok dilli başarı çizgisini desteklemektedir.
+
+**Disiplinler Arası Öğrenci Çalıştayı:** BAL, Türkiye'deki çeşitli liselerin katıldığı "Disiplinler Arası Öğrenci Çalıştayı"na katılmaktadır. 2024–2025 yılında 3. Çalıştay'a iştirak edilmiştir.
+
+**TÜBİTAK 4006 Bilim Fuarları:** BAL, TÜBİTAK 4006 Bilim Fuarı'nı düzenli olarak gerçekleştirmektedir. **2026 yılında 12. TÜBİTAK 4006 Bilim Fuarı** düzenlenmiş olup bu organizasyonda 23 danışman öğretmen ve 60 öğrenci yer almıştır. Okul bünyesindeki akademik kültür, TÜBİTAK liselerarası bilimsel proje yarışmalarına katılımı teşvik etmektedir.
+
+**Olimpiyat branşları:** Fen bilimleri, fizik, kimya, biyoloji, matematik, bilgisayar/BT.
+
+#### B.3.6 HONEYMUN
+
+HONEYMUN, BAL bünyesinde yürütülen Model United Nations (MUN) formatlı öğrenci konferansıdır. BAL'de HONEYMUN, BALGÇ ve TEDx olmak üzere üç yıllık öğrenci konferansı bulunduğu belirtilmektedir; bu çerçevede HONEYMUN okulun görünür akademik etkinliklerinden biri olarak değerlendirilebilir.
+
+HONEYMUN, tek seferlik bir proje olmaktan çok, çok oturumlu bir konferans serisi yapısına yakındır. MUN formatı gereği etkinliklerde komite toplantıları, açılış-kapanış konuşmaları, blok görüşmeler ve karar taslakları gibi çalışmalar yer alabilir. BAL'e özgü yıllık tema, komite başlıkları ve oturum içerikleri açık kaynaklarda net biçimde doğrulanmamıştır.
+
+Katılım koşulları açık kaynaklarda ayrıntılı olarak verilmemiştir. Ancak MUN formatında öğrenciler genellikle araştırma yapma, İngilizce konuşma, takım çalışması ve topluluk önünde sunum becerileri üzerinden hazırlanır. Bu yönüyle HONEYMUN, BAL'ın yabancı dil eğitimi ve sosyal-akademik kulüp kültürüyle uyumlu bir öğrenci etkinliğidir.
+
+[GÜNCEL VERİ GEREKLİ: HONEYMUN'un hangi yıldan beri düzenlendiği, yıllık tema başlıkları, komite listeleri, organizasyon ekibi ve güncel katılım koşulları için okulun resmi duyuruları veya etkinlik organizasyon ekibiyle teyit ediniz.]
+
+---
+
+### B.4 Fransızca Bölümü — Müfredat, DELF Sistemi ve Başarılar
+
+BAL'ın Fransızca bölümü, 1997–1998 öğretim yılında açılmış olup Türkiye'de üç yabancı dilde eğitim veren tek Anadolu Lisesi olma özelliğinin temel taşlarından biridir. Okul, öğrencilerini sıfır (başlangıç) seviyesinden alarak 5 yıllık süreçte uluslararası geçerli DELF diplomasına hazırlamaktadır.
+
+#### B.4.1 DELF Seviye Hedefleri ve Akademik Akış
+
+**Hazırlık Sınıfı Sonu (Hedef: DELF A1 / A2):** Haftalık 20 saati bulan yoğun Fransızca eğitimiyle öğrenciler, doğrudan DELF A2 seviyesindeki metinleri anlayacak ve konuşacak düzeye getirilir.
+
+**10. ve 11. Sınıf Sonu (Hedef: DELF B1):** Öğrenciler dil bilgisi ve kompozisyon süreçlerini tamamlayarak B1 sınavlarına yönlendirilir.
+
+**12. Sınıf Mezuniyet Hedefi (Nihai Hedef: DELF B2):** BAL Fransızca bölümü mezuniyet standardı olarak DELF B2 diplomasını hedefler. B2 diploması alan bir BAL mezunu, Fransa'daki üniversitelere (Sorbonne, Lyon vb.) doğrudan, dil hazırlık sınıfı okumadan lisans başvurusu yapma hakkı kazanır.
+
+#### B.4.2 DELF/DALF Sınav Protokolü
+
+**İzmir Fransız Kültür Merkezi (Institut Français) Partnerliği:** BAL, sınav organizasyonlarını resmi olarak İzmir Fransız Kültür Merkezi ile koordineli yürütür. Sınav başvuruları okulun Fransızca zümresi tarafından toplu olarak organize edilir.
+
+**DELF Junior Formatı:** BAL öğrencileri, yetişkinlerin girdiğine eşdeğer ancak sınav içerikleri (okuma parçaları, kompozisyon konuları) lise yaş grubunun ilgi alanlarına (gençlik sorunları, çevre, okul yaşamı, teknoloji) göre optimize edilmiş DELF Junior oturumlarına katılır.
+
+**Sınav Başarı Oranları:** Okulun hazırlık tabanlı dil geçmişi sayesinde, DELF sınavlarına toplu katılım sağlayan öğrencilerin sınavı geçme (100 üzerinden 50 barajını aşma) oranları %90'ın üzerindedir.
+
+#### B.4.3 Fransızca Eğitim Kadrosu ve Ders Yükü
+
+Resmi atama verilerine göre BAL'da Fransızca eğitimi norm kadro olarak kritik öneme sahiptir. Okulda haftalık toplam **52 saatin üzerinde Fransızca ders yükü** bulunmakta olup bu dersler, MEB'in Proje Okul kapsamında görevlendirdiği, DELF sınav formatına ve Avrupa Ortak Dil Kriterleri'ne (CEFR) hakim kıdemli Fransızca öğretmenleri tarafından yürütülmektedir.
+
+---
+
+### B.5 Kültür, Sanat ve Dil Etkinlikleri
+
+#### B.5.1 Yabancı Dil Günleri
+
+Üç ayrı yabancı dil bölümüne sahip olan BAL'da, İngilizce, Almanca ve Fransızca dillerinde düzenlenen "Yabancı Dil Günleri" etkinlikleri yapılmaktadır. Bu günlerde dil temelli yarışmalar, sunumlar ve kültür etkinlikleri düzenlenir.
+
+#### B.5.2 Münazara Etkinlikleri
+
+Öğrenciler, okul içi münazara etkinliklerine ve çeşitli liselerarası münazara turnuvalarına katılmaktadır. Münazara, eleştirel düşünme ve ikna yetkinliğini geliştiren önemli bir akademik etkinliktir.
+
+#### B.5.3 Kültür ve Sanat Şenlikleri
+
+Yıl boyunca düzenlenen kültür-sanat etkinliklerinde öğrenciler çeşitli alanlarda sahneye çıkar. Bu etkinlikler Ayran Günü ile birlikte okulun sosyal takviminin en önemli köşe taşlarından birini oluşturur.
+
+---
+
+### B.6 Uluslararası Projeler ve Programlar
+
+#### B.6.1 eTwinning ve Erasmus+
+
+**eTwinning:** BAL, Avrupa Birliği destekli eTwinning platformunda aktif projeler yürütmektedir. Platform, farklı ülkelerdeki okulların çevrimiçi işbirliği yapmasına olanak tanır. BAL öğrencileri bu projeler aracılığıyla Avrupalı akranlarıyla ortak eğitim deneyimleri yaşamaktadır. Okul, e-Güvenlik (e-Safety) Bronze Ödülü almıştır (2021). 2025 tarihli bir okul profili kaynağı, BAL'ın eTwinning ve Erasmus+ açısından aktif olduğunu belirtmektedir.
+
+**Erasmus+ Projeleri:** Okulun Erasmus+ ile ilişkili etkinlikleri yenilik değildir. **2021 yılında Erasmus Günleri** kapsamında okul içinde kutlama yapıldığı görülmektedir. **2024 yılında BALPOD** podcast bölümünde doğrudan Erasmus+ temalı içerik üretilmiş olması, okulun projeyi yalnızca katılım düzeyinde değil, içerik üretimi ve görünürlük boyutunda da taşıdığını göstermektedir.
+
+#### B.6.2 PASCH Ağı Etkinlikleri
+
+Almanya Dışişleri Bakanlığı'nın PASCH (Schulen: Partner der Zukunft) ağına üye olan BAL, bu ağ kapsamındaki uluslararası öğrenci ve öğretmen değişim etkinliklerine katılmaktadır. Almanca bölümü öğrencileri için Almanya üniversitelerine bağlantı sağlayan bu ağ, öğrenci değişim programları ve burs imkânları da sunmaktadır.
+
+#### B.6.3 AP (Advanced Placement) Dersleri
+
+2024–2025 öğretim yılında başlatılan AP programı kapsamında öğrenciler uluslararası tanınan sınavlara girebilmektedir. Yüksek AP sınavı puanları, ABD ve pek çok uluslararası üniversitede ders muafiyeti ya da kredi kazanımı sağlar.
+
+---
+
+### B.7 Sosyal Sorumluluk ve Çevre
+
+#### B.7.1 Fidan Dikimi ve Çevre Etkinlikleri
+
+2025–2026 eğitim-öğretim yılının ilk dersi, okulun bahçesinde fidan dikimi etkinliğiyle açılmıştır. Bu etkinlik, BAL'ın uzun süredir benimsediği çevre bilinci anlayışının somut bir yansımasıdır. Yeşil vatan temalı çalışmalar okul programının ayrılmaz parçasıdır.
+
+#### B.7.2 Sosyal Sorumluluk Projeleri
+
+Öğrenciler, yıl boyunca çeşitli toplumsal sorumluluk projelerine katılmaktadır. Bu projeler bağış kampanyaları, köy okulu destekleri ve sosyal farkındalık etkinliklerini kapsamaktadır.
+
+---
+
+### B.8 BALÖDER — BAL Öğrenci Derneği
+
+**BALÖDER (BAL Öğrenci Derneği)** okulun veya MEB'in resmi öğrenci temsilciliği değildir; öğrenci öncülüğünde ve diğer kurumlardan bağımsız örgütlenen bir öğrenci oluşumudur. BALÖDER'in web sitesi **https://balogrenci.org**, resmi haber platformu **BAL Times** (**https://baltimes.org**), sosyal medya hesabı ise **https://www.instagram.com/balogrenci/** adresindedir. BALÖDER bağış kabul eder; bağış bilgileri **https://balogrenci.org/bagis** adresinde bulunabilir.
+
+BALÖDER hakkındaki bilgiler derneğin kendi beyanlarına dayanır; okulun veya MEB'in resmi görüşü olarak sunulmamalıdır.
+
+#### B.8.1 BAL Okul Kooperatifi
+
+**BAL Okul Kooperatifi**, BALÖDER bünyesinde yer alan, öğrenciler tarafından yürütülen bir öğrenci oluşumudur. Amacı öğrencilere uygun fiyatlı, kaliteli ve güvenilir gıda ve içecekler sunmaktır.
+
+Okul Kooperatifi, Ege Tanrıverdi tarafından 2023 yılında kurulmuştur. En aktif dönemlerinden biri 2025–2026 eğitim-öğretim yılı olmuş; 11 Temmuz 2026 itibariyle mevcut başkanı Emre Bozkurt'tur. Kooperatifin çalışmaları ve BALÖDER ile ilişkisi hakkında güncel bilgi için **https://balogrenci.org** takip edilmelidir.
+
+### B.9 Kulüplere ve Topluluklara Katılım
+
+Toplulukların tanıtımları eğitim-öğretim yılının başında yapılır. Öğrenciler bu tanıtımlar sırasında farklı toplulukları ve etkinlik alanlarını tanıma fırsatı bulur. Kulüpler ise yıl başında sınıf öğretmenleri aracılığıyla seçilir.
+
+Öğrenciler istedikleri kadar topluluğa bu tanıtım sürecinden sonra katılabilir ve yıl içinde topluluk değiştirebilirler. Hem kulüpler hem de topluluklar her yıl aynı düzeyde aktif olmayabilir; güncel durum okul duyurularından öğrenilmelidir.
+
+[GÜNCEL VERİ GEREKLİ: Her yıl açılan kulüpler, danışman öğretmenler, kontenjanlar, başvuru formları ve toplantı günleri okul duyuruları ve kulüp tanıtımları üzerinden takip edilmelidir.]
+
+---
+
+## §C — SSS Güncellemeleri (Mevcut §4'e Eklenecek)
+
+### Bölüm I: Kulüpler ve Topluluklar
+
+**S45: BAL'da hangi BALEV destekli topluluklar var?**
+BALEV tarafından desteklenen dört temel topluluk bulunmaktadır: BAL Tiyatro Topluluğu (1990'dan beri aktif), BAL Fotoğrafçılık Kulübü (2000'den beri aktif), BAL Radyo (mezun Ümit Tunçağ'66 tarafından başlatılmış, öğle tatilinde kapalı devre yayın yapar) ve BALEV Ersin Günöy'86 Kütüphanesi.
+
+**S46: BAL Fotoğrafçılık Kulübü'ne nasıl katılınır?**
+Kulüp, okulun sosyal etkinlik programı kapsamında yer almaktadır. Sorumlu öğretmen gözetiminde yürütülen kulübe katılım için okul idaresi veya kulübün sorumlu öğretmenine başvurulabilir. Kulüp, her öğretim yılı sonunda bir fotoğraf sergisi düzenler.
+
+**S47: BAL Radyo nedir, nasıl yayın yapar?**
+BAL Radyo, okul bünyesinde öğrencilerin yapımcılık ve sunuculuğunu üstlendiği kapalı devre bir radyodur. Öğle tatili süresince ve yalnızca okul sınırları içinde yayın yapar. Tüm teknik donanım BALEV tarafından sağlanmıştır.
+
+**S48: Okulda Pickleball yapılıyor mu?**
+Evet. BAL'da 2024–2025 öğretim yılından itibaren pickleball aktif olarak uygulanmaktadır. Haftada iki gün birer saatlik antrenmanlar yapılmakta, okul içi turnuvalar düzenlenmekte ve bu spor aynı zamanda bilimsel bir araştırma projesinin konusu olmaktadır. BAL Pickleball ekibi uluslararası etkinliklere de katılmıştır.
+
+**S49: Bilim olimpiyatlarına katılım var mı?**
+Evet. BAL öğrencileri İzmir Bilim Olimpiyatları başta olmak üzere çeşitli bilimsel yarışmalara katılmakta ve madalyalar kazanmaktadır. 2025 yılında bronz madalya elde edilmiştir. İzmir Bilim Olimpiyatları'nın ikinci aşaması 2025'te BAL bünyesinde gerçekleştirilmiştir.
+
+**S50: Münazara veya konuşma kulübü var mı?**
+Evet. BAL'da münazara etkinlikleri ve okul içi/okullararası münazara yarışmaları düzenli olarak yapılmaktadır.
+
+**S51: HONEYMUN nedir?**
+HONEYMUN, BAL bünyesinde yürütülen MUN formatlı öğrenci konferansıdır. BAL'deki üç yıllık öğrenci konferansından biri olarak anılır; diğerleri BALGÇ ve TEDx'tir. Açık kaynaklarda yıl, tema, komite listesi ve organizasyon ekibi gibi ayrıntılar sınırlı olduğundan güncel bilgiler okul duyuruları veya organizasyon ekibiyle teyit edilmelidir.
+
+---
+
+### Bölüm J: LGS Taban Puanları
+
+**S52: BAL'ın LGS taban puanları yıllar içinde nasıl değişti?**
+Tüm üç bölümde 2021'den 2025'e kesintisiz bir yükseliş trendi izlenmiştir. Almanca bölümü için 2021'de yaklaşık 447,6 olan taban puan 2025'te 484,2'ye ulaşmıştır. Bu artışın temel nedenleri arasında 2023'te hazırlık sınıfının yeniden açılması ve okulun giderek artan ulusal tanınırlığı bulunmaktadır.
+
+**S53: 2025 LGS'de BAL'ın bölüm bazlı puanları neydi?**
+2025 LGS yerleştirme sonuçlarına göre: Almanca bölümü 484,1567 (%0,59), İngilizce bölümü 476,4021 (%1,13), Fransızca bölümü 480,1748 (%0,87). Not: Farklı kaynaklar aynı yıl için küçük farklılıklar gösterebilmektedir; bunun nedeni "ilk yerleştirme" ile "ek yerleştirme" sonuçları arasındaki farktır.
+
+**S54: 2021 yılı LGS puanları neydi?**
+MEB İzmir İl Müdürlüğü kılavuz verilerine göre 2021 yılı taban puanları şöyle gerçekleşmiştir: İngilizce bölümü 449,1954 (%1,81 yüzdelik dilim), Almanca bölümü 447,5683 (%1,93), Fransızca bölümü 445,8431 (%2,08).
+
+---
+
+### Bölüm K: Kayıt, Hazırlık ve Günlük Okul Yaşamı
+
+**S55: Kesin kayıt için okula gelmek gerekiyor mu?**
+Evet. BAL'a yerleşen öğrencilerin kesin kayıt süreci için okula gelmeleri gerekir. Kayıt işlemleri okulda yürütülür ve süreçte Okul Aile Birliği birimi de yer alır.
+
+**S56: Kayıt sırasında hangi belgeler gerekiyor?**
+Kayıt sırasında temel olarak kimlik ve ikametgâh belgesi gerekmektedir. Belge listesi her yıl değişebileceği için kesin kayıt döneminde okulun resmi duyuruları takip edilmelidir.
+
+**S57: İkinci yabancı dil ne zaman seçiliyor?**
+İkinci yabancı dil kayıt sırasında seçilir. İngilizce bölümü öğrencileri Almanca veya Fransızca; Almanca bölümü öğrencileri İngilizce veya Fransızca; Fransızca bölümü öğrencileri İngilizce veya Almanca seçebilir.
+
+**S58: Hazırlık sınıfları nasıl belirleniyor?**
+Hazırlığın ilk haftasında öğrencinin yerleştiği bölümün yabancı dilinde seviye belirleme/yeterlilik sınavı yapılır. Yeterli performans gösteren öğrenci hazırlığı atlayarak doğrudan 9. sınıfa geçebilir; diğer öğrenciler hazırlık eğitimine devam eder.
+
+**S59: Yılda kaç yazılı sınav yapılıyor?**
+Her ders için yıl içinde toplam 4 yazılı sınav yapılır. Bazı sınavlar ortak sınav şeklinde uygulanır; ancak tüm sınavlar ortak değildir.
+
+**S60: Okulda telefon kullanımı serbest mi?**
+Hayır. Telefonlar ilk dersin başlangıcında, saat 08:30'da, telefon dolaplarına veya kutularına bırakılır ve son dersin son beş dakikasında, yaklaşık 15:30–15:35 arasında geri alınır.
+
+**S61: Öğle arasında okul dışına çıkılabilir mi?**
+Hayır. Öğrenci yalnızca öğle arası için dışarı çıkamaz ve dışarıdan yemek sipariş edemez. Velisi yemek getirebilir. Öğrenci, velisi tarafından okuldan alınıp öğleden sonraki derslere dönmeyecekse çıkabilir.
+
+**S62: Öğrenci dolabı var mı?**
+Evet. 2026–2027 yılı için yıllık ücret 200 TL olarak bildirilmiştir. Anahtar kaybında kilit ve yeni anahtar için 100 TL alınır. Dolap, yılın son iki haftasında içi boşaltılarak teslim edilir.
+
+**S63: Kulüplere nasıl katılabilirim?**
+Öğrenciler yıl başında sınıf öğretmenleri aracılığıyla bir kulüp seçer. Toplulukların tanıtımları ise sene başında yapılır; öğrenciler diledikleri kadar topluluğa katılabilir ve yıl içinde topluluk değiştirebilir.
+
+**S64: Rehberlik servisi üniversite tercihi ve yeni öğrenci adaptasyonu konusunda destek veriyor mu?**
+Evet. BAL'da üniversite tercih danışmanlığı yapılır. LGS ile yeni gelen öğrencilerin okula ve hazırlık sürecine adaptasyonu da desteklenir.
+
+---
+
+## 14. Öğretmen ve Öğrenci Kalitesi
+
+BAL'da görev yapan öğretmen kadrosu, alanlarında uzman, deneyimli ve yenilikçi eğitim anlayışına sahip akademisyenlerden oluşmaktadır. Okul bünyesinde doktoralı öğretmenlerin yanı sıra ulusal ve uluslararası projelerde yer alan, öğrencilerini bilimsel araştırmalara, olimpiyatlara ve akademik yarışmalara hazırlayan nitelikli bir eğitim kadrosu bulunmaktadır. Öğretmenler, MEB müfredatının yanında AP, DSD, PASCH gibi uluslararası programları da yürütecek donanıma sahiptir.
+
+BAL öğrencileri, LGS sınavında Türkiye genelinde üst sıralarda yer alan başarılı öğrenciler arasından seçilmektedir. Okulun akademik başarısı, öğrencilerin YKS'de elde ettiği yüksek dereceler, tıp, mühendislik, hukuk gibi prestijli bölümlere yerleşme oranları ve ulusal/uluslararası bilim olimpiyatlarındaki başarılarıyla kanıtlanmaktadır. BAL öğrencileri akademik başarının yanında sosyal sorumluluk projeleri, müzik, tiyatro, spor ve girişimcilik alanlarında da aktif rol alarak çok yönlü bir profil sergilemektedir.
+
+## Okul Öğretmen ve Müdür Kadrosu
+
+Kaynak: https://izmirbal.meb.k12.tr/35/06/164773/teskilat_semasi.html (11 Temmuz 2026 tarihinde erişildi). Aşağıdaki isimler resmî MEB teşkilat şemasıyla karşılaştırılmıştır.
+
+Okul Müdürü (11 Temmuz 2026 itibariyle): Aydın DOĞMUŞ
+
+2026–2027 eğitim-öğretim döneminden itibaren okul müdürlüğü görevini, şu anki İzmir Fen Lisesi Müdürü Mahmut Yıldız devralacaktır.
+
+Müdür Başyardımcısı: Ömer TÜRKER
+Pansiyon Müdür Yardımcısı: Çetin KOCAMAN
+Müdür Yardımcısı: Yeşim BABADAĞ
+Müdür Yardımcısı: Nurdan DURALI
+Müdür Yardımcısı: Leyla EKİNCİ
+
+Rehberlik Öğretmeni: Sibel AKKAN ÖZKAN
+Rehberlik Öğretmeni: Abdullah AYDIN
+Rehberlik Öğretmeni: Yasemin TARIKAHYA
+
+Türk Dili ve Edebiyatı Öğretmeni: Şükriye AKAYDIN
+Türk Dili ve Edebiyatı Öğretmeni: Serdar BOZKIR
+Türk Dili ve Edebiyatı Öğretmeni: Nebahat ÇELEBİ
+Türk Dili ve Edebiyatı Öğretmeni: Onur GÜRSES
+Türk Dili ve Edebiyatı Öğretmeni: Erdoğan KATİPOĞLU
+Türk Dili ve Edebiyatı Öğretmeni: Dr. Salih KÖSE
+Türk Dili ve Edebiyatı Öğretmeni: Çağlayan KURUOĞLU
+Türk Dili ve Edebiyatı Öğretmeni: Fatma ÖZGÜR
+Türk Dili ve Edebiyatı Öğretmeni: Fatma Filiz VURAL
+Türk Dili ve Edebiyatı Öğretmeni: Yelda YİĞİT
+
+Matematik Öğretmeni: Yunus AL
+Matematik Öğretmeni: Bülent BORA
+Matematik Öğretmeni: Ebru BORA
+Matematik Öğretmeni: Gülsüm ERYALÇIN
+Matematik Öğretmeni: Sezgin FİLİZ
+Matematik Öğretmeni: İsmail GÖK
+Matematik Öğretmeni: Selver CEMGİL
+Matematik Öğretmeni: Demet GÖKDUMAN
+Matematik Öğretmeni: Alpaslan SAĞLAM
+Matematik Öğretmeni: Derya TAŞÇIOĞLU
+Matematik Öğretmeni: Mehmet UZUN
+
+Fizik Öğretmeni: Berk GÖKDUMAN
+Fizik Öğretmeni: İbrahim İPEK
+Fizik Öğretmeni: Özlem KANTAR
+Fizik Öğretmeni: Necibe GÜRDENİZ
+Fizik Öğretmeni: Volkan PURSALI
+Fizik Öğretmeni: Melis SAVAŞ OSAN
+
+Kimya Öğretmeni: Kadir KÖKCÜR
+Kimya Öğretmeni: Dr. Kıymet MUTLU
+Kimya Öğretmeni: Birol ÖZTÜRK
+Kimya Öğretmeni: Dr. Emre POLAT
+Kimya Öğretmeni: Aysel ÜNAL SÜMEN
+
+Biyoloji Öğretmeni: İlkay ÇINAR
+Biyoloji Öğretmeni: Zehra KUTLUK
+Biyoloji Öğretmeni: Fidan ÖZDEMİR
+Biyoloji Öğretmeni: Yeliz ÖZGİRAY
+Biyoloji Öğretmeni: Döne UMDU
+
+Tarih Öğretmeni: Fatih AKÇE
+Tarih Öğretmeni: Özcan ATICIER
+Tarih Öğretmeni: Hatice ŞENGÜL
+
+Coğrafya Öğretmeni: Mediha Eda DOĞAN
+Coğrafya Öğretmeni: Buket ERTUĞRUL
+
+İngilizce Öğretmeni: Gamze AKDAĞ
+İngilizce Öğretmeni: Ayla ALAY
+İngilizce Öğretmeni: Fatma Tuğba ALSAÇ
+İngilizce Öğretmeni: Esra DEMİRCİ
+İngilizce Öğretmeni: Deniz DOLGUN
+İngilizce Öğretmeni: Nurser ERSOY
+İngilizce Öğretmeni: Ersin IŞIKLI
+İngilizce Öğretmeni: Emine Asuman OĞAN
+İngilizce Öğretmeni: Pelin ÖZGEN
+İngilizce Öğretmeni: Ayşegül SIĞINÇ
+İngilizce Öğretmeni: Dr. Nazan TELLİ
+İngilizce Öğretmeni: Dr. Gülay TİRYAKİOĞLU
+İngilizce Öğretmeni: Aslı Yelda VURAL
+
+Almanca Öğretmeni: Mustafa Ali GEDİK
+Almanca Öğretmeni: Meltem GÖKÜŞ
+Almanca Öğretmeni: Zeynep KIZILTAŞ
+Almanca Öğretmeni: Gökhan KORAP
+Almanca Öğretmeni: Çılga MANSURGÜLER
+Almanca Öğretmeni: İlknur TUNÇ
+
+Fransızca Öğretmeni: Reyhan BUDAKÇI
+Fransızca Öğretmeni: Şebnem KARAİBRAHİMOĞLU
+
+Müzik Öğretmeni: Seda ASLANGER
+Müzik Öğretmeni: Gül DOĞANER
+Müzik Öğretmeni: Meltem GONCA
+Müzik Öğretmeni: Benan KAYALI GÜVEN
+Müzik Öğretmeni: Duran ÖZÜBERK
+
+Görsel Sanatlar Öğretmeni: Ferhat BURTAKUCİN
+Görsel Sanatlar Öğretmeni: Yusuf MEMOĞLU
+Görsel Sanatlar Öğretmeni: Aysel MİMAN
+Görsel Sanatlar Öğretmeni: Esin SÖNMEZ
+
+Felsefe Öğretmeni: Emir Ali ERGAT
+Felsefe Öğretmeni: Ayşe Serhan KASAP
+
+Din Kültürü ve Ahlâk Bilgisi Öğretmeni: Mustafa KARAKAŞ
+Din Kültürü ve Ahlâk Bilgisi Öğretmeni: Zeynep KAYAN
+Din Kültürü ve Ahlâk Bilgisi Öğretmeni: Diyadin KOLDAŞ
+Din Kültürü ve Ahlâk Bilgisi Öğretmeni: Mustafa SARAÇOĞLU
+
+Beden Eğitimi Öğretmeni: Musa GÜRPUNAR
+Beden Eğitimi Öğretmeni: Hikmet SERVİ
+Beden Eğitimi Öğretmeni: Alper TANRIKULU
+Beden Eğitimi Öğretmeni: Mehmet YAŞLI
+Beden Eğitimi Öğretmeni: Gonca YÜKSEL
+
+Bilişim Teknolojileri Öğretmeni (Bilgisayar Öğretmeni): Selçuk SAĞBAŞ
+Bilişim Teknolojileri Öğretmeni (Bilgisayar Öğretmeni): Murat YONCACI
+
+Resmî teşkilat şemasında yönetim, rehberlik ve branş öğretmenleri dahil **94 isim** listelenmektedir. Okul ana sayfasındaki ayrı istatistik ise **91 öğretmen** göstermektedir; bu iki sayı farklı kapsamları ifade eder. 11 Temmuz 2026 itibariyle okul müdürü Aydın DOĞMUŞ, müdür başyardımcısı Ömer TÜRKER'dir. 2026–2027 eğitim-öğretim döneminden itibaren okul müdürlüğü görevini Mahmut Yıldız devralacaktır.
+
+
+---
+
+## 8. Haftalık Ders Programı
+
+> **Kaynak:** MEB Talim ve Terbiye Kurulu Başkanlığı Karar No: 05, Tarih: 09/05/2025
+> BAL "Hazırlık Sınıfı Bulunan Anadolu Lisesi" statüsünde olduğu için aşağıdaki çizelge uygulanır.
+> Bu çizelge 2025-2026 eğitim-öğretim yılından itibaren tüm sınıf seviyelerinde geçerlidir.
+
+---
+
+### 8.1 Hazırlık Sınıfı Haftalık Ders Programı
+
+Hazırlık sınıfında toplam haftalık ders saati: **40**
+
+| Ders | Haftalık Saat |
+|---|---|
+| Birinci Yabancı Dil (İngilizce / Almanca / Fransızca) | 20 |
+| İkinci Yabancı Dil | 4 |
+| Matematik | 3 |
+| Türk Dili ve Edebiyatı (Hazırlık) | 4 |
+| Bilişim Teknolojileri ve Yazılım | 4 |
+| Beden Eğitimi ve Spor | 2 |
+| Görsel Sanatlar / Müzik | 2 |
+| Rehberlik ve Yönlendirme | 1 |
+| **Toplam** | **40** |
+
+**Not:** Hazırlık sınıfında okutulan yabancı dil, 9, 10, 11 ve 12. sınıflarda da birinci yabancı dil olarak okutulur. Seçmeli ders saati: 0 (hazırlıkta seçmeli ders yoktur).
+
+---
+
+### 8.2 9. Sınıf Haftalık Ders Programı
+
+Toplam haftalık ders saati: **40** (32 zorunlu + 7 seçmeli + 1 rehberlik)
+
+**Zorunlu (Ortak) Dersler:**
+
+| Ders | Haftalık Saat |
+|---|---|
+| Türk Dili ve Edebiyatı | 5 |
+| Matematik | 6 |
+| Fizik | 2 |
+| Kimya | 2 |
+| Biyoloji | 2 |
+| Tarih | 2 |
+| Coğrafya | 2 |
+| Din Kültürü ve Ahlak Bilgisi | 2 |
+| Birinci Yabancı Dil | 4 |
+| Beden Eğitimi ve Spor | 2 |
+| Görsel Sanatlar / Müzik | 2 |
+| Sağlık Bilgisi ve Trafik Kültürü | 1 |
+| Rehberlik ve Yönlendirme | 1 |
+| **Zorunlu Toplam** | **33** |
+
+**Seçmeli Dersler (7 saat, öğrenci seçimine göre):**
+Bilişim Teknolojileri ve Yazılım, Osmanlı Türkçesi, Türk Kültür ve Medeniyet Tarihi, Sosyal Bilim Çalışmaları, Metin Tahlilleri, Proje Tasarımı ve Uygulamaları, Düşünme Eğitimi, Demokrasi ve İnsan Hakları, Astronomi ve Uzay Bilimleri, Kur'an-ı Kerim, Din-Ahlak-Değer grubu dersleri, Sanat Eğitimi, Spor Eğitimi ve diğerleri.
+
+---
+
+### 8.3 10. Sınıf Haftalık Ders Programı
+
+Toplam haftalık ders saati: **40** (33 zorunlu + 6 seçmeli + 1 rehberlik)
+
+**Zorunlu (Ortak) Dersler:**
+
+| Ders | Haftalık Saat |
+|---|---|
+| Türk Dili ve Edebiyatı | 5 |
+| Matematik | 6 |
+| Fizik | 2 |
+| Kimya | 2 |
+| Biyoloji | 2 |
+| Tarih | 2 |
+| Coğrafya | 2 |
+| Din Kültürü ve Ahlak Bilgisi | 2 |
+| Felsefe | 2 |
+| Birinci Yabancı Dil | 4 |
+| Beden Eğitimi ve Spor | 2 |
+| Görsel Sanatlar / Müzik | 2 |
+| Rehberlik ve Yönlendirme | 1 |
+| **Zorunlu Toplam** | **34** |
+
+**Seçmeli Dersler (6 saat):**
+Osmanlı Türkçesi, Türk Kültür ve Medeniyet Tarihi, Sosyal Bilim Çalışmaları, Metin Tahlilleri, Bilişim Teknolojileri ve Yazılım, Proje Tasarımı ve Uygulamaları, Düşünme Eğitimi, Demokrasi ve İnsan Hakları, Astronomi ve Uzay Bilimleri, Kur'an-ı Kerim, Sanat Eğitimi, Spor Eğitimi ve diğerleri.
+
+---
+
+### 8.4 11. Sınıf Haftalık Ders Programı
+
+Toplam haftalık ders saati: **40** (19 zorunlu + 20 seçmeli + 1 rehberlik)
+
+**Zorunlu (Ortak) Dersler:**
+
+| Ders | Haftalık Saat |
+|---|---|
+| Türk Dili ve Edebiyatı | 5 |
+| Tarih | 2 |
+| Din Kültürü ve Ahlak Bilgisi | 2 |
+| Felsefe | 2 |
+| Birinci Yabancı Dil | 4 |
+| Beden Eğitimi ve Spor | 2 |
+| Görsel Sanatlar / Müzik | 2 |
+| Rehberlik ve Yönlendirme | 1 |
+| **Zorunlu Toplam** | **20** |
+
+**Seçmeli Dersler (20 saat — alan seçimine göre):**
+11. sınıfta matematik, fizik, kimya ve biyoloji zorunlu ortak ders olmaktan çıkar; öğrenciler YKS alanlarına göre seçmeli olarak alır.
+
+Akademik Seçmeli Dersler: Seçmeli Matematik (6 saat), Seçmeli Fizik (4 saat), Seçmeli Kimya (4 saat), Seçmeli Biyoloji (4 saat), Seçmeli Tarih (2 saat), Seçmeli Coğrafya (2 saat), Seçmeli Türk Dili ve Edebiyatı (3 saat), Temel Matematik (2 saat).
+
+Diğer Seçmeliler: Psikoloji, Mantık, Sosyoloji, Osmanlı Türkçesi, Bilişim Teknolojileri ve Yazılım, Proje Tasarımı ve Uygulamaları, Fen Bilimleri Uygulamaları, Matematik Uygulamaları, Sosyal Bilim Çalışmaları, Girişimcilik ve diğerleri.
+
+---
+
+### 8.5 12. Sınıf Haftalık Ders Programı
+
+Toplam haftalık ders saati: **40** (15 zorunlu + 24 seçmeli + 1 rehberlik)
+
+**Zorunlu (Ortak) Dersler:**
+
+| Ders | Haftalık Saat |
+|---|---|
+| Türk Dili ve Edebiyatı | 5 |
+| T.C. İnkılap Tarihi ve Atatürkçülük | 2 |
+| Din Kültürü ve Ahlak Bilgisi | 2 |
+| Birinci Yabancı Dil | 4 |
+| Beden Eğitimi ve Spor / Görsel Sanatlar / Müzik | 2 |
+| Rehberlik ve Yönlendirme | 1 |
+| **Zorunlu Toplam** | **16** |
+
+**Seçmeli Dersler (24 saat — alan seçimine göre):**
+12. sınıfta seçmeli ders ağırlığı en yüksek seviyededir; öğrenciler YKS hazırlıklarına göre alan derslerini yoğunlaştırır.
+
+Akademik Seçmeli Dersler: Seçmeli Matematik (6 saat), Seçmeli Fizik (4 saat), Seçmeli Kimya (4 saat), Seçmeli Biyoloji (4 saat), Seçmeli Tarih (2 saat), Seçmeli Coğrafya (2 saat), Seçmeli Türk Dili ve Edebiyatı (3 saat), Seçmeli Birinci Yabancı Dil (2 saat), Temel Matematik (2 saat), Çağdaş Türk ve Dünya Tarihi (2 saat).
+
+Diğer Seçmeliler: Psikoloji, Mantık, Sosyoloji, Hedef Temelli Destek Eğitimi, Girişimcilik, Fen Bilimleri Uygulamaları, Matematik Uygulamaları, Proje Tasarımı ve Uygulamaları, Sosyal Bilim Çalışmaları ve diğerleri.
+
+---
+
+### 8.6 Özet Karşılaştırma Tablosu
+
+| Sınıf | Zorunlu Saat | Seçmeli Saat | Rehberlik | Toplam |
+|---|---|---|---|---|
+| Hazırlık | 39 | 0 | 1 | 40 |
+| 9. Sınıf | 32 | 7 | 1 | 40 |
+| 10. Sınıf | 33 | 6 | 1 | 40 |
+| 11. Sınıf | 19 | 20 | 1 | 40 |
+| 12. Sınıf | 15 | 24 | 1 | 40 |
+
+**Önemli Notlar:**
+- Tüm sınıflarda haftalık toplam ders saati **40**'tır.
+- Hazırlık sınıfında birinci yabancı dile haftada 20 saat ayrılır — bu okulun en yoğun dil eğitimi veren sınıfıdır.
+- 9. ve 10. sınıflarda fen bilimleri (fizik, kimya, biyoloji, matematik) zorunlu ortak derstir.
+- 11. ve 12. sınıflarda fen dersleri seçmeli hale gelir; öğrenciler YKS alan tercihlerine göre ders yoğunluklarını belirler.
+- T.C. İnkılap Tarihi ve Atatürkçülük dersi yalnızca 12. sınıfta zorunludur.
+- Felsefe dersi 10. ve 11. sınıflarda zorunlu ortak derstir.
+
+### 8.7 Bilişim Teknolojileri Dersi — Önemli Not
+
+BAL'da Bilişim Teknolojileri ve Yazılım dersi yalnızca **hazırlık sınıfında** zorunlu ders olarak yer almaktadır. 9, 10, 11 ve 12. sınıflarda bu ders seçmeli olarak sunulmakta; ancak uygulamada yoğun akademik program nedeniyle tercih edilme oranı düşük kalmaktadır.
+
+Hazırlık sınıfındaki Bilişim Teknolojileri dersinde temel programlama dili olarak **Python** öğretilmektedir. Öğrenciler bu ders kapsamında temel algoritma mantığı, değişkenler, döngüler ve fonksiyonlar gibi programlama kavramlarını Python üzerinden öğrenmektedir.
+
+## 9. YKS ve Üniversite Başarıları
+
+### 9.1 Genel Yerleştirme İstatistikleri
+
+2022–2025 yılları arasındaki dört yıllık dönemde toplam **1.773 BAL mezunu** yükseköğretim programlarına yerleşmiştir. 2024 YKS'de ise **344 öğrenci** ulusal ve uluslararası üniversitelerin çeşitli bölümlerine yerleşmiştir (kaynak: izmirbal.meb.k12.tr).
+
+### 9.2 Bölüm Bazlı Başarılar (2022–2025 Toplamı)
+
+Son dört yılda öne çıkan bölümlere yerleşen mezun sayıları:
+
+| Bölüm | Mezun Sayısı (2022–2025) |
+|---|---|
+| Tıp | 190 |
+| Bilgisayar Mühendisliği | 117 |
+| Diş Hekimliği | 87 |
+| Hukuk | 55 |
+
+Mezunlar; tıp, diş hekimliği, hukuk ve mühendislik gibi yüksek puan gerektiren rekabetçi programlarda yoğunlaşmaktadır.
+
+### 9.3 2025 YKS Sıralama Başarısı
+
+2025 YKS Sayısal puan türü bazında BAL mezunlarının sıralama dağılımı:
+
+| Sıralama Aralığı | Öğrenci Sayısı |
+|---|---|
+| İlk 1.000 | 1 |
+| İlk 10.000 | 22 |
+| İlk 20.000 | 51 |
+| İlk 50.000 | 128 |
+| İlk 100.000 | 199 |
+
+### 9.4 2025 En Çok Tercih Edilen Üniversiteler
+
+2025 YKS yerleşme verilerine göre BAL mezunlarının en çok tercih ettiği üniversiteler:
+
+| Üniversite | Yerleşen Öğrenci |
+|---|---|
+| Ege Üniversitesi | 39 |
+| İzmir Yüksek Teknoloji Enstitüsü | 29 |
+| İzmir Katip Çelebi Üniversitesi | 23 |
+| Dokuz Eylül Üniversitesi | 23 |
+| Orta Doğu Teknik Üniversitesi | 18 |
+
+### 9.5 Şehir Tercih Dağılımı (2025)
+
+| Şehir | Yerleşen Öğrenci |
+|---|---|
+| İzmir | 148 |
+| İstanbul | 103 |
+| Ankara | 51 |
+| Manisa | 9 |
+| Eskişehir | 9 |
+
+### 9.6 Uluslararası Üniversite İmkânı
+
+BAL mezunları, okulda kazandıkları yabancı dil yeterlikleri (İngilizce, Almanca, Fransızca) ve DSD diploması sayesinde yurt dışı yükseköğretim kurumlarına — özellikle Almanya'daki üniversitelere — başvurup kabul alabilmektedir.
+
+### 9.7 AP (Advanced Placement) Programı
+
+BAL, 2024–2025 eğitim öğretim yılı itibariyle **AP (Advanced Placement)** programını uygulamaktadır. College Board tarafından düzenlenen bu program, öğrencilere lise düzeyinde üniversite kredisi kazandıran sınavlara girme imkânı sunar. 2024–2025 yılında sunulan AP dersleri:
+
+- Hesaplama AB
+- Hesaplama BC
+- Bilgisayar Bilimi A
+- İngilizce Dil ve Kompozisyon
+- Fizik 1
+
+[GÜNCEL VERİ GEREKLİ: 2026–2027 yılında sunulacak AP derslerinin güncel listesi henüz bilinmemektedir; okul idaresiyle teyit ediniz.]
+
+## 10. Pansiyon — Kapsamlı Bilgi
+
+### 10.1 Genel Bilgi
+
+BAL kampüsünde kız ve erkek öğrenciler için **ayrı pansiyon birimleri** mevcuttur. Pansiyon, özellikle İzmir dışından gelen öğrenciler için güvenli ve düzenli bir konaklama imkânı sunar. Kapasite sınırlı olduğundan başvuruların erken yapılması önerilir.
+
+### 10.2 Pansiyon Türleri
+
+MEB yönetmeliğine göre iki tür pansiyon statüsü mevcuttur:
+
+**Parasız Yatılı:** Ailenin yıllık gelirinden kişi başına düşen tutar belirlenen eşiğin altında kalan öğrenciler parasız yatılı statüsünden yararlanabilir. Devlet tarafından karşılanan bu statüde öğrenci ücret ödemez.
+
+**Paralı Yatılı:** Gelir kriteri parasız yatılılık eşiğini aşan öğrenciler paralı yatılı olarak kalabilir. Ücret 4 taksitte ödenir: ilk taksit kayıt sırasında, diğerleri Kasım, Şubat ve Nisan aylarının son iş gününe kadar. Taksitini zamanında ödemeyen öğrencinin pansiyonla ilişiği kesilir.
+
+[GÜNCEL VERİ GEREKLİ: 2025–2026 yılı pansiyon ücreti ve parasız yatılılık gelir eşiği için okul idaresiyle teyit ediniz. Tel: 0232 388 10 39]
+
+### 10.3 Başvuru için Gerekli Belgeler
+
+BAL'ın resmi web sitesinde (izmirbal.meb.k12.tr) yayımlanan 2024–2025 pansiyon kayıt kılavuzuna göre gerekli evraklar şu şekildedir:
+
+**Paralı Yatılı Öğrenciler için:**
+- Paralı yatılı başvuru formu (okul sitesinden temin edilir)
+
+**Parasız Yatılı Öğrenciler için:**
+- Parasız yatılı başvuru dilekçesi
+- Aile ve geçim durumunu gösterir beyanname (Ek-1)
+- Bursluluğundan feragat dilekçesi (ilköğretimde burs alanlar için)
+
+**Tüm Veliler için Ortak Belgeler:**
+- Çarşı izni çıkma belgesi
+- Evci çıkma dilekçesi
+- Genel muvafakatname
+- Pansiyon taksitleri taahhütnamesi (paralı yatılı için)
+
+[GÜNCEL VERİ GEREKLİ: Her yıl belge listesi güncellenebilir. Güncel formlar için izmirbal.meb.k12.tr adresindeki Duyurular bölümünü kontrol ediniz.]
+
+### 10.4 Başvuru Süreci
+
+1. Okul kesin kayıt dönemi sonrasında pansiyon başvurusu alınır.
+2. Parasız yatılı başvurusu için aile gelir belgesi Eylül ayı başına kadar okul idaresine teslim edilmelidir.
+3. Belgeler okul komisyonu tarafından incelenir; öğrenciler okula giriş puan sıralamasına göre listeye alınır.
+4. Pansiyona hak kazanan öğrenci **velisiyle birlikte** okula gelerek kayıt belgelerini imzalamalıdır.
+5. Kaydın kesinleşmesi için tüm evrakların eksiksiz teslim edilmesi zorunludur.
+
+[GÜNCEL VERİ GEREKLİ: 2025–2026 yılı başvuru takvimi için okul idaresiyle iletişime geçiniz.]
+
+### 10.5 Pansiyon Kuralları (MEB Yönetmeliği)
+
+- Hafta sonu evci izni: Cuma 15:30'dan Pazar 18:00'e kadar (okul tarafından belirlenen çizelgeye göre).
+- Çarşı izni: Okul tarafından belirlenen programa göre kullanılır.
+- Öğrencilerin üzerlerinde fazla nakit taşımamaları, banka kartı edinmeleri önerilir.
+- Yatakhaneye yiyecek/içecek getirilmesi yasaktır.
+- Etüt saatlerinde etüt salonunda hazır bulunulması zorunludur.
+- Pansiyonu izinsiz terk etmek disiplin ihlali sayılır.
+
+### 10.6 İletişim ve Başvuru
+
+Pansiyon kayıt evrakları ve güncel bilgi için:
+- **Okul Telefonu:** 0232 388 10 39
+- **Resmi Web Sitesi:** izmirbal.meb.k12.tr (Duyurular bölümü)
+- **Adres:** Mevlana Mah. Ord. Prof. Dr. Muhiddin Erel Cad. No: 15A, Bornova / İzmir
+
+## 11. Okul Gezileri
+
+### 11.1 Ortaokul Öğrencileri için Kampüs Tanıtım Gezisi
+
+BAL, LGS tercih döneminde okulu tanımak isteyen 8. sınıf öğrencilerine ve velilerine yönelik **"Orta Okullar Gezi Randevu Programı"** düzenlemektedir. Bu program kapsamında öğrenci grupları kampüsü yerinde gezebilir, okul hakkında bilgi alabilir.
+
+Randevu almak için okulun resmi web sitesindeki bağlantıyı kullanabilirsiniz: izmirbal.meb.k12.tr
+
+### 11.2 Öğrenci Gezileri — Genel Çerçeve
+
+BAL, MEB'in "İlköğretim ve Ortaöğretim Kurumları Sosyal Etkinlikler Yönetmeliği" kapsamında kültürel, tarihi ve bilimsel içerikli öğrenci gezileri düzenlemektedir. Geziler, okul müdürünün onayı ve veli muvafakat belgesiyle gerçekleştirilir.
+
+Gezi planları her öğretim yılına göre belirlenmekte ve okul duyuru kanalları aracılığıyla öğrenci ve velilere iletilmektedir.
+
+[GÜNCEL VERİ GEREKLİ: O yıl düzenlenen gezilerin destinasyonları, tarihleri ve katılım koşulları için okul idaresiyle (Tel: 0232 388 10 39) veya sınıf rehber öğretmeniyle iletişime geçiniz.]
+
+## 12. Kütüphane
+
+BALEV Ersin Günöy'86 Kütüphanesi BALEV'in kampüs içindeki kütüphane yapılanmasıdır. 1986 mezunu Ersin Günöy adını taşıyan bu kütüphane, öğrencilerin akademik ve kişisel okuma alışkanlıklarını desteklemek amacıyla BALEV tarafından sürdürülmektedir. **Daha fazla bilgi:** balev.org.tr/balev-ersin-gunoy-kutuphanesi
+
+## §13 — Öğrenci Deneyimi ve Kampüs Yaşamı
+
+> Bu bölüm, BAL'da eğitim gören veya BAL'a gelmeyi düşünen öğrencilerin en sık merak ettiği konulara ilişkin genel bilgiler içerir. Öğrenci deneyimleri kişiden kişiye değişebilir.
+
+### S1: Hazırlık sınıfı zor mu?
+
+Hazırlık sınıfı, öğrencilerin yabancı dil becerilerini geliştirmeyi amaçlayan yoğun bir eğitim yılıdır. Ortaokula kıyasla ders temposu daha yüksek olabilir. Ancak düzenli çalışan öğrenciler için süreç yönetilebilir düzeydedir. Hazırlık yılı aynı zamanda öğrencilerin BAL kültürüne, lise düzenine ve yeni arkadaş çevrelerine alıştıkları dönemdir.
+
+---
+
+### S2: BAL'da sosyal hayat nasıl?
+
+BAL yalnızca akademik başarısıyla değil, güçlü öğrenci kültürüyle de tanınmaktadır. Topluluklar, spor faaliyetleri, konferanslar, çalıştaylar, geleneksel etkinlikler, sosyal sorumluluk projeleri ve öğrenci organizasyonları okul yaşamının önemli bir parçasıdır.
+
+---
+
+### S3: BAL'da arkadaş edinmek zor mu?
+
+Hayır. Özellikle hazırlık sınıfında tüm öğrenciler yeni bir ortama başladığı için arkadaşlık kurmak genellikle kolaydır. Topluluklar, spor faaliyetleri, etkinlikler ve sınıf ortamı öğrencilerin birbirlerini tanımalarına yardımcı olur.
+
+---
+
+### S4: BAL'da telefonlar toplanıyor mu?
+
+Telefon kullanımı ve okul içi elektronik cihaz kuralları dönemsel olarak okul yönetimi tarafından belirlenmektedir. Güncel uygulamalar için okul yönetiminin duyuruları esas alınmalıdır.
+
+[GÜNCEL VERİ GEREKLİ]
+
+---
+
+### S5: BAL'da akademik ortam nasıl?
+
+BAL, Türkiye'nin köklü Anadolu liselerinden biridir. Öğrenciler arasında akademik başarıya önem veren güçlü bir çalışma kültürü bulunmaktadır. Bununla birlikte okul yaşamı yalnızca derslerden ibaret değildir; sosyal, kültürel ve sportif faaliyetler de önemli yer tutmaktadır.
+
+---
+
+### S6: BAL'da rekabet çok mu yüksek?
+
+Öğrencilerin akademik seviyeleri genellikle yüksektir. Ancak okul kültürü yalnızca rekabete değil, dayanışma ve paylaşım anlayışına da önem verir. Öğrenciler sıklıkla birlikte çalışır, not paylaşır ve birbirlerine destek olurlar.
+
+---
+
+### S7: BAL'da Almanca mı İngilizce mi daha önemli?
+
+BAL'ın tarihsel kimliği Almanca eğitim geleneğine dayanmaktadır. Bununla birlikte İngilizce eğitimi de oldukça güçlüdür. Öğrenciler hem Almanca hem de İngilizce alanlarında çeşitli akademik programlara, sınavlara ve etkinliklere katılabilmektedir.
+
+---
+
+### S8: BAL'da boş zamanlarda ne yapılır?
+
+Öğrenciler boş zamanlarında kütüphaneden yararlanabilir, topluluk etkinliklerine katılabilir, spor faaliyetlerinde bulunabilir veya kampüs içerisindeki sosyal alanlarda vakit geçirebilirler. Okulda yıl boyunca çeşitli organizasyonlar ve etkinlikler düzenlenmektedir.
+
+---
+
+### S9: BAL'da öğrenciler mutlu mu?
+
+Öğrenci deneyimi kişiden kişiye değişmekle birlikte BAL; güçlü mezun ağı, köklü gelenekleri, topluluk kültürü ve sosyal etkinlikleri nedeniyle birçok öğrenci tarafından aidiyet hissinin yüksek olduğu bir okul olarak tanımlanmaktadır.
+
+---
+
+### S10: BAL'da hocalar sert mi?
+
+Öğretmenlerin ders işleme tarzları ve beklentileri kişiden kişiye değişebilir. Ancak genel olarak öğretmenler öğrencilerin akademik gelişimini desteklemeyi amaçlar. Akademik beklentiler yüksek olsa da öğrenciler gerektiğinde öğretmenlerinden destek alabilmektedir.
+
+---
+
+### S11: BAL'da dersler çok mu zor?
+
+BAL'a gelen öğrenciler genellikle akademik olarak başarılı öğrencilerden oluşmaktadır. Bu nedenle derslerin temposu bazı öğrencilere başlangıçta yoğun gelebilir. Ancak düzenli çalışan ve dersleri takip eden öğrenciler için süreç yönetilebilir durumdadır.
+
+---
+
+### S12: BAL'da kantin pahalı mı?
+
+Kantin fiyatları dönemsel olarak değişiklik gösterebilmektedir. Güncel fiyatlar için okul kantininden bilgi alınmalıdır.
+
+[GÜNCEL VERİ GEREKLİ]
+
+---
+
+### S13: BAL'da yeni gelen öğrenciler uyum sağlamakta zorlanır mı?
+
+Hazırlık sınıfı ve okulun topluluk kültürü sayesinde öğrencilerin büyük bölümü kısa sürede uyum sağlamaktadır. Okulun gelenekleri, etkinlikleri ve öğrenci toplulukları yeni öğrencilerin sosyal çevre edinmesini kolaylaştırmaktadır.
+
+---
+
+### S14: BAL'da topluluklara katılmak zor mu?
+
+Hayır. Eğitim-öğretim yılının başında topluluk ve kulüpler sınıfları ziyaret ederek tanıtım yaparlar. Öğrenciler ilgi duydukları alanlara kolayca katılabilir ve yeni toplulukların kurulmasına da katkı sağlayabilirler.
+
+---
+
+### S15: BAL'da sadece ders mi çalışılır?
+
+Hayır. BAL güçlü akademik yapısıyla tanınsa da öğrencilerin sosyal, kültürel ve sportif faaliyetlere katılımı oldukça yaygındır. Topluluklar, spor faaliyetleri, konferanslar, çalıştaylar, geleneksel etkinlikler ve öğrenci organizasyonları okul yaşamının önemli bir parçasıdır.
+
+---
+
+### S16: BAL ruhu nedir?
+
+"BAL ruhu" öğrenciler, mezunlar ve öğretmenler arasında yıllar boyunca oluşmuş aidiyet duygusunu ifade etmek için kullanılan bir kavramdır. Mezunların okulla bağlarını sürdürmesi, geleneklerin yaşatılması ve öğrenciler arasındaki dayanışma bu kavramın temel unsurları arasında gösterilmektedir.
+
+---
+
+### S17: BAL'a gelmeyi düşünen bir öğrenci için okulun en güçlü yönleri nelerdir?
+
+BAL; köklü tarihi, güçlü mezun ağı, yabancı dil eğitimi, akademik başarısı, aktif öğrenci toplulukları, uluslararası programları ve yerleşik okul kültürü ile öne çıkan bir Anadolu lisesidir. Akademik ve sosyal gelişimi birlikte destekleyen yapısı okulun en sık vurgulanan özellikleri arasındadır.
+
+---
+
+### S18: Hazırlıkta çok ödev veriliyor mu?
+
+Öğretmenlere ve derslere göre değişmekle birlikte hazırlık sınıfında yabancı dil ağırlıklı çalışmalar nedeniyle ödev yoğunluğu ortaokula kıyasla daha fazla hissedilebilir.
+
+---
+
+### S19: BAL'da sınav haftaları yoğun geçer mi?
+
+BAL'ın akademik yapısı nedeniyle sınav dönemleri öğrenciler için yoğun geçebilir. Ancak düzenli çalışan öğrenciler için süreç yönetilebilir durumdadır.
+
+---
+
+### S20: BAL'da devamsızlık konusunda sıkı davranılıyor mu?
+
+Devamsızlık uygulamaları MEB mevzuatına göre yürütülmektedir. Öğrencilerin devam durumları düzenli olarak takip edilir.
+
+---
+
+### S21: BAL mı İzmir Atatürk Lisesi mi?
+
+Her iki okul da İzmir'in köklü ve yüksek başarı düzeyine sahip devlet liseleri arasında yer almaktadır.
+
+BAL; hazırlık eğitimi, Almanca geleneği, geniş kampüsü, pansiyon imkanları ve güçlü mezun ağı ile öne çıkmaktadır.
+
+İzmir Atatürk Lisesi ise şehir merkezindeki konumu, tarihi geçmişi ve akademik başarılarıyla tanınmaktadır.
+
+Hangi okulun daha uygun olduğu öğrencinin akademik hedeflerine, yabancı dil tercihlerine, ulaşım durumuna ve okul ortamından beklentilerine göre değişebilir.
+
+---
+
+### S22: BAL mı İzmir Fen Lisesi mi?
+
+BAL ve İzmir Fen Lisesi farklı eğitim modellerine sahip okullardır.
+
+İzmir Fen Lisesi, fen ve matematik ağırlıklı akademik programıyla özellikle mühendislik, temel bilimler ve araştırma odaklı öğrenciler tarafından tercih edilmektedir.
+
+BAL ise güçlü yabancı dil eğitimi, geniş sosyal faaliyet imkanları, uluslararası projeleri ve köklü okul kültürüyle öne çıkmaktadır.
+
+Tercih yapılırken öğrencinin ilgi alanları, kariyer hedefleri ve öğrenim beklentileri dikkate alınmalıdır.
+
+---
+
+### S23: BAL mı Buca İnci-Özer Tırnaklı Fen Lisesi mi?
+
+Her iki okul da İzmir'in en yüksek puanlı devlet liseleri arasında gösterilmektedir.
+
+Buca İnci-Özer Tırnaklı Fen Lisesi fen lisesi programı uygularken, BAL Anadolu lisesi programı uygulamakta ve hazırlık sınıfı ile yabancı dil eğitimine daha fazla ağırlık vermektedir.
+
+Öğrencinin fen lisesi programı mı yoksa yabancı dil ağırlıklı Anadolu lisesi programı mı istediği tercih sürecinde önemli bir faktördür.
+
+---
+
+### S24: BAL'ın diğer yüksek puanlı liselerden farkı nedir?
+
+BAL'ın öne çıkan özellikleri arasında:
+
+- Köklü Almanca eğitim geleneği
+- Hazırlık sınıfı uygulaması
+- Güçlü mezun ağı (BALEV ve BALMED)
+- Pansiyon imkanları
+- Aktif öğrenci toplulukları
+- Uluslararası projeler ve değişim programları
+- Geniş kampüs alanı
+- Güçlü okul aidiyeti ve "BAL ruhu"
+
+yer almaktadır.
+
+Okul tercihinde her öğrencinin öncelikleri farklı olabileceğinden, en uygun okul öğrencinin hedeflerine ve beklentilerine göre değişebilir.
+
+---
+
+### S27: BAL mı özel okul mu?
+
+Bu sorunun tek bir doğru cevabı yoktur. Özel okullar ve köklü devlet liseleri farklı avantajlar sunabilir. BAL, devlet okulu olmasına rağmen yüksek akademik başarı düzeyi, güçlü mezun ağı, yabancı dil eğitimi ve köklü okul kültürüyle öne çıkmaktadır.
+
+Tercih yapılırken akademik hedefler, ulaşım, sosyal imkanlar, yabancı dil beklentileri ve kişisel tercihler birlikte değerlendirilmelidir.
+
+
+
+## 15. Temmuz 2026 Güncel Doğrulamalar ve Yeni Bilgiler
+
+### 15.1 Güncel Okul Müdürü
+
+11 Temmuz 2026 itibariyle Bornova Anadolu Lisesi'nin mevcut okul müdürü **Aydın DOĞMUŞ**'tur. **2026–2027 eğitim-öğretim döneminden itibaren yerini, şu anki İzmir Fen Lisesi Müdürü Mahmut Yıldız alacaktır.** Tarih belirtilmeden “Şu an müdür kim?” diye sorulursa Aydın Doğmuş; gelecek eğitim-öğretim dönemi sorulursa Mahmut Yıldız yanıtı verilmelidir.
+
+### 15.2 Hazırlık Sınıfına Geçiş, Kuşaklar ve Sınıf Boşluğu
+
+BAL'da öğrenci kuşakları mezun olacakları yılla adlandırılır. Hazırlık sınıfı 2023–2024 eğitim-öğretim yılında yeniden açıldığında önceki sistemdeki öğrenciler doğrudan 9. sınıftan başlamışken yeni öğrenciler hazırlık sınıfından başladı:
+
+- **BAL'26:** Eski, hazırlıksız sistemin son kuşağıdır. 2026 yazında mezun oldu.
+- **BAL'27:** Böyle bir öğrenci kuşağı yoktur. Bu nedenle 2026–2027 eğitim-öğretim yılında okulda 12. sınıf bulunmayacaktır.
+- **BAL'28:** Hazırlığın yeniden açıldığı 2023–2024 yılında hazırlık sınıfına başlayan ilk kuşaktır. 2026–2027 yılında 11. sınıfa geçecektir.
+
+### 15.3 2026–2027 Fransızca Bölümü Öğrenci Alımı
+
+Proje ekibinden 11 Temmuz 2026 tarihinde aktarılan okul içi bilgiye göre Bornova Anadolu Lisesi, **2026–2027 eğitim-öğretim yılından itibaren Fransızca bölümüne yeni öğrenci kabul etmeyecektir.** Mevcut Fransızca öğrencilerinin eğitimi devam edecektir. **BAL'30 Fransızca öğrencileri son Fransızca bölümü mezunları olacaktır.** Asistan “Fransızca bölümü kapandı” dememeli; “yeni öğrenci alımı durduruldu, mevcut öğrencilerin eğitimi sürüyor” demelidir.
+
+### 15.4 Güncel Resmî İstatistikler
+
+10 Temmuz 2026 tarihinde erişilen resmî okul ana sayfasında **50 derslik, 91 öğretmen ve 1.174 öğrenci** bilgisi yer almaktadır. Öğrenci ve öğretmen sayıları zamanla değişebilir; yanıt verilirken tarih belirtilmelidir.
+
+## Kapsanan Konular Özeti
+
+Bu belge aşağıdaki konularda yapılandırılmış veri içermektedir:
+
+- **Kimlik:** Resmi ad, adres, telefon, faks, web sitesi, bağlı kurum, öğretim şekli, isınma, internet altyapısı
+- **Tarihçe:** 1953'ten 2025'e 17 kronolojik milat noktası
+- **Vizyon / Misyon:** Resmi tam metin (4 başlık altında)
+- **Eğitim Yapısı:** 5 yıllık sistem, 2026–2027'den itibaren yeni Fransızca alımı olmayan 7 yeni öğrenci şubesi, beklenen kontenjan 210
+- **Kayıt ve Hazırlık:** Kesin kayıt için okula gelme, kimlik ve ikametgâh belgesi, ikinci yabancı dil seçenekleri, hazırlığın ilk haftasındaki yabancı dil yeterlilik sınavı ve hazırlık atlama imkânı
+- **Ders Programı:** Giriş (08:30), çıkış (15:35), öğle yemeği servisi (11:40–13:15), hazırlıkların 11:40'ta ve diğer sınıfların 12:30'da çıkması
+- **Sınav Sistemi:** Her ders için yılda 4 yazılı sınav, bazı derslerde ortak sınav uygulaması
+- **Fiziksel Altyapı:** MEB resmi tablosu (50 derslik, 3 fen lab, 1 BT sınıfı, 4 spor salonu, 5 çok amaçlı salon, 2 konferans salonu, 2 toplantı salonu, 2 yemekhane, 1 kütüphane / 20.563 kitap, 2 revir, 1 halısaha, pansiyon 240 kişi)
+- **Günlük Okul Yaşamı:** Telefonların 08:30'da toplanıp 15:30–15:35'te verilmesi, okul kartının arka kapı/pansiyon/yemekhane kullanımı, öğle arasında çıkış ve sipariş yasağı, kütüphane saatleri ve dolap kuralları
+- **Pansiyon:** Kapasite, paralı/parasız yatılı kategorileri, resmi evrak PDF linkleri
+- **Okul Forması:** BAL logolu siyah polo tişört, siyah kumaş pantolon ve kız öğrenciler için BALEV gri etek seçeneği
+- **Akademik Başarı:** 2025 LGS bölüm bazlı taban puanları ve yüzdelik dilimleri, Türkiye sıralaması (14.), üniversite yerleştirme (1.773 mezun)
+- **Okul Kültürü:** BAL Ruhu açıklaması, Ayran Günü (tarih, konum, aktiviteler)
+- **Rehberlik:** Üniversite tercih danışmanlığı, LGS ile yeni gelen öğrenciler için adaptasyon desteği
+- **Marş:** Besteci adı (Naci Önöz), beste yılı (1965), tam metin
+- **Müzik:** 1967–2011 arası yarışma kronolojisi (7 dönüm noktası)
+- **Tiyatro:** BALEV destekli topluluk (1990'dan beri), eğitmen isimleri ve mezun yılları, yıllık takvim
+- **Spor:** BALspor (12 branş, kuruluş 2004), Ultimate Frizbi (Türkiye'deki tek lise), pickleball
+- **Kulüp Katılımı:** Sene başı kulüp ve topluluk tanıtımları, öğrencilerin ilgi duydukları topluluklara katılım süreci
+- **Uluslararası:** PASCH, DSD (2008'den itibaren), eTwinning, AP programı (2024–2025, 5 ders)
+- **Mezun ve Öğrenci Ağı:** BALEV (kuruluş 1981, burs kulübü 1983, 2024–25'te 483 burslu), BALMED, BALÖDER, balogrenci.org, BAL Okul Kooperatifi ve Bi'BALlı
+- **Topluluklar:** 2025–2026 Excel listesindeki 24 kayıt ve Sosyal Sorumluluk Topluluğu dahil 25 topluluk; başkan adları, kamuya açık Instagram hesapları ve katılım modeli
+- **Çevre:** Fidan dikimi etkinliği, yeşil kampüs anlayışı
+- **BAL360:** Sanal kampüs turu, Türkiye'de bir ilk olma özelliği
+- **SSS:** 64 adet soru-cevap çifti
+- **İletişim ve Ulaşım:** Telefon (0232 388 10 39), faks (0232 342 90 77), web, iletişim formu, 5 otobüs hattı, minibüs hattı, İzmir ilçeleri ve Manisa'dan mesafeye göre ücretlenen servisler

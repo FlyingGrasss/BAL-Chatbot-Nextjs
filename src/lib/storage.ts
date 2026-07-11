@@ -1,4 +1,6 @@
 import { Pool } from "pg";
+import { createHash } from "node:crypto";
+import { isIP } from "node:net";
 import { CONFIG } from "./config";
 import type { Identity } from "./types";
 
@@ -157,6 +159,26 @@ export function getClientFingerprint(headers: Headers) {
   return /^[A-Za-z0-9_-]{8,255}$/.test(fingerprint) ? fingerprint : null;
 }
 
+export function getClientIp(headers: Headers) {
+  const forwarded = headers.get("x-forwarded-for") || "";
+  const candidates = [
+    forwarded.split(",")[0]?.trim(),
+    headers.get("x-real-ip")?.trim(),
+    headers.get("cf-connecting-ip")?.trim(),
+  ];
+  return candidates.find((candidate) => candidate && isIP(candidate)) || null;
+}
+
+function getIpSubject(headers: Headers) {
+  const ip = getClientIp(headers);
+  if (!ip) return null;
+  const secret = process.env.FLASK_SECRET_KEY || "bal-ip-rate-limit";
+  const subjectId = createHash("sha256")
+    .update(`${secret}:${ip}`)
+    .digest("hex");
+  return { subjectType: "ip", subjectId };
+}
+
 export async function getIdentity(headers: Headers): Promise<Identity | null> {
   const fingerprint = getClientFingerprint(headers);
   if (!fingerprint) return null;
@@ -220,7 +242,58 @@ export async function checkQuota(identity: Identity) {
   return { ok: true, usage, error: "" };
 }
 
+export async function checkIpQuota(headers: Headers) {
+  const subject = getIpSubject(headers);
+  if (!subject) return { ok: true, usage: null, error: "" };
+
+  const dailyUsed = await getUsageForSubject(
+    subject.subjectType,
+    subject.subjectId,
+    "day",
+    todayKey(),
+  );
+  const minuteUsed = await getUsageForSubject(
+    subject.subjectType,
+    subject.subjectId,
+    "minute",
+    minuteKey(),
+  );
+  const usage = {
+    daily_used: dailyUsed,
+    daily_remaining: Math.max(CONFIG.ipLimits.daily - dailyUsed, 0),
+    minute_used: minuteUsed,
+    minute_remaining: Math.max(CONFIG.ipLimits.minute - minuteUsed, 0),
+  };
+
+  if (usage.daily_remaining <= 0) {
+    return {
+      ok: false,
+      usage,
+      error: "Bu ağdan günlük istek limitine ulaşıldı.",
+    };
+  }
+  if (usage.minute_remaining <= 0) {
+    return {
+      ok: false,
+      usage,
+      error: "Bu ağdan çok fazla istek geldi. Biraz bekleyip tekrar dene.",
+    };
+  }
+  return { ok: true, usage, error: "" };
+}
+
 export async function incrementUsage(identity: Identity) {
+  await incrementSubjectUsage(identity.subjectType, identity.subjectId);
+  return quotaSnapshot(identity);
+}
+
+export async function incrementIpUsage(headers: Headers) {
+  const subject = getIpSubject(headers);
+  if (!subject) return;
+  await incrementSubjectUsage(subject.subjectType, subject.subjectId);
+}
+
+async function incrementSubjectUsage(subjectType: string, subjectId: string) {
   const now = new Date().toISOString();
   for (const [periodType, periodKey] of [
     ["day", todayKey()],
@@ -234,15 +307,14 @@ export async function incrementUsage(identity: Identity) {
          VALUES ($1, $2, $3, $4, 1, $5)
          ON CONFLICT (subject_type, subject_id, period_type, period_key)
          DO UPDATE SET count = usage_counters.count + 1, updated_at = EXCLUDED.updated_at`,
-        [identity.subjectType, identity.subjectId, periodType, periodKey, now],
+        [subjectType, subjectId, periodType, periodKey, now],
       );
     } else {
       const usage = memoryUsage();
-      const key = usageKey(identity, periodType, periodKey);
+      const key = usageKey({ subjectType, subjectId }, periodType, periodKey);
       usage.set(key, (usage.get(key) || 0) + 1);
     }
   }
-  return quotaSnapshot(identity);
 }
 
 export async function saveChatLog(identity: Identity, question: string, answer: string) {
@@ -429,16 +501,20 @@ export async function incrementSuggestionUsage(identity: Identity) {
 }
 
 async function getUsageForType(identity: Identity, subjectType: string, periodType: "day" | "minute", periodKey: string) {
+  return getUsageForSubject(subjectType, identity.subjectId, periodType, periodKey);
+}
+
+async function getUsageForSubject(subjectType: string, subjectId: string, periodType: "day" | "minute", periodKey: string) {
   const pool = getPool();
   if (pool) {
     await ensureSchema();
     const result = await pool.query(
       "SELECT count FROM usage_counters WHERE subject_type = $1 AND subject_id = $2 AND period_type = $3 AND period_key = $4",
-      [subjectType, identity.subjectId, periodType, periodKey],
+      [subjectType, subjectId, periodType, periodKey],
     );
     return Number(result.rows[0]?.count || 0);
   }
-  const key = `${subjectType}:${identity.subjectId}:${periodType}:${periodKey}`;
+  const key = `${subjectType}:${subjectId}:${periodType}:${periodKey}`;
   return memoryUsage().get(key) || 0;
 }
 
@@ -460,8 +536,8 @@ function identityFromUser(id: number, role: Role): Identity {
   };
 }
 
-function usageKey(identity: Identity, periodType: string, periodKey: string) {
-  return `${identity.subjectType}:${identity.subjectId}:${periodType}:${periodKey}`;
+function usageKey(subject: { subjectType: string; subjectId: string }, periodType: string, periodKey: string) {
+  return `${subject.subjectType}:${subject.subjectId}:${periodType}:${periodKey}`;
 }
 
 function todayKey() {

@@ -1,9 +1,12 @@
 import { CONFIG } from "../../../src/lib/config";
 import {
   buildAugmentedUserMessage,
+  buildRetrievalQuery,
   buildSourcesPayload,
   formatContext,
+  isBalRelatedQuery,
   retrieve,
+  shouldUseGoogleSearch,
 } from "../../../src/lib/rag";
 import { sse, streamResponse } from "../../../src/lib/sse";
 import {
@@ -14,12 +17,15 @@ import {
 } from "../../../src/lib/sessions";
 import {
   checkQuota,
+  checkIpQuota,
   getIdentity,
+  incrementIpUsage,
   incrementUsage,
   saveChatLog,
 } from "../../../src/lib/storage";
-import { streamChat } from "../../../src/lib/groq";
+import { streamChat } from "../../../src/lib/llm";
 import { estimateMessageTokens, estimateTokens } from "../../../src/lib/tokenCounter";
+import type { ChatMessage } from "../../../src/lib/types";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -27,7 +33,7 @@ export const maxDuration = 60;
 
 // Token limits
 const MAX_MESSAGE_TOKENS = 500; // Max tokens per user message
-const MAX_TOTAL_REQUEST_TOKENS = 8000; // Max tokens in entire request (message + context + history)
+const MAX_TOTAL_REQUEST_TOKENS = 100000; // Message + RAG context + conversation history
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
@@ -67,6 +73,14 @@ export async function POST(request: Request) {
     );
   }
 
+  const ipQuota = await checkIpQuota(request.headers);
+  if (!ipQuota.ok) {
+    return Response.json(
+      { error: ipQuota.error, error_type: "quota" },
+      { status: 429 },
+    );
+  }
+
   const quota = await checkQuota(identity);
   if (!quota.ok) {
     return Response.json(
@@ -76,10 +90,18 @@ export async function POST(request: Request) {
   }
 
   const updatedQuota = await incrementUsage(identity);
+  await incrementIpUsage(request.headers);
+  const clientHistory = parseClientHistory(body?.history);
+  const recentHistory = clientHistory.length
+    ? clientHistory.slice(-(CONFIG.maxHistoryTurns * 2))
+    : getRecentHistory(sessionId);
+  const retrievalQuery = buildRetrievalQuery(userMessage, recentHistory);
 
   let retrieved;
   try {
-    retrieved = await retrieve(userMessage, CONFIG.retrievalTopK);
+    retrieved = isBalRelatedQuery(retrievalQuery)
+      ? await retrieve(retrievalQuery, CONFIG.retrievalTopK)
+      : [];
   } catch {
     return Response.json(
       {
@@ -91,7 +113,6 @@ export async function POST(request: Request) {
   }
 
   const context = formatContext(retrieved, CONFIG.retrievalScoreThreshold);
-  const recentHistory = getRecentHistory(sessionId);
 
   // ============ NEW: Full request token validation ============
   const totalTokens = estimateMessageTokens(userMessage, context, recentHistory);
@@ -111,7 +132,11 @@ export async function POST(request: Request) {
   // Initialize the stream iterator before committing to 200 status
   let streamIterator: AsyncIterableIterator<Record<string, unknown>>;
   try {
-    streamIterator = streamChat(recentHistory, augmentedMessage)[
+    streamIterator = streamChat(recentHistory, augmentedMessage, {
+      googleSearch:
+        CONFIG.geminiSearchGrounding &&
+        shouldUseGoogleSearch(retrievalQuery),
+    })[
       Symbol.asyncIterator
     ]();
   } catch {
@@ -185,7 +210,7 @@ export async function POST(request: Request) {
       const donePayload: Record<string, unknown> = {
         done: true,
         sources: buildSourcesPayload(retrieved, CONFIG.retrievalScoreThreshold),
-        near_limit: updatedQuota.daily_used >= 30,
+        near_limit: updatedQuota.daily_remaining <= 10,
       };
 
       if (savedQuestionIndex) donePayload.question_index = savedQuestionIndex;
@@ -196,4 +221,23 @@ export async function POST(request: Request) {
   });
 
   return streamResponse(stream);
+}
+
+function parseClientHistory(value: unknown): ChatMessage[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .slice(-(CONFIG.maxHistoryTurns * 2))
+    .flatMap((item): ChatMessage[] => {
+      if (!item || typeof item !== "object") return [];
+      const role = "role" in item ? item.role : null;
+      const content = "content" in item ? item.content : null;
+      if (
+        (role !== "user" && role !== "assistant") ||
+        typeof content !== "string" ||
+        !content.trim()
+      ) {
+        return [];
+      }
+      return [{ role, content: content.trim().slice(0, 8000) }];
+    });
 }

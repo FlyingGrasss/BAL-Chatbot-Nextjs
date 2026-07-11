@@ -3,13 +3,14 @@
 [![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=nextdotjs&logoColor=white)](https://nextjs.org)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Groq](https://img.shields.io/badge/Groq-LLM_Inference-F97316)](https://groq.com)
+[![Gemini](https://img.shields.io/badge/Gemini-Primary_LLM-4285F4?logo=google&logoColor=white)](https://ai.google.dev/gemini-api)
+[![Groq](https://img.shields.io/badge/Groq-Fallback_LLM-F97316)](https://groq.com)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Optional-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 A Retrieval-Augmented Generation chatbot for Bornova Anadolu Lisesi, migrated from the original Flask app to a Next.js App Router project.
 
-The app serves the existing BAL chatbot frontend, streams model responses from Groq through Next.js API routes, retrieves school-specific context from a bundled vectorstore, and supports anonymous fingerprint-based quotas, chat logging, and feedback.
+The app serves the BAL chatbot frontend, streams model responses from Gemini through Next.js API routes with Groq as a final fallback, retrieves school-specific context from a bundled vectorstore, and supports anonymous fingerprint-based quotas, chat logging, and feedback.
 
 Migration to Next.js by [FlyingGrasss](https://github.com/FlyingGrasss) | [Emre Bozkurt](https://www.instagram.com/emre.bozqurt).
 
@@ -20,7 +21,9 @@ Migration to Next.js by [FlyingGrasss](https://github.com/FlyingGrasss) | [Emre 
 - RAG pipeline over BAL knowledge-base chunks using local JSON vectors
 - Query embeddings through the Hugging Face Inference API
 - Streaming chat responses through Server-Sent Events
-- Groq model fallback chain and support for multiple API keys
+- Gemini model and API-key rotation, with Groq as the final provider fallback
+- Selective Google Search grounding for explicitly current or web-search questions
+- Client-supplied conversation history that survives serverless instance changes
 - Anonymous FingerprintJS-based visitor identity
 - Per-role rate limits for visitor, user, and admin roles
 - Conversation memory for recent turns per session
@@ -37,11 +40,11 @@ Migration to Next.js by [FlyingGrasss](https://github.com/FlyingGrasss) | [Emre 
 | --- | --- |
 | App | Next.js 16, React 19, TypeScript |
 | API | Next.js App Router route handlers |
-| LLM | Groq Chat Completions API |
+| LLM | Gemini API, with Groq Chat Completions fallback |
 | Embeddings | Hugging Face Inference API, `intfloat/multilingual-e5-small` |
 | Retrieval | Bundled vectorstore JSON, cosine-style dot product over normalized vectors |
 | Storage | PostgreSQL via `pg`, with in-memory fallback |
-| Frontend | Static HTML/CSS/JS, FingerprintJS vendor bundle |
+| Frontend | React client components, CSS, FingerprintJS vendor bundle |
 | Package Manager | pnpm |
 
 ---
@@ -54,7 +57,7 @@ BAL-Chatbot-Nextjs/
 |   |-- api/
 |   |   |-- auth/status/route.ts       # Visitor identity and quota status
 |   |   |-- admin/feedback/route.ts    # Password-protected feedback listing
-|   |   |-- chat/route.ts              # RAG + Groq SSE chat endpoint
+|   |   |-- chat/route.ts              # RAG + Gemini/Groq SSE chat endpoint
 |   |   |-- chat/feedback/route.ts     # Response feedback endpoint
 |   |   |-- clear/route.ts             # Session clear endpoint
 |   |   `-- health/route.ts            # System health endpoint
@@ -66,13 +69,15 @@ BAL-Chatbot-Nextjs/
 |   |-- BAL_Logo.png
 |   `-- vendor/fingerprintjs/fp.esm.js
 |-- scripts/
-|   `-- export_faiss_vectors.py        # Converts old FAISS data to JSON vectors
+|   |-- build-vectorstore.mjs          # Builds the live index from Markdown
+|   `-- export_faiss_vectors.py        # Legacy FAISS import utility
 |-- src/
-|   |-- data/vectorstore.json          # 142 embedded BAL chunks
+|   |-- data/RAG_Dataset_BAL.md        # Canonical editable knowledge source
+|   |-- data/vectorstore.json          # Generated embedded BAL chunks
 |   `-- lib/
 |       |-- config.ts                  # Models, limits, retrieval settings
 |       |-- embeddings.ts              # Hugging Face embedding API client
-|       |-- groq.ts                    # Streaming Groq client + fallback
+|       |-- llm.ts                     # Gemini rotation + Groq provider fallback
 |       |-- rag.ts                     # Retrieval and context formatting
 |       |-- sessions.ts                # In-memory conversation sessions
 |       |-- storage.ts                 # PostgreSQL/in-memory persistence
@@ -92,7 +97,8 @@ BAL-Chatbot-Nextjs/
 
 - Node.js compatible with Next.js 16
 - pnpm
-- Groq API key from [console.groq.com](https://console.groq.com)
+- Gemini API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+- Optional Groq API key from [console.groq.com](https://console.groq.com) for final fallback
 - Optional PostgreSQL database for persistent quotas, logs, and feedback
 
 ### Installation
@@ -107,15 +113,14 @@ Create an environment file:
 cp .env.example .env.local
 ```
 
-Set at least one Groq key:
+Set at least one Gemini key. Additional numbered keys are tried when a key is exhausted:
 
 ```env
-GROQ_API_KEY=your_groq_key_here
-# or:
-# GROQ_API_KEYS=key1,key2,key3
-# also supported:
-# GROQ_API_KEY_2=...
-# GROQ_API_KEY_3=...
+GEMINI_API_KEY=your_primary_gemini_key
+GEMINI_API_KEY_2=your_secondary_gemini_key
+
+# Optional final provider fallback
+GROQ_API_KEY=your_groq_key
 ```
 
 Optional production persistence:
@@ -144,7 +149,14 @@ http://localhost:3000
 
 | Variable | Required | Description |
 | --- | --- | --- |
-| `GROQ_API_KEY` | Yes | Single Groq API key |
+| `GEMINI_API_KEY` | Yes | Primary Gemini API key |
+| `GEMINI_API_KEYS` | No | Comma-separated Gemini API key pool |
+| `GEMINI_API_KEY_2` ... `GEMINI_API_KEY_5` | No | Additional Gemini keys used after quota/auth failures |
+| `GEMINI_MODEL_CHAIN` | No | Comma-separated per-model quota fallback chain |
+| `GEMINI_TIMEOUT_MS` | No | Defaults to `120000` |
+| `GEMINI_SEARCH_GROUNDING` | No | Enables selective Google Search grounding; defaults to `true` |
+| `GEMINI_SEARCH_MODEL` | No | Grounded-query model; defaults to `gemini-3.1-flash-lite` |
+| `GROQ_API_KEY` | No | Single Groq fallback API key |
 | `GROQ_API_KEYS` | No | Comma-separated Groq API key pool |
 | `GROQ_API_KEY_2` ... `GROQ_API_KEY_5` | No | Additional Groq fallback keys |
 | `GROQ_MODEL_CHAIN` | No | Comma-separated fallback model chain |
@@ -153,16 +165,28 @@ http://localhost:3000
 | `HF_TOKEN` | Recommended | Hugging Face token for query embeddings |
 | `ADMIN_PASSWORD` | Recommended | Password for `/admin` feedback view |
 | `EMBEDDING_MODEL` | No | Defaults to `intfloat/multilingual-e5-small` |
+| `INDEX_CHUNK_MAX_CHARS` | No | Maximum generated chunk size, defaults to `1200` |
+| `INDEX_EMBED_BATCH_SIZE` | No | Hugging Face indexing batch size, defaults to `8` |
 | `RETRIEVAL_TOP_K` | No | Defaults to `5` |
 | `RETRIEVAL_SCORE_THRESHOLD` | No | Defaults to `0.35` |
 | `GROQ_TIMEOUT_MS` | No | Defaults to `120000` |
 | `LLM_TEMPERATURE` | No | Defaults to `0.1` |
 | `LLM_MAX_TOKENS` | No | Defaults to `1024` |
 | `LLM_TOP_P` | No | Defaults to `0.9` |
-| `MAX_HISTORY_TURNS` | No | Defaults to `6` |
+| `MAX_HISTORY_TURNS` | No | Conversation turns sent to the model; defaults to `60` |
 | `CONGESTION_THRESHOLD` | No | Defaults to `4` active requests |
 
-Default Groq model chain:
+Default Gemini model chain:
+
+```text
+gemini-3.1-flash-lite,
+gemini-2.5-flash,
+gemini-3.5-flash,
+gemini-3-flash-preview,
+gemini-2.5-flash-lite
+```
+
+Default Groq fallback model chain:
 
 ```text
 llama-3.3-70b-versatile,
@@ -177,7 +201,7 @@ llama-3.1-8b-instant
 
 ### `POST /api/chat`
 
-Streams an answer using SSE.
+Streams an answer using SSE. Gemini is attempted first; Groq is used only when all configured Gemini attempts fail.
 
 Request:
 
@@ -241,29 +265,33 @@ Clears the current in-memory conversation session.
 
 | Role | Daily Limit | Minute Limit |
 | --- | ---: | ---: |
-| Visitor | 40 | 5 |
-| User | 50 | 8 |
+| Visitor | 30 | 5 |
+| User | 30 | 5 |
 | Admin | 500 | 20 |
+
+In addition, chat requests receive a hashed-IP abuse guard of 30 requests per
+minute and 300 per day by default. These values can be changed with
+`IP_MINUTE_LIMIT` and `IP_DAILY_LIMIT`.
 
 ---
 
-## Vectorstore Migration
+## Knowledge Base and Indexing
 
-The original Flask version used FAISS files at runtime. This Next.js version stores vectors in `src/data/vectorstore.json` so retrieval can run directly inside the Next.js API layer.
+`src/data/RAG_Dataset_BAL.md` is the canonical editable knowledge source. `src/data/vectorstore.json` is generated from it and should not be edited manually.
 
-If the original FAISS files and chunk metadata are available in the parent project layout, regenerate the JSON vectorstore with:
+Preview deterministic chunking without making API calls:
 
 ```bash
-pnpm export:vectors
+pnpm index:data:dry
 ```
 
-The script expects the old files at:
+Rebuild the complete vectorstore using `HF_TOKEN` from `.env.local`:
 
-```text
-../data/bal_faiss.index
-../data/bal_chunks.json
-../data/vectorstore_config.json
+```bash
+pnpm index:data
 ```
+
+The generated file records the source SHA-256, embedding model and chunking configuration. The old FAISS conversion script remains available as `pnpm export:legacy-vectors` only for legacy imports.
 
 ---
 

@@ -25,7 +25,7 @@ export async function GET(request: Request) {
     minute_used: usage.minute_used,
     daily_limit: limits.daily,
     minute_limit: limits.minute,
-    near_limit: usage.daily_used >= 30,
+    near_limit: usage.daily_remaining <= 10,
     google_configured: false,
     google_client_id: "",
     https_required: false,

@@ -137,3 +137,6 @@ dist
 
 # old
 old/
+
+# Contains student contact details; use the names only when updating the public RAG dataset.
+src/data/25-26 ÖĞRENCİ TOPLULUKLARI.xlsx
