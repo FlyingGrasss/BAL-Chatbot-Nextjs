@@ -54,7 +54,7 @@ export default function AboutPage() {
         <section className="info-section">
           <h2>Hazırlayanlar</h2>
           <p>
-            Bu Websiteyi Hazırlayan: Emre Bozkurt&apos;28 - 10/C
+            Bu Websiteyi Hazırlayan: <a className="credit-link" href="https://www.instagram.com/emre.bozqurt" target="_blank" rel="noreferrer">Emre Bozkurt&apos;28</a> - 10/C
             <br />
             Veri Hazırlamada Yardımcı: Burak Güldilek&apos;29 9/K
           </p>
@@ -71,7 +71,7 @@ export default function AboutPage() {
       </article>
 
       <footer className="info-page-footer">
-        Bu website Emre Bozkurt&apos;28 tarafından yapılmıştır.
+        Bu website <a className="credit-link" href="https://www.instagram.com/emre.bozqurt" target="_blank" rel="noreferrer">Emre Bozkurt&apos;28</a> tarafından yapılmıştır.
       </footer>
     </main>
   );

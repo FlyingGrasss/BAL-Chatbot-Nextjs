@@ -269,9 +269,9 @@ Clears the current in-memory conversation session.
 | User | 30 | 5 |
 | Admin | 500 | 20 |
 
-In addition, chat requests receive a hashed-IP abuse guard of 30 requests per
-minute and 300 per day by default. These values can be changed with
-`IP_MINUTE_LIMIT` and `IP_DAILY_LIMIT`.
+In addition, chat requests receive a hashed-IP burst guard of 30 requests per
+minute by default. This value can be changed with `IP_MINUTE_LIMIT`; there is
+no shared daily quota across users on the same network.
 
 ---
 

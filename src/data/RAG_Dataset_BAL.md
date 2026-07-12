@@ -198,7 +198,11 @@ Etkinlik kampüsün **koruluk alanında** gerçekleşir. Şenliğin başlıca un
 
 Ayran Günü, özellikle eski öğrencilerin ve mezunların özlemle andığı, BAL kimliğinin en güçlü sembollerinden biridir.
 
-### 2.3 Okul Marşı
+### 2.3 Ballama
+
+**Ballama**, BAL'ın eski geleneklerinden biridir. 12. sınıf öğrencileri, özellikle en alt dönem olmak üzere alt dönem öğrencileriyle kaynaşmak için bu geleneği oluşturmuştur. Gelenekte üç 12. sınıf öğrencisi bir alt dönem öğrencisini tutup havaya kaldırır; başka bir 12. sınıf öğrencisi de alt döneme doğru çok sert olmayacak şekilde bacak arasına omuz atar. Tehlikeli bir hareket olduğu için **2025–2026 eğitim-öğretim yılından itibaren yasaklanmıştır** ve uygulanmamalıdır.
+
+### 2.4 Okul Marşı
 
 BAL'ın resmi marşı, müzik öğretmeni **Naci Önöz** tarafından **1965 yılında** hem güftesi hem de bestesiyle kaleme alınmıştır. Okulun isim değişikliğiyle sözler güncellenmiştir. Tam metin:
 
@@ -570,31 +574,31 @@ Evet. BAL, Ultimate Frizbi takımına sahip Türkiye'deki tek lisedir. BALspor K
 **S29: Öğrenci kulüpleri var mı?**
 Evet. 2025–2026 listesinde kayıtlı 25 topluluk bulunmaktadır:
 
-- Atatürkçü Gençlik Topluluğu
-- BAL Genç Yeşilay
-- BALTIMATE
-- BAL Felsefe Topluluğu
-- BAL Radyo
-- BAL Yazılım Topluluğu
-- Balösev
-- Bornova Anadolu Lisesi Bando Takımı
-- BAL Klasik Müzik Topluluğu
-- İktisadi ve İdari Bilimler Topluluğu
-- BAL Gastronomi Topluluğu
-- Tanıtım Ekibi
-- BAL FPS Topluluğu
-- Astronomi Topluluğu
-- BAL Animasyon ve Çizgi Roman
-- BALFEST
-- BAL Robotik
-- BAL Mitoloji Topluluğu (BALMİT)
-- BALART
-- BAL Hip-Hop
-- BAL Game Development
-- BalDeutsch
-- BAL Sinema ve Kısa Film Topluluğu
-- Bornova Anadolu Lisesi Kamp Topluluğu
-- Sosyal Sorumluluk Topluluğu
+Atatürkçü Gençlik Topluluğu
+BAL Genç Yeşilay
+BALTIMATE
+BAL Felsefe Topluluğu
+BAL Radyo
+BAL Yazılım Topluluğu
+Balösev
+Bornova Anadolu Lisesi Bando Takımı
+BAL Klasik Müzik Topluluğu
+İktisadi ve İdari Bilimler Topluluğu
+BAL Gastronomi Topluluğu
+Tanıtım Ekibi
+BAL FPS Topluluğu
+Astronomi Topluluğu
+BAL Animasyon ve Çizgi Roman
+BALFEST
+BAL Robotik
+BAL Mitoloji Topluluğu (BALMİT)
+BALART
+BAL Hip-Hop
+BAL Game Development
+BalDeutsch
+BAL Sinema ve Kısa Film Topluluğu
+Bornova Anadolu Lisesi Kamp Topluluğu
+Sosyal Sorumluluk Topluluğu
 
 Kulüplerin ve toplulukların kayıtlı veya tanıtılmış olması, yıl boyunca aktif faaliyet gösterdikleri anlamına gelmeyebilir. Öğrenciler yıl başında sınıf öğretmenleri aracılığıyla bir kulüp seçer; diledikleri kadar topluluğa katılabilir ve yıl içinde topluluk değiştirebilir.
 
@@ -807,43 +811,43 @@ Okulda sosyal hayat oldukça dinamiktir ve her sene yeni topluluklar kurulabilir
 
 ### B.1 Topluluklar ve Kulüpler
 
-BAL'da sosyal yaşam oldukça dinamiktir ve kulüpler ile topluluklar her yıl yenilenmektedir. Topluluklar öğrenci inisiyatifiyle yürütülebilir, yeni topluluklar kurulabilir veya bazı topluluklar faaliyetlerine ara verebilir. Aynı durum özellikle kulüpler için de geçerlidir.
+BAL'da sosyal yaşam oldukça dinamiktir; kulüpler ve topluluklar her yıl yenilenebilir, bazıları faaliyetlerine ara verebilir. Öğrenciler eğitim-öğretim yılının başında sınıf öğretmenleri aracılığıyla bir kulüp seçer; bunun yanı sıra diledikleri kadar topluluğa katılabilir ve yıl içinde topluluk değiştirebilirler. Toplulukların tanıtımları yıl başında yapılır.
 
 ÖNEMLİ KURAL / ÖZELLİKLE BELİRTİLECEK HUSUS: Öğrenciler yıl başında sınıf öğretmenleri aracılığıyla bir kulüp seçer; diledikleri kadar topluluğa katılabilir ve yıl içinde topluluk değiştirebilir. Topluluk tanıtımları eğitim-öğretim yılı başında yapılır.
 
 Okulda her sene yeni topluluklar kurulabilir ve bazı topluluklar faaliyetlerine ara verebilir. Eğitim-öğretim yılının başında topluluk temsilcileri sınıfları ziyaret ederek tanıtım yapar. Öğrenciler yıl başında sınıf öğretmenleri aracılığıyla bir kulüp seçer; ayrıca istedikleri kadar topluluğa katılabilir ve topluluklar arasında yıl içinde geçiş yapabilirler.
 
-BAL bünyesinde son yıllarda faaliyet göstermiş topluluk ve kulüplerden bazıları şunlardır:
+Okulda faaliyet göstermiş topluluk ve kulüpler şunlardır:
 
 #### B.1.1 2025–2026 Öğrenci Toplulukları Listesi
 
-2025–2026 eğitim-öğretim yılı için kayıtlı **25 topluluk** (Excel'deki 24 kayıt ve ayrıca eklenen Sosyal Sorumluluk Topluluğu) şunlardır:
+2025–2026 eğitim-öğretim yılı için kayıtlı 25 topluluk şunlardır:
 
-- Atatürkçü Gençlik Topluluğu
-- BAL Genç Yeşilay
-- BALTIMATE
-- BAL Felsefe Topluluğu
-- BAL Radyo
-- BAL Yazılım Topluluğu
-- Balösev
-- Bornova Anadolu Lisesi Bando Takımı
-- BAL Klasik Müzik Topluluğu
-- İktisadi ve İdari Bilimler Topluluğu
-- BAL Gastronomi Topluluğu
-- Tanıtım Ekibi
-- BAL FPS Topluluğu
-- Astronomi Topluluğu
-- BAL Animasyon ve Çizgi Roman
-- BALFEST
-- BAL Robotik
-- BAL Mitoloji Topluluğu (BALMİT)
-- BALART
-- BAL Hip-Hop
-- BAL Game Development
-- BalDeutsch
-- BAL Sinema ve Kısa Film Topluluğu
-- Bornova Anadolu Lisesi Kamp Topluluğu
-- Sosyal Sorumluluk Topluluğu
+Atatürkçü Gençlik Topluluğu
+BAL Genç Yeşilay
+BALTIMATE
+BAL Felsefe Topluluğu
+BAL Radyo
+BAL Yazılım Topluluğu
+Balösev
+Bornova Anadolu Lisesi Bando Takımı
+BAL Klasik Müzik Topluluğu
+İktisadi ve İdari Bilimler Topluluğu
+BAL Gastronomi Topluluğu
+Tanıtım Ekibi
+BAL FPS Topluluğu
+Astronomi Topluluğu
+BAL Animasyon ve Çizgi Roman
+BALFEST
+BAL Robotik
+BAL Mitoloji Topluluğu (BALMİT)
+BALART
+BAL Hip-Hop
+BAL Game Development
+BalDeutsch
+BAL Sinema ve Kısa Film Topluluğu
+Bornova Anadolu Lisesi Kamp Topluluğu
+Sosyal Sorumluluk Topluluğu
 
 ##### Topluluk Başkanları ve Kamuya Açık Hesaplar
 
@@ -1100,7 +1104,7 @@ Toplulukların tanıtımları eğitim-öğretim yılının başında yapılır. 
 
 Öğrenciler istedikleri kadar topluluğa bu tanıtım sürecinden sonra katılabilir ve yıl içinde topluluk değiştirebilirler. Hem kulüpler hem de topluluklar her yıl aynı düzeyde aktif olmayabilir; güncel durum okul duyurularından öğrenilmelidir.
 
-[GÜNCEL VERİ GEREKLİ: Her yıl açılan kulüpler, danışman öğretmenler, kontenjanlar, başvuru formları ve toplantı günleri okul duyuruları ve kulüp tanıtımları üzerinden takip edilmelidir.]
+[GÜNCEL VERİ GEREKLİ: Her yıl açılan kulüpler, danışman öğretmenler, kontenjanlar, başvuru formları ve toplantı günleri okul duyuruları üzerinden takip edilmelidir.]
 
 ---
 
@@ -1175,6 +1179,9 @@ Evet. 2026–2027 yılı için yıllık ücret 200 TL olarak bildirilmiştir. An
 
 **S64: Rehberlik servisi üniversite tercihi ve yeni öğrenci adaptasyonu konusunda destek veriyor mu?**
 Evet. BAL'da üniversite tercih danışmanlığı yapılır. LGS ile yeni gelen öğrencilerin okula ve hazırlık sürecine adaptasyonu da desteklenir.
+
+**S65: Ballama nedir?**
+Ballama, BAL'ın eski bir geleneğidir. 12. sınıf öğrencileri alt dönem öğrencileriyle kaynaşmak için bu geleneği oluşturmuştur. Tehlikeli bir hareket olduğu için 2025–2026 eğitim-öğretim yılından itibaren yasaklanmıştır ve uygulanmamalıdır.
 
 ---
 
@@ -1707,7 +1714,7 @@ Hazırlık sınıfı ve okulun topluluk kültürü sayesinde öğrencilerin büy
 
 ### S14: BAL'da topluluklara katılmak zor mu?
 
-Hayır. Eğitim-öğretim yılının başında topluluk ve kulüpler sınıfları ziyaret ederek tanıtım yaparlar. Öğrenciler ilgi duydukları alanlara kolayca katılabilir ve yeni toplulukların kurulmasına da katkı sağlayabilirler.
+Hayır. Eğitim-öğretim yılının başında topluluk temsilcileri sınıfları ziyaret ederek tanıtım yapar; kulüpler ise sınıf öğretmenleri aracılığıyla seçilir. Öğrenciler ilgi duydukları topluluklara kolayca katılabilir ve yeni toplulukların kurulmasına da katkı sağlayabilirler.
 
 ---
 
@@ -1852,11 +1859,11 @@ Bu belge aşağıdaki konularda yapılandırılmış veri içermektedir:
 - **Müzik:** 1967–2011 arası yarışma kronolojisi (7 dönüm noktası)
 - **Tiyatro:** BALEV destekli topluluk (1990'dan beri), eğitmen isimleri ve mezun yılları, yıllık takvim
 - **Spor:** BALspor (12 branş, kuruluş 2004), Ultimate Frizbi (Türkiye'deki tek lise), pickleball
-- **Kulüp Katılımı:** Sene başı kulüp ve topluluk tanıtımları, öğrencilerin ilgi duydukları topluluklara katılım süreci
+- **Kulüp ve Topluluk Katılımı:** Kulüplerin sınıf öğretmenleri aracılığıyla seçilmesi, toplulukların sene başında tanıtılması ve öğrencilerin topluluklara katılım süreci
 - **Uluslararası:** PASCH, DSD (2008'den itibaren), eTwinning, AP programı (2024–2025, 5 ders)
 - **Mezun ve Öğrenci Ağı:** BALEV (kuruluş 1981, burs kulübü 1983, 2024–25'te 483 burslu), BALMED, BALÖDER, balogrenci.org, BAL Okul Kooperatifi ve Bi'BALlı
-- **Topluluklar:** 2025–2026 Excel listesindeki 24 kayıt ve Sosyal Sorumluluk Topluluğu dahil 25 topluluk; başkan adları, kamuya açık Instagram hesapları ve katılım modeli
+- **Topluluklar:** 2025–2026 listesindeki 25 topluluk; başkan adları, kamuya açık Instagram hesapları ve katılım modeli
 - **Çevre:** Fidan dikimi etkinliği, yeşil kampüs anlayışı
 - **BAL360:** Sanal kampüs turu, Türkiye'de bir ilk olma özelliği
-- **SSS:** 64 adet soru-cevap çifti
+- **SSS:** 65 adet soru-cevap çifti
 - **İletişim ve Ulaşım:** Telefon (0232 388 10 39), faks (0232 342 90 77), web, iletişim formu, 5 otobüs hattı, minibüs hattı, İzmir ilçeleri ve Manisa'dan mesafeye göre ücretlenen servisler

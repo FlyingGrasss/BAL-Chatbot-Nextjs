@@ -41,6 +41,13 @@ export type SuggestionRecord = {
   created_at: string;
 };
 
+export type CachedChatResponse = {
+  question: string;
+  answer: string;
+  sources: Array<{ breadcrumb: string; score: number }>;
+  created_at: string;
+};
+
 type MemorySuggestion = {
   userId: number;
   content: string;
@@ -54,6 +61,7 @@ const globalState = globalThis as typeof globalThis & {
   balUsage?: Map<string, number>;
   balLogs?: MemoryLog[];
   balSuggestions?: MemorySuggestion[];
+  balResponseCache?: Map<string, CachedChatResponse>;
   balNextUserId?: number;
 };
 
@@ -99,6 +107,11 @@ function memorySuggestions() {
   return globalState.balSuggestions;
 }
 
+function memoryResponseCache() {
+  if (!globalState.balResponseCache) globalState.balResponseCache = new Map();
+  return globalState.balResponseCache;
+}
+
 export async function ensureSchema() {
   const pool = getPool();
   if (!pool) return;
@@ -139,6 +152,14 @@ export async function ensureSchema() {
         id SERIAL PRIMARY KEY,
         user_id INTEGER NOT NULL,
         content TEXT NOT NULL,
+        created_at VARCHAR(64) NOT NULL
+      );
+
+      CREATE TABLE IF NOT EXISTS response_cache (
+        cache_key VARCHAR(255) PRIMARY KEY,
+        question TEXT NOT NULL,
+        answer TEXT NOT NULL,
+        sources JSONB NOT NULL DEFAULT '[]'::jsonb,
         created_at VARCHAR(64) NOT NULL
       );
 
@@ -246,12 +267,6 @@ export async function checkIpQuota(headers: Headers) {
   const subject = getIpSubject(headers);
   if (!subject) return { ok: true, usage: null, error: "" };
 
-  const dailyUsed = await getUsageForSubject(
-    subject.subjectType,
-    subject.subjectId,
-    "day",
-    todayKey(),
-  );
   const minuteUsed = await getUsageForSubject(
     subject.subjectType,
     subject.subjectId,
@@ -259,19 +274,10 @@ export async function checkIpQuota(headers: Headers) {
     minuteKey(),
   );
   const usage = {
-    daily_used: dailyUsed,
-    daily_remaining: Math.max(CONFIG.ipLimits.daily - dailyUsed, 0),
     minute_used: minuteUsed,
     minute_remaining: Math.max(CONFIG.ipLimits.minute - minuteUsed, 0),
   };
 
-  if (usage.daily_remaining <= 0) {
-    return {
-      ok: false,
-      usage,
-      error: "Bu ağdan günlük istek limitine ulaşıldı.",
-    };
-  }
   if (usage.minute_remaining <= 0) {
     return {
       ok: false,
@@ -290,30 +296,101 @@ export async function incrementUsage(identity: Identity) {
 export async function incrementIpUsage(headers: Headers) {
   const subject = getIpSubject(headers);
   if (!subject) return;
-  await incrementSubjectUsage(subject.subjectType, subject.subjectId);
+  await incrementSubjectCounter(
+    subject.subjectType,
+    subject.subjectId,
+    "minute",
+    minuteKey(),
+  );
+}
+
+export async function getCachedChatResponse(cacheKey: string) {
+  const pool = getPool();
+  if (pool) {
+    await ensureSchema();
+    const result = await pool.query(
+      "SELECT question, answer, sources, created_at FROM response_cache WHERE cache_key = $1",
+      [cacheKey],
+    );
+    const row = result.rows[0] as
+      | { question: string; answer: string; sources: unknown; created_at: string }
+      | undefined;
+    if (!row) return null;
+    return {
+      question: row.question,
+      answer: row.answer,
+      sources: parseCachedSources(row.sources),
+      created_at: row.created_at,
+    } satisfies CachedChatResponse;
+  }
+  return memoryResponseCache().get(cacheKey) || null;
+}
+
+export async function saveCachedChatResponse(
+  cacheKey: string,
+  question: string,
+  answer: string,
+  sources: Array<{ breadcrumb: string; score: number }>,
+) {
+  const createdAt = new Date().toISOString();
+  const cached = { question, answer, sources, created_at: createdAt } satisfies CachedChatResponse;
+  const pool = getPool();
+  if (pool) {
+    await ensureSchema();
+    await pool.query(
+      `INSERT INTO response_cache (cache_key, question, answer, sources, created_at)
+       VALUES ($1, $2, $3, $4::jsonb, $5)
+       ON CONFLICT (cache_key) DO NOTHING`,
+      [cacheKey, question, answer, JSON.stringify(sources), createdAt],
+    );
+    return;
+  }
+  if (!memoryResponseCache().has(cacheKey)) memoryResponseCache().set(cacheKey, cached);
+}
+
+function parseCachedSources(value: unknown) {
+  const parsed = typeof value === "string" ? JSON.parse(value) : value;
+  if (!Array.isArray(parsed)) return [];
+  return parsed.flatMap((source): Array<{ breadcrumb: string; score: number }> => {
+    if (!source || typeof source !== "object") return [];
+    const breadcrumb = "breadcrumb" in source && typeof source.breadcrumb === "string"
+      ? source.breadcrumb
+      : "";
+    const score = "score" in source && typeof source.score === "number" ? source.score : 0;
+    return [{ breadcrumb, score }];
+  });
 }
 
 async function incrementSubjectUsage(subjectType: string, subjectId: string) {
-  const now = new Date().toISOString();
   for (const [periodType, periodKey] of [
     ["day", todayKey()],
     ["minute", minuteKey()],
   ] as const) {
-    const pool = getPool();
-    if (pool) {
-      await ensureSchema();
-      await pool.query(
-        `INSERT INTO usage_counters (subject_type, subject_id, period_type, period_key, count, updated_at)
-         VALUES ($1, $2, $3, $4, 1, $5)
-         ON CONFLICT (subject_type, subject_id, period_type, period_key)
-         DO UPDATE SET count = usage_counters.count + 1, updated_at = EXCLUDED.updated_at`,
-        [subjectType, subjectId, periodType, periodKey, now],
-      );
-    } else {
-      const usage = memoryUsage();
-      const key = usageKey({ subjectType, subjectId }, periodType, periodKey);
-      usage.set(key, (usage.get(key) || 0) + 1);
-    }
+    await incrementSubjectCounter(subjectType, subjectId, periodType, periodKey);
+  }
+}
+
+async function incrementSubjectCounter(
+  subjectType: string,
+  subjectId: string,
+  periodType: "day" | "minute",
+  periodKey: string,
+) {
+  const now = new Date().toISOString();
+  const pool = getPool();
+  if (pool) {
+    await ensureSchema();
+    await pool.query(
+      `INSERT INTO usage_counters (subject_type, subject_id, period_type, period_key, count, updated_at)
+       VALUES ($1, $2, $3, $4, 1, $5)
+       ON CONFLICT (subject_type, subject_id, period_type, period_key)
+       DO UPDATE SET count = usage_counters.count + 1, updated_at = EXCLUDED.updated_at`,
+      [subjectType, subjectId, periodType, periodKey, now],
+    );
+  } else {
+    const usage = memoryUsage();
+    const key = usageKey({ subjectType, subjectId }, periodType, periodKey);
+    usage.set(key, (usage.get(key) || 0) + 1);
   }
 }
 

@@ -11,6 +11,7 @@ import {
   useState,
 } from "react";
 import Link from "next/link";
+import { ArrowUp, RotateCcw, X } from "lucide-react";
 import { estimateTokens } from "../src/lib/tokenCounter";
 
 type Role = "user" | "assistant";
@@ -263,7 +264,10 @@ export default function Home() {
       addNotice({
         id: "quota-low-daily",
         tone: "warning",
-        text: `Hakkın az kaldı. Bugün ${remainingDaily} soru hakkın var.`,
+        text:
+          remainingDaily === 0
+            ? "Günlük soru hakkın doldu."
+            : `Hakkın az kaldı. Bugün ${remainingDaily} soru hakkın var.`,
       });
     }
     if (remainingMinute <= 1) {
@@ -534,7 +538,6 @@ export default function Home() {
       );
     } finally {
       setIsStreaming(false);
-      window.setTimeout(() => inputRef.current?.focus(), 0);
     }
   }
 
@@ -667,7 +670,7 @@ export default function Home() {
                         onClick={() => dismissNotice(notice.id)}
                         aria-label="Bildirimi kapat"
                       >
-                        x
+                        <X aria-hidden="true" size={14} strokeWidth={2.2} />
                       </button>
                     </div>
                   ))}
@@ -708,7 +711,7 @@ export default function Home() {
                     onClick={clearChat}
                     title="Sohbeti temizle"
                   >
-                    <span aria-hidden="true">↺</span>
+                    <RotateCcw aria-hidden="true" size={17} strokeWidth={2.2} />
                   </button>
                   <button
                     className="send-button"
@@ -726,13 +729,13 @@ export default function Home() {
                         : ""
                     }
                   >
-                    <span aria-hidden="true">↑</span>
+                    <ArrowUp aria-hidden="true" size={19} strokeWidth={2.25} />
                   </button>
                 </div>
               </form>
 
               <footer className="site-footer">
-                Bu website Emre Bozkurt'28 tarafından yapılmıştır.
+                Bu website <a className="credit-link" href="https://www.instagram.com/emre.bozqurt" target="_blank" rel="noreferrer">Emre Bozkurt&apos;28</a> tarafından yapılmıştır.
               </footer>
             </div>
           </section>
@@ -819,7 +822,7 @@ function EntryGate({
             <div>
               <h2>Proje Hakkında</h2>
               <div className="gate-author">
-                Bu Websiteyi Hazırlayan: Emre Bozkurt'28 - 10/C
+                Bu Websiteyi Hazırlayan: <a className="credit-link" href="https://www.instagram.com/emre.bozqurt" target="_blank" rel="noreferrer">Emre Bozkurt&apos;28</a> - 10/C
                 <br />
                 Veri Hazırlamada Yardımcı: Burak Güldilek'29 - 9/K
               </div>
@@ -892,7 +895,7 @@ function Welcome({
             aria-label="BAL hakkında bilgi panelini kapat"
             title="Kapat"
           >
-            ×
+            <X aria-hidden="true" size={22} strokeWidth={1.8} />
           </button>
           <img src="/BAL_Logo.png" alt="BAL" />
           <h2>{title}</h2>

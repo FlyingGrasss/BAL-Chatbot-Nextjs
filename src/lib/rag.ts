@@ -70,6 +70,8 @@ const BAL_TOPIC_TERMS = [
   "tübitak",
   "teknofest",
   "yarışma",
+  "ballama",
+  "gelenek",
 ] as const;
 
 const VAGUE_FOLLOW_UP = /^(tell me more|more|devam|devam et|biraz daha anlat|daha fazla anlat|detaylandır|detay verir misin|peki|neden|nasıl yani|ne demek|nedir|ne dir)[?.!\s]*$/iu;

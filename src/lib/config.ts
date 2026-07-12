@@ -32,7 +32,6 @@ export const CONFIG = {
   maxHistoryTurns: Number(process.env.MAX_HISTORY_TURNS || 60),
   congestionThreshold: Number(process.env.CONGESTION_THRESHOLD || 4),
   ipLimits: {
-    daily: Number(process.env.IP_DAILY_LIMIT || 300),
     minute: Number(process.env.IP_MINUTE_LIMIT || 30),
   },
   limits: {

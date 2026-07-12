@@ -1,4 +1,5 @@
 import { CONFIG } from "../../../src/lib/config";
+import { DEFAULT_QUESTIONS } from "../../../src/lib/defaultQuestions";
 import {
   buildAugmentedUserMessage,
   buildRetrievalQuery,
@@ -18,14 +19,18 @@ import {
 import {
   checkQuota,
   checkIpQuota,
+  getCachedChatResponse,
   getIdentity,
   incrementIpUsage,
   incrementUsage,
+  quotaSnapshot,
+  saveCachedChatResponse,
   saveChatLog,
 } from "../../../src/lib/storage";
 import { streamChat } from "../../../src/lib/llm";
 import { estimateMessageTokens, estimateTokens } from "../../../src/lib/tokenCounter";
 import type { ChatMessage } from "../../../src/lib/types";
+import { createHash } from "node:crypto";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -34,6 +39,7 @@ export const maxDuration = 60;
 // Token limits
 const MAX_MESSAGE_TOKENS = 500; // Max tokens per user message
 const MAX_TOTAL_REQUEST_TOKENS = 100000; // Message + RAG context + conversation history
+const DEFAULT_CACHE_VERSION = "2";
 
 export async function POST(request: Request) {
   const body = await request.json().catch(() => null);
@@ -81,6 +87,40 @@ export async function POST(request: Request) {
     );
   }
 
+  await incrementIpUsage(request.headers);
+
+  const cacheKey = DEFAULT_QUESTIONS.has(userMessage)
+    ? createHash("sha256")
+        .update(`${DEFAULT_CACHE_VERSION}:${userMessage}`)
+        .digest("hex")
+    : null;
+
+  if (cacheKey) {
+    try {
+      const cached = await getCachedChatResponse(cacheKey);
+      if (cached) {
+        const currentQuota = await quotaSnapshot(identity);
+        appendTurn(sessionId, userMessage, cached.answer);
+        let questionIndex: number | null = null;
+        try {
+          questionIndex = await saveChatLog(identity, userMessage, cached.answer);
+        } catch {
+          questionIndex = null;
+        }
+        return streamResponse(
+          cachedStream(
+            cached.answer,
+            cached.sources,
+            questionIndex || undefined,
+            currentQuota.daily_remaining <= 10,
+          ),
+        );
+      }
+    } catch (error) {
+      console.warn("[CACHE READ ERROR]", error instanceof Error ? error.message : error);
+    }
+  }
+
   const quota = await checkQuota(identity);
   if (!quota.ok) {
     return Response.json(
@@ -90,7 +130,7 @@ export async function POST(request: Request) {
   }
 
   const updatedQuota = await incrementUsage(identity);
-  await incrementIpUsage(request.headers);
+
   const clientHistory = parseClientHistory(body?.history);
   const recentHistory = clientHistory.length
     ? clientHistory.slice(-(CONFIG.maxHistoryTurns * 2))
@@ -156,6 +196,10 @@ export async function POST(request: Request) {
       let hadError = false;
       let savedQuestionIndex: number | null = null;
       const active = incrementActiveRequests();
+      const responseSources = buildSourcesPayload(
+        retrieved,
+        CONFIG.retrievalScoreThreshold,
+      );
 
       try {
         if (active >= CONFIG.congestionThreshold) {
@@ -205,11 +249,26 @@ export async function POST(request: Request) {
         } catch {
           savedQuestionIndex = null;
         }
+        if (cacheKey) {
+          try {
+            await saveCachedChatResponse(
+              cacheKey,
+              userMessage,
+              fullResponse,
+              responseSources,
+            );
+          } catch (error) {
+            console.warn(
+              "[CACHE WRITE ERROR]",
+              error instanceof Error ? error.message : error,
+            );
+          }
+        }
       }
 
       const donePayload: Record<string, unknown> = {
         done: true,
-        sources: buildSourcesPayload(retrieved, CONFIG.retrievalScoreThreshold),
+        sources: responseSources,
         near_limit: updatedQuota.daily_remaining <= 10,
       };
 
@@ -221,6 +280,32 @@ export async function POST(request: Request) {
   });
 
   return streamResponse(stream);
+}
+
+function cachedStream(
+  answer: string,
+  sources: Array<{ breadcrumb: string; score: number }>,
+  questionIndex: number | undefined,
+  nearLimit: boolean,
+) {
+  const encoder = new TextEncoder();
+  return new ReadableStream<Uint8Array>({
+    start(controller) {
+      controller.enqueue(encoder.encode(sse({ token: answer, cached: true })));
+      controller.enqueue(
+        encoder.encode(
+          sse({
+            done: true,
+            cached: true,
+            sources,
+            near_limit: nearLimit,
+            ...(questionIndex ? { question_index: questionIndex } : {}),
+          }),
+        ),
+      );
+      controller.close();
+    },
+  });
 }
 
 function parseClientHistory(value: unknown): ChatMessage[] {
